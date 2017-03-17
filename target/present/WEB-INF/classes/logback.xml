@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<configuration debug="true">
+
+	<appender name="consoleAppender" class="ch.qos.logback.core.ConsoleAppender">
+		<Target>System.out</Target>
+		<encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+			<pattern>%d{yyyy-MM-dd HH:mm:ss:SSS} %-5level %logger{0}- %msg%n</pattern>
+		</encoder>
+	</appender>
+	
+	<appender name="externalFileAppender" class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<filter class="ch.qos.logback.classic.filter.LevelFilter">
+			<level>INFO</level>
+			<onMatch>ACCEPT</onMatch>
+			<onMismatch>DENY</onMismatch>
+		</filter>
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<fileNamePattern>${catalina.base}/logs/mds/application_external.log.%d{yyyy-MM-dd}.%i</fileNamePattern>
+			<timeBasedFileNamingAndTriggeringPolicy
+                  class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
+                <maxFileSize>10MB</maxFileSize>
+            </timeBasedFileNamingAndTriggeringPolicy>
+		</rollingPolicy>
+		<encoder>
+			<charset>UTF-8</charset>
+			<pattern>%d{yyyy-MM-dd HH:mm:ss:SSS} %-5level %logger{0}- %msg%n</pattern>
+		</encoder>
+	</appender>
+	
+	<appender name="externalErrorFileAppender" class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<filter class="ch.qos.logback.classic.filter.LevelFilter">
+			<level>ERROR</level>
+			<onMatch>ACCEPT</onMatch>
+			<onMismatch>DENY</onMismatch>
+		</filter>
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<fileNamePattern>${catalina.base}/logs/mds/error_external.log.%d{yyyy-MM-dd}.%i</fileNamePattern>
+			<timeBasedFileNamingAndTriggeringPolicy
+                  class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
+                <maxFileSize>10MB</maxFileSize>
+            </timeBasedFileNamingAndTriggeringPolicy>
+		</rollingPolicy>
+		<encoder>
+			<charset>UTF-8</charset>
+			<pattern>%d{yyyy-MM-dd HH:mm:ss:SSS} %-5level %logger{0}- %msg%n</pattern>
+		</encoder>
+	</appender>
+
+	<logger name="org.springframework">
+		<level value="ERROR" />
+	</logger>
+	
+	<logger name="cn.redcdn.mds">
+		<level value="DEBUG" />
+	</logger>	
+
+	<logger name="org.apache.ibatis">
+		<level value="ERROR" />
+	</logger>
+
+	<logger name="org.mybatis.spring">
+		<level value="ERROR" />
+	</logger>
+
+	<logger name="java.sql">
+		<level value="ERROR" />
+	</logger>
+
+	<root>
+	    <level value="DEBUG" />
+		<appender-ref ref="consoleAppender" />
+		<appender-ref ref="externalFileAppender" />
+		<appender-ref ref="externalErrorFileAppender" />
+	</root>
+</configuration>
