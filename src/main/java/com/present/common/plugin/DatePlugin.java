@@ -14,6 +14,7 @@ import com.present.common.exception.ExternalException;
 import com.present.common.exception.ExternalServiceException;
 import com.present.common.util.MessageUtil;
 import com.present.common.util.MyStringUtil;
+import com.present.common.util.StringUtil;
 import org.apache.ibatis.executor.Executor;
 import org.apache.ibatis.mapping.MappedStatement;
 import org.apache.ibatis.plugin.*;
@@ -91,7 +92,7 @@ public class DatePlugin implements Interceptor
 				try
 				{
 					f.setAccessible(true);
-					f.set(target, MyStringUtil.getUUIDString());
+					f.set(target, StringUtil.getUUIDString());
 				} catch (Exception e)
 				{
 					throw new ExternalException();

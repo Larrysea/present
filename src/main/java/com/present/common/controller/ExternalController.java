@@ -5,10 +5,7 @@ import com.present.common.dto.MessageInfoDto;
 import com.present.common.dto.ResponseDto;
 import com.present.common.exception.ExternalServiceException;
 import com.present.common.service.IBaseService;
-import com.present.common.util.BeanFactoryUtil;
-import com.present.common.util.CheckUtil;
-import com.present.common.util.MessageUtil;
-import com.present.common.util.MyStringUtil;
+import com.present.common.util.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.BeansException;
@@ -46,7 +43,7 @@ public class ExternalController{
 	{		
 		response.addHeader("Access-Control-Allow-Origin", "*");  //跨域访问用
 		
-		String uuid = MyStringUtil.getUUIDString();
+		String uuid = StringUtil.getUUIDString();
 		logger.info("request({}):service={}, params={}", new Object[]{uuid, service, params});
 
 		ResponseDto rspDto = new ResponseDto();

@@ -1,10 +1,3 @@
-/**
- * 南京青牛通讯技术有限公司
- * 日期：$$Date: 2015-02-05 10:35:13 +0800 (周四, 05 2月 2015) $$
- * 作者：$$Author: zhangmengying $$
- * 版本：$$Rev: 3771 $$
- * 版权：All rights reserved.
- */
 package com.present.common.plugin;
 
 

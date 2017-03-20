@@ -14,9 +14,12 @@ import com.present.common.dto.MessageInfoDto;
 import com.present.common.exception.ExternalServiceException;
 import com.present.common.util.MessageUtil;
 import com.present.common.util.MyStringUtil;
+import com.present.common.util.StringUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
 import redis.clients.jedis.Jedis;
 import redis.clients.jedis.JedisPool;
 import redis.clients.jedis.JedisPoolConfig;
@@ -26,8 +29,9 @@ import redis.clients.jedis.Pipeline;
 /**  
  * redis操作工具类  
  *  
- */  
-public class CacheDao {  
+ */
+@Repository
+public class CacheDao {
 	
 	private static JedisPool pool = null;
 	private static Logger logger = LoggerFactory.getLogger(CacheDao.class);
@@ -57,7 +61,7 @@ public class CacheDao {
 		config.setTimeBetweenEvictionRunsMillis(timeBetweenEvictionRunsMillis);
 		config.setMinEvictableIdleTimeMillis(minEvictableIdleTimeMillis);
 		
-		if (MyStringUtil.isNotBlank(password))
+		if (StringUtil.isNotBlank(password))
 		{
 			pool = new JedisPool(config, url, port, readTimeout, password);
 		}

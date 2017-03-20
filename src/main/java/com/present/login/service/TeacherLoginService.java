@@ -32,7 +32,6 @@ public class TeacherLoginService extends BaseService<TeacherLoginSuccessDto> {
     @Autowired
     TokenApiService tokenApiService;
 
-    @Autowired
 
     @Override
     public ResponseDto<TeacherLoginSuccessDto> process(JSONObject params, HttpServletRequest request, HttpServletResponse response) {
