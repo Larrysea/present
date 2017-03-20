@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://www.mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.present.classes.dao.CourseClassDao">
+    <resultMap type="com.present.classes.bean.CourseClasses" id="courseClassesMap">
+        <collection column="classList" property="classesList"/>
+    </resultMap>
+
+   <!-- 通过老师和课程获取某个课程下面的所有班级-->
+    <select id="queryClassesByteacherAndCourse" resultType="CourseClasses">
+        SELECT
+        class_name,
+        schoole_id
+        FROM
+        classes
+        AND
+        course_class
+        <where>
+            teacher_id=#{teacherId}
+            AND
+            course_class.class_id=classes.id
+        </where>
+    </select>
+
+</mapper>

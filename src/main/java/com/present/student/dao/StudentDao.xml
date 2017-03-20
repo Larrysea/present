@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://www.mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.present.student.bean.dao.StudentDao">
+    <resultMap type="com.present.student.bean.Student" id="studentMap">
+        <!-- 学生id -->
+        <id column="id" property="id"/>
+        <!-- 学生名称 -->
+        <result column="name" property="name"/>
+        <!-- 密码 -->
+        <result column="password" property="password"/>
+        <!-- 手机号 -->
+        <result column="phone" property="phone"/>
+        <!-- 性别 -->
+        <result column="sexual" property="sexual"/>
+        <!-- 头像 -->
+        <result column="portrait_url" property="portraitUrl"/>
+        <!-- 手机唯一标示 -->
+        <result column="imel" property="imel"/>
+        <!-- 邮箱 -->
+        <result column="mail" property="mail"/>
+        <!-- 学号 -->
+        <result column="student_number" property="studentNumber"/>
+    </resultMap>
+
+    <!-- 将数据插入数据库中 -->
+    <insert id="insert" parameterType="com.present.student.bean.Student">
+        INSERT INTO
+        student (
+            id,
+            name,
+            password,
+            phone,
+            sexual,
+            portrait_url,
+            imel,
+            mail,
+            student_number) 
+        VALUES (
+            #{id},
+            #{name},
+            #{password},
+            #{phone},
+            #{sexual},
+            #{portraitUrl},
+            #{imel},
+            #{mail},
+            #{studentNumber}) 
+    </insert>
+
+    <!-- 根据key查找数据库中信息 -->
+    <select id="queryByKey" resultMap="studentMap">
+        SELECT
+            * 
+        FROM 
+            student 
+        <where>
+            id = #{id} 
+        </where>
+    </select>
+
+    <!-- 根据key更新数据库中信息 -->
+    <update id="updateByKey">
+        Update
+            student
+        <set>
+            <if test = " name != null ">
+                name = #{name},
+            </if>
+            <if test = " password != null ">
+                password = #{password},
+            </if>
+            <if test = " phone != null ">
+                phone = #{phone},
+            </if>
+            <if test = " sexual != null ">
+                sexual = #{sexual},
+            </if>
+            <if test = " portraitUrl != null ">
+                portrait_url = #{portraitUrl},
+            </if>
+            <if test = " imel != null ">
+                imel = #{imel},
+            </if>
+            <if test = " mail != null ">
+                mail = #{mail},
+            </if>
+            <if test = " studentNumber != null ">
+                student_number = #{studentNumber}
+            </if>
+        </set>
+        <where>
+            id = #{id} 
+        </where>
+    </update>
+
+    <!-- 根据Key删除数据库中信息 -->
+    <delete id="deleteByKey">
+        DELETE FROM
+            student 
+        <where>
+            id = #{id} 
+        </where>
+    </delete>
+</mapper>

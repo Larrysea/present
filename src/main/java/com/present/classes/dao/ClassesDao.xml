@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://www.mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.present.classes.dao.ClassesDao">
+    <resultMap type="com.present.classes.bean.Classes" id="classesMap">
+        <!-- 班级id -->
+        <id column="id" property="id"/>
+        <!-- 班级名称 -->
+        <result column="class_name" property="className"/>
+        <!-- 学校id -->
+        <result column="school_id" property="schoolId"/>
+    </resultMap>
+
+    <!-- 将数据插入数据库中 -->
+    <insert id="insert" parameterType="com.present.classes.bean.Classes">
+        INSERT INTO
+        classes (
+        id,
+        class_name,
+        school_id)
+        VALUES (
+        #{id},
+        #{className},
+        #{schoolId})
+    </insert>
+
+    <!-- 根据key查找数据库中信息 -->
+    <select id="queryByKey" resultMap="classesMap">
+        SELECT
+        *
+        FROM
+        classes
+        <where>
+            id = #{id}
+        </where>
+    </select>
+
+    <!-- 根据key更新数据库中信息 -->
+    <update id="updateByKey">
+        Update
+        classes
+        <set>
+            <if test=" className != null ">
+                class_name = #{className},
+            </if>
+            <if test=" schoolId != null ">
+                school_id = #{schoolId}
+            </if>
+        </set>
+        <where>
+            id = #{id}
+        </where>
+    </update>
+
+    <!-- 根据Key删除数据库中信息 -->
+    <delete id="deleteByKey">
+        DELETE FROM
+        classes
+        <where>
+            id = #{id}
+        </where>
+    </delete>
+
+
+    <!-- 更具班级名称和学校id查询是否存在这个班级 -->
+    <select id="queryIdByClassesNameAndSchoolId" resultType="java.lang.String">
+        SELECT
+        id
+        FROM
+        classes
+        <where>
+            class_name = #{className}
+            AND
+            school_id=#{schoolId}
+        </where>
+    </select>
+
+
+
+
+
+
+</mapper>

@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BookmarkManager">
+    <bookmark url="file://$PROJECT_DIR$/src/main/java/com/present/classes/service/AddClassesService.java" line="44" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="1c04015e-c0d6-46ce-bb8c-ace53f402c19" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../mds" />
+    <list default="true" id="1c04015e-c0d6-46ce-bb8c-ace53f402c19" name="Default" comment="添加获取课程，还有获取班级接口,还有发起签到接口，还有获取学生签到记录接口">
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/artifacts/present_war.xml" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/artifacts/present_war_exploded.xml" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__aopalliance_aopalliance_1_0.xml" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__c3p0_c3p0_0_9_0.xml" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__ch_qos_logback_logback_classic_1_0_7.xml" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__ch_qos_logback_logback_core_1_0_7.xml" />
@@ -16,7 +17,6 @@
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_fileupload_commons_fileupload_1_3.xml" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_io_commons_io_2_2.xml" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_lang_commons_lang_2_6.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_logging_commons_logging_1_1_1.xml" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_servlet_servlet_api_2_5.xml" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_validation_validation_api_1_0_0_GA.xml" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__jstl_jstl_1_2.xml" />
@@ -37,16 +37,6 @@
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_mybatis_3_2_4.xml" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_mybatis_spring_1_2_2.xml" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_api_1_6_6.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_aop_3_2_4_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_beans_3_2_4_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_3_2_4_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_core_3_2_4_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_expression_3_2_4_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jdbc_3_2_4_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_orm_3_2_4_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_tx_3_2_4_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_web_3_2_4_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_webmvc_3_2_4_RELEASE.xml" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__redis_clients_jedis_2_9_0.xml" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
@@ -91,337 +81,7 @@
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/message.properties" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/redis.properties" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/sms-email.properties" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../.gitignore" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../.idea/copyright/profiles_settings.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../.idea/gradle.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../.idea/runConfigurations.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/.gitignore" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/build.gradle" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/proguard-rules.pro" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/androidTest/java/tit/lab/here/ExampleInstrumentedTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/AndroidManifest.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/java/tit/lab/here/App.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/java/tit/lab/here/Config.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/java/tit/lab/here/adapter/BaseFilterAdapter.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/java/tit/lab/here/adapter/BuildingAndRoomDialogAdapter.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/java/tit/lab/here/adapter/ChineseFilter.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/java/tit/lab/here/adapter/ChooseBuildingAdapter.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/java/tit/lab/here/adapter/ChooseRoomAdapter.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/java/tit/lab/here/adapter/LessonDialogAdapter.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/java/tit/lab/here/adapter/MainPagerAdapter.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/java/tit/lab/here/adapter/RecordAdapter.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/java/tit/lab/here/adapter/RecordClassDialogAdapter.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/java/tit/lab/here/adapter/RecordDetailAdapter.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/java/tit/lab/here/api/ApiEngine.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/java/tit/lab/here/api/LogInterceptor.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/java/tit/lab/here/api/TeacherApi.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/java/tit/lab/here/base/BaseActivity.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/java/tit/lab/here/base/BaseFragment.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/java/tit/lab/here/bean/Building.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/java/tit/lab/here/bean/BuildingAndRoom.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/java/tit/lab/here/bean/ChooseSeat.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/java/tit/lab/here/bean/ClassRecord.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/java/tit/lab/here/bean/ClassRoom.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/java/tit/lab/here/bean/Collage.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/java/tit/lab/here/bean/Info.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/java/tit/lab/here/bean/Lesson.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/java/tit/lab/here/bean/LessonClass.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/java/tit/lab/here/bean/LessonRecord.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/java/tit/lab/here/bean/SeatInfo.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/java/tit/lab/here/bean/TeacherClass.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/java/tit/lab/here/bean/Test.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/java/tit/lab/here/bean/XY.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/java/tit/lab/here/callback_interface/retrofit/AddClassRoomImpl.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/java/tit/lab/here/callback_interface/retrofit/ApiService.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/java/tit/lab/here/callback_interface/retrofit/BaseCallModeal.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/java/tit/lab/here/callback_interface/retrofit/BaseRetroFitCallBack.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/java/tit/lab/here/callback_interface/retrofit/BindMailAddress.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/java/tit/lab/here/callback_interface/retrofit/ChangePasswordImpl.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/java/tit/lab/here/callback_interface/retrofit/ChangePortraitImpl.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/java/tit/lab/here/callback_interface/retrofit/DeviceUnbind.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/java/tit/lab/here/callback_interface/retrofit/GetAllSchollNameImpl.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/java/tit/lab/here/callback_interface/retrofit/GetClassRoomImpl.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/java/tit/lab/here/callback_interface/retrofit/GetIsLessoningClassInfor.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/java/tit/lab/here/callback_interface/retrofit/GetLessonAttendanceInforImpl.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/java/tit/lab/here/callback_interface/retrofit/GsonResponseBodyConverter.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/java/tit/lab/here/callback_interface/retrofit/LoginImpl.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/java/tit/lab/here/callback_interface/retrofit/RegisterImpl.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/java/tit/lab/here/callback_interface/retrofit/ResponseConvertFactory.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/java/tit/lab/here/callback_interface/retrofit/StudentAskQuestionImpl.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/java/tit/lab/here/callback_interface/retrofit/StudentGetAllLessonInfor.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/java/tit/lab/here/callback_interface/retrofit/StudentGetQuestionImpl.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/java/tit/lab/here/callback_interface/retrofit/StudentGetSelfInfo.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/java/tit/lab/here/callback_interface/retrofit/StudentPostiveGetClassId.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/java/tit/lab/here/callback_interface/retrofit/StudentSendSelfInfo.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/java/tit/lab/here/callback_interface/retrofit/StudentSignlnImpl.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/java/tit/lab/here/callback_interface/retrofit/UpdateApp.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/java/tit/lab/here/constants/Constants.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/java/tit/lab/here/data/modeal/AttendanceInfor.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/java/tit/lab/here/data/modeal/College.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/java/tit/lab/here/data/modeal/Lesson.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/java/tit/lab/here/data/modeal/Question.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/java/tit/lab/here/data/modeal/SessionAndUserId.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/java/tit/lab/here/data/modeal/Student.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/java/tit/lab/here/exception/ApiException.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/java/tit/lab/here/jpush/MyReceiver.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/java/tit/lab/here/receiver/MyReceiver.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/java/tit/lab/here/ui/activity/BuildingActivity.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/java/tit/lab/here/ui/activity/RecordActivity.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/java/tit/lab/here/ui/activity/RecordDetailActivity.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/java/tit/lab/here/ui/activity/SearchActivity.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/java/tit/lab/here/ui/activity/StartSignActivity.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/java/tit/lab/here/ui/activity/TeacherActivity.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/java/tit/lab/here/ui/activity/TeacherLoginActivity.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/java/tit/lab/here/ui/fragment/ChooseBuildingFragment.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/java/tit/lab/here/ui/fragment/ChooseRoomFragment.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/java/tit/lab/here/ui/fragment/LessonDialogFragment.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/java/tit/lab/here/ui/fragment/ModifyRecordDialogFragment.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/java/tit/lab/here/ui/fragment/QuestionFragment.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/java/tit/lab/here/ui/fragment/RecordClassDialogFragment.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/java/tit/lab/here/ui/fragment/RoomDialogFragment.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/java/tit/lab/here/ui/fragment/SeatFragment.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/java/tit/lab/here/util/APUtil.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/java/tit/lab/here/util/AnimatorUtil.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/java/tit/lab/here/util/BtnUtil.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/java/tit/lab/here/util/CheckETEmptyUtil.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/java/tit/lab/here/util/DeviceUtil.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/java/tit/lab/here/util/DialogUtil.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/java/tit/lab/here/util/GetContextUtil.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/java/tit/lab/here/util/HotSpotUtil.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/java/tit/lab/here/util/InternetUtil.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/java/tit/lab/here/util/KeyBoardUtils.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/java/tit/lab/here/util/NetUtil.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/java/tit/lab/here/util/NetUtils.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/java/tit/lab/here/util/OkhttpClient.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/java/tit/lab/here/util/RegexUtil.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/java/tit/lab/here/util/SPUtil.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/java/tit/lab/here/util/SharedPreferenceUtil.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/java/tit/lab/here/util/StringUtil.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/java/tit/lab/here/util/TestT.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/java/tit/lab/here/util/WifiAdmin.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/java/tit/lab/here/util/WifiUtil.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/java/tit/lab/here/view/activity/AttendanceInforActivity.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/java/tit/lab/here/view/activity/BaseFragmentActivity.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/java/tit/lab/here/view/activity/BindEmailActivity.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/java/tit/lab/here/view/activity/ChangePasswordActivity.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/java/tit/lab/here/view/activity/ClassRoomActivity.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/java/tit/lab/here/view/activity/EditPersoninforActivity.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/java/tit/lab/here/view/activity/LoginActivity.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/java/tit/lab/here/view/activity/RegisterActivity.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/java/tit/lab/here/view/activity/ScrollingActivity.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/java/tit/lab/here/view/activity/SelectSchoolActivity.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/java/tit/lab/here/view/activity/SetPortraitActivity.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/java/tit/lab/here/view/activity/StudentSignActivity.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/java/tit/lab/here/view/activity/UnbindDeviceActivtiy.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/java/tit/lab/here/view/customer/SeatTable.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/java/tit/lab/here/view/fragment/ClassroomFragment.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/java/tit/lab/here/view/fragment/StudentGetAllLessonFragment.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/java/tit/lab/here/view/fragment/StudentSignlnFragment.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/java/tit/lab/here/widget/ButtonBar.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/java/tit/lab/here/widget/SeatTable.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/java/tit/lab/here/widget/StateLayout.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/res/drawable-hdpi/ic_arrow_back_white_24dp.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/res/drawable-hdpi/ic_check_white_24dp.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/res/drawable-mdpi/ic_arrow_back_white_24dp.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/res/drawable-mdpi/ic_check_white_24dp.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/res/drawable-v21/ic_phone_android_pink_900_24dp.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/res/drawable-xhdpi/ic_arrow_back_white_24dp.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/res/drawable-xhdpi/ic_check_48.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/res/drawable-xhdpi/ic_check_white_24dp.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/res/drawable-xhdpi/ic_circle_48.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/res/drawable-xhdpi/ic_classroom_bg.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/res/drawable-xhdpi/ic_classroom_bg_small.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/res/drawable-xhdpi/ic_fork_48.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/res/drawable-xhdpi/iv_bg_head.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/res/drawable-xhdpi/iv_icon_white.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/res/drawable-xhdpi/seat_gray.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/res/drawable-xhdpi/seat_green.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/res/drawable-xhdpi/seat_sold.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/res/drawable-xhdpi/table_bg.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/res/drawable-xxhdpi/ic_arrow_back_white_24dp.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/res/drawable-xxhdpi/ic_check_white_24dp.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/res/drawable-xxxhdpi/corner_button.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/res/drawable-xxxhdpi/ic_arrow_back_white_24dp.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/res/drawable-xxxhdpi/ic_check_white_24dp.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/res/drawable/button_shape.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/res/drawable/frame_et_bg.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/res/drawable/ic_arrow_back_white_24dp.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/res/drawable/ic_arrow_et.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/res/drawable/ic_camera.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/res/drawable/ic_check.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/res/drawable/ic_check_et.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/res/drawable/ic_check_pink_500_24dp.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/res/drawable/ic_check_small.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/res/drawable/ic_circle.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/res/drawable/ic_class_pink_400_24dp.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/res/drawable/ic_content_paste_white_24dp.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/res/drawable/ic_default_portrait.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/res/drawable/ic_email.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/res/drawable/ic_et_arrow.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/res/drawable/ic_event_note_white_24dp.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/res/drawable/ic_event_seat_red_400_24dp.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/res/drawable/ic_fork.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/res/drawable/ic_format_list_bulleted_white_24dp.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/res/drawable/ic_group_blue_500_24dp.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/res/drawable/ic_horn.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/res/drawable/ic_job_position.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/res/drawable/ic_lock_outline_white_24dp.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/res/drawable/ic_mail_logo.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/res/drawable/ic_name.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/res/drawable/ic_navigate_before_black_24dp.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/res/drawable/ic_navigate_next_black_24dp.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/res/drawable/ic_person_blue_500_24dp.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/res/drawable/ic_person_grey_300_48dp.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/res/drawable/ic_person_white_24dp.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/res/drawable/ic_phone.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/res/drawable/ic_phone_android_black_48dp.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/res/drawable/ic_phone_android_pink_900_24dp.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/res/drawable/ic_portrait_red_400_48dp.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/res/drawable/ic_record_voice_over_white_24dp.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/res/drawable/ic_refresh_blue_500_24dp.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/res/drawable/ic_room_brown_500_24dp.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/res/drawable/ic_search_white_24dp.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/res/drawable/ic_sexual.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/res/drawable/ic_student_number.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/res/drawable/ic_switch_role.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/res/drawable/ic_textsms_white_24dp.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/res/drawable/ll_divider.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/res/drawable/seat_gray.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/res/drawable/seat_green.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/res/drawable/seat_sold.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/res/drawable/side_nav_bar.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/res/drawable/table_bg.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/res/layout/activity_attendance_info.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/res/layout/activity_bind_mail.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/res/layout/activity_building.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/res/layout/activity_change_password.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/res/layout/activity_class.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/res/layout/activity_class_room.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/res/layout/activity_classinfor.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/res/layout/activity_login.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/res/layout/activity_main.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/res/layout/activity_main_test.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/res/layout/activity_personinfo.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/res/layout/activity_record.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/res/layout/activity_record_detail.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/res/layout/activity_register.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/res/layout/activity_scrolling.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/res/layout/activity_search.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/res/layout/activity_select_school.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/res/layout/activity_setportrait.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/res/layout/activity_start_sign.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/res/layout/activity_teacher.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/res/layout/activity_teacher_login.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/res/layout/activity_test_content.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/res/layout/activity_testrxjava.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/res/layout/activity_unbind_device.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/res/layout/activity_xrecycler_test.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/res/layout/app_bar_main.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/res/layout/attendance_infor_header.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/res/layout/attendance_item.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/res/layout/base_fragment_activity.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/res/layout/common_recycle_view.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/res/layout/content_scrolling.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/res/layout/content_search.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/res/layout/dialog_building_and_room.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/res/layout/dialog_lesson.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/res/layout/dialog_modify_record.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/res/layout/dialog_record_lesson.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/res/layout/dialog_x_y.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/res/layout/empty_view.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/res/layout/fragment_all_lesson.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/res/layout/fragment_choose_building.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/res/layout/fragment_choose_room.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/res/layout/fragment_choose_seat.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/res/layout/fragment_classroom.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/res/layout/fragment_question.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/res/layout/fragment_record.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/res/layout/fragment_seat.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/res/layout/header_class_record.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/res/layout/item_auto_complete.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/res/layout/item_choose_building.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/res/layout/item_choose_room.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/res/layout/item_class_record.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/res/layout/item_dialog_building_and_room.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/res/layout/item_dialog_lesson.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/res/layout/item_record.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/res/layout/loading_view.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/res/layout/nav_header_main.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/res/layout/person_infor_class_position_item.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/res/layout/person_infor_email_item.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/res/layout/person_infor_name_item.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/res/layout/person_infor_phone_item.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/res/layout/person_infor_sexual_item.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/res/layout/person_infor_stu_item.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/res/layout/question_item.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/res/layout/state_empty.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/res/layout/state_error.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/res/layout/state_loading.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/res/layout/state_rv.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/res/layout/table_view.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/res/layout/test.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/res/layout/test_bfragment.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/res/layout/test_dynamic_et.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/res/layout/test_percent.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/res/layout/widget_button_bar.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/res/menu/activity_main_drawer.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/res/menu/bottom_nav.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/res/menu/change_password_menu.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/res/menu/edit_person_infor_menu.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/res/menu/menu_teacher_main.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/res/menu/start_sign_menu.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/res/mipmap-hdpi/ic_launcher.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/res/mipmap-mdpi/ic_launcher.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/res/mipmap-xhdpi/ic_launcher.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/res/mipmap-xxhdpi/ic_launcher.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/res/mipmap-xxxhdpi/ic_launcher.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/res/values-1024x600/lay_x.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/res/values-1024x600/lay_y.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/res/values-1024x768/lay_x.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/res/values-1024x768/lay_y.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/res/values-1184x720/lay_x.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/res/values-1184x720/lay_y.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/res/values-1196x720/lay_x.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/res/values-1196x720/lay_y.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/res/values-1280x720/lay_x.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/res/values-1280x720/lay_y.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/res/values-1280x800/lay_x.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/res/values-1280x800/lay_y.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/res/values-1812x1080/lay_x.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/res/values-1812x1080/lay_y.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/res/values-1920x1080/lay_x.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/res/values-1920x1080/lay_y.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/res/values-2560x1440/lay_x.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/res/values-2560x1440/lay_y.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/res/values-400x320/lay_x.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/res/values-400x320/lay_y.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/res/values-480x320/lay_x.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/res/values-480x320/lay_y.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/res/values-800x480/lay_x.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/res/values-800x480/lay_y.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/res/values-854x480/lay_x.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/res/values-854x480/lay_y.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/res/values-960x540/lay_x.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/res/values-960x540/lay_y.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/res/values-v21/styles.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/res/values-w820dp/dimens.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/res/values/attrs.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/res/values/colors.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/res/values/dimens.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/res/values/strings.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/main/res/values/styles.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../app/src/test/java/tit/lab/here/ExampleUnitTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../build.gradle" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../gradle.properties" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../gradle/wrapper/gradle-wrapper.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../gradle/wrapper/gradle-wrapper.properties" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../gradlew" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../gradlew.bat" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../settings.gradle" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../.idea/compiler.xml" afterPath="$PROJECT_DIR$/../.idea/compiler.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../.idea/misc.xml" afterPath="$PROJECT_DIR$/../.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../.idea/modules.xml" afterPath="$PROJECT_DIR$/../.idea/modules.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../.idea/vcs.xml" afterPath="$PROJECT_DIR$/../.idea/vcs.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../mds" afterPath="$PROJECT_DIR$/../mds" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -438,13 +98,15 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="TeacherRegisterService.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/present/login/service/TeacherRegisterService.java">
+      <file leaf-file-name="DatePlugin.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/present/common/plugin/DatePlugin.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="333">
-              <caret line="16" column="46" lean-forward="true" selection-start-line="16" selection-start-column="46" selection-end-line="16" selection-end-column="46" />
+            <state relative-caret-position="98">
+              <caret line="28" column="1" lean-forward="true" selection-start-line="28" selection-start-column="1" selection-end-line="28" selection-end-column="1" />
               <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="n#!!doc" expanded="false" />
+                <element signature="imports" expanded="false" />
+                <element signature="e#1902#1931#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -455,7 +117,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Aspect" />
         <option value="spring-beans.schema" />
+        <option value="package-info" />
         <option value="Class" />
       </list>
     </option>
@@ -483,62 +147,68 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/common/annotation/UUID.java" />
-        <option value="$PROJECT_DIR$/src/main/java/common/annotation/Now.java" />
-        <option value="$PROJECT_DIR$/src/main/java/common/dto/PageResultDto.java" />
-        <option value="$PROJECT_DIR$/src/main/java/common/dto/MessageInfoDto.java" />
-        <option value="$PROJECT_DIR$/src/main/java/common/util/SecondsFormatSerializer.java" />
-        <option value="$PROJECT_DIR$/src/main/java/common/util/TimestampSecondsFormatSerializer.java" />
-        <option value="$PROJECT_DIR$/src/main/java/common/exception/ExternalException.java" />
-        <option value="$PROJECT_DIR$/src/main/java/common/util/DateUtil.java" />
-        <option value="$PROJECT_DIR$/src/main/java/common/dto/ResponseDto.java" />
-        <option value="$PROJECT_DIR$/src/main/java/common/util/MessageUtil.java" />
-        <option value="$PROJECT_DIR$/src/main/java/common/util/BeanFactoryUtil.java" />
-        <option value="$PROJECT_DIR$/src/main/java/common/util/StringUtil.java" />
-        <option value="$PROJECT_DIR$/src/main/java/common/exception/ExternalServiceException.java" />
-        <option value="$PROJECT_DIR$/src/main/java/common/util/CheckUtil.java" />
-        <option value="$PROJECT_DIR$/src/main/java/common/service/IBaseService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/common/controller/ExternalController.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/jdbc.properties" />
-        <option value="$PROJECT_DIR$/src/main/java/common/plugin/PagePlugin.java" />
-        <option value="$PROJECT_DIR$/src/main/java/common/plugin/PropertiesConfigurer.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/present/common/annotation/Now.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/present/common/plugin/PropertiesConfigurer.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/application-context.xml" />
-        <option value="$PROJECT_DIR$/src/main/resources/redis.properties" />
-        <option value="$PROJECT_DIR$/src/main/java/com/present/common/temp/dto/ResponseDto.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/present/temp/dto/ResponseDto.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/present/common/dto/ResponseDto.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/present/course/dao/CourseDao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/present/course/dao/CourseDao.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/present/course/service/AddCourse.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/present/classes/bean/test.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/present/classes/bean/Classes.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/present/classes/service/AddClasses.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/present/classes/dao/ClassesDao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/present/classes/dao/ClassesDao.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/present/classes/service/AddClassesService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/present/student/baen/Student.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/present/student/dao/StudentDao.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/present/student/service/AddStudentService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/present/login/test.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/present/common/util/BeanFactoryUtil.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/present/login/TeacherLoginSuccessDto.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/present/common/service/BaseService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/present/common/dto/PageInfoDto.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/present/common/plugin/PagePlugin.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/present/common/plugin/DatePlugin.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/external-servlet.xml" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/present/login/dto/TeacherLoginSuccessDto.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/present/login/bean/Student.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/present/login/dao/StudentDao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/present/student/dao/StudentDao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/present/course/bean/TeacherCourse.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/present/course/dao/TeacherCourseDao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/present/course/dto/TeacherCourseList.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/present/course/bean/Course.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/present/course/dao/TeacherCourseDao.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/present/teacher/service/TeacherGetAllCourse.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/present/classes/bean/CourseClasses.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/present/classes/dao/CourseClassDao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/present/classes/dao/CourseClassDao.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/present/common/util/CheckUtil.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/present/sign/dao/CourseSignDao.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/present/sign/dao/CourseSignDao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/present/sign/service/SelectCourseToSign.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/present/sign/bean/SelectCourrseToSign.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/present/sign/bean/CourseSign.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/present/sign/bean/SignStartWithClass.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/present/sign/dao/SignStartWithClassDao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/present/sign/dao/SignStartWithClassDao.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/present/sign/service/SelectClassToSign.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/present/sign/bean/StudentSign.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/present/sign/dao/StudentSignDao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/present/sign/dao/StudentSignDao.xml" />
+        <option value="$PROJECT_DIR$/src/main/resources/message.properties" />
         <option value="$PROJECT_DIR$/src/main/java/com/present/common/controller/ExternalController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/present/common/util/MessageUtil.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/present/common/plugin/DatePlugin.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/present/common/dao/PropertiesUtil.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/present/common/dao/CacheDao.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/present/common/util/StringUtil.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/present/common/util/MyStringUtil.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/present/login/dao/TeacherDao.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/present/login/dao/TeacherDao.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/present/login/service/LoginService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/present/login/bean/Teacher.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/present/classes/service/GetClassesUnderCourse.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/present/course/service/TeacherGetAllCourse.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/present/sign/service/GetTheSignInfoBySignCourseId.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/present/login/service/StudentLoginService.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/application-context.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/present/common/service/TokenApiService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/present/login/service/TeacherLoginService.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/message.properties" />
-        <option value="$PROJECT_DIR$/src/main/java/com/present/login/service/TeacherRegisterService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/present/common/dao/CacheDao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/present/common/plugin/PagePlugin.java" />
       </list>
     </option>
   </component>
   <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
   <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsFlowSettings">
+    <service-enabled>false</service-enabled>
+    <exe-path />
+    <annotation-enable>false</annotation-enable>
+    <other-services-enabled>false</other-services-enabled>
+  </component>
   <component name="JsGulpfileManager">
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
@@ -558,30 +228,7 @@
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
-      <profile-state>
-        <expanded-state>
-          <State>
-            <id />
-          </State>
-          <State>
-            <id>CodeSpring CoreSpring</id>
-          </State>
-          <State>
-            <id>Spring</id>
-          </State>
-          <State>
-            <id>Spring CoreSpring</id>
-          </State>
-          <State>
-            <id>XMLSpring CoreSpring</id>
-          </State>
-        </expanded-state>
-        <selected-state>
-          <State>
-            <id>SpringJavaAutowiringInspection</id>
-          </State>
-        </selected-state>
-      </profile-state>
+      <profile-state />
     </entry>
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -602,7 +249,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -629,32 +275,64 @@
               <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="present" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="present" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="present" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
       <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="android.sdk.path" value="K:/Androidsdk/android-sdk" />
-    <property name="settings.editor.selected.configurable" value="Errors" />
+    <property name="settings.editor.selected.configurable" value="settings.github" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="nodejs_interpreter_path" value="K:/ProgramFile/NodeJs/node" />
     <property name="js.eslint.eslintPackage" value="" />
     <property name="js-jscs-nodeInterpreter" value="K:\ProgramFile\NodeJs\node.exe" />
-    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2505747" />
-    <property name="SearchEverywhereHistoryKey" value="String&#9;FILE&#9;file://C:/Users/Larry-sea/OneDrive/code/gitpath/present/src/main/java/com/present/common/util/StringUtil.java&#10;teacherLogin&#9;null&#9;null&#10;teacherLog&#9;FILE&#9;file://C:/Users/Larry-sea/OneDrive/code/gitpath/present/src/main/java/com/present/login/dto/TeacherLoginSuccessDto.java&#10;message&#9;FILE&#9;file://C:/Users/Larry-sea/OneDrive/code/gitpath/present/src/main/java/com/present/common/util/MessageUtil.java" />
+    <property name="SearchEverywhereHistoryKey" value="to&#9;FILE&#9;file://C:/Users/Larry-sea/OneDrive/code/gitpath/present/src/main/java/com/present/common/service/TokenApiService.java&#10;context&#9;FILE&#9;file://C:/Users/Larry-sea/OneDrive/code/gitpath/present/src/main/resources/application-context.xml&#10;message&#9;FILE&#9;file://C:/Users/Larry-sea/OneDrive/code/gitpath/present/src/main/resources/message.properties&#10;teacher&#9;FILE&#9;file://C:/Users/Larry-sea/OneDrive/code/gitpath/present/src/main/java/com/present/login/bean/Teacher.java&#10;String&#9;FILE&#9;file://C:/Users/Larry-sea/OneDrive/code/gitpath/present/src/main/java/com/present/common/util/StringUtil.java&#10;teacherLogin&#9;null&#9;null&#10;teacherLog&#9;FILE&#9;file://C:/Users/Larry-sea/OneDrive/code/gitpath/present/src/main/java/com/present/login/dto/TeacherLoginSuccessDto.java" />
+    <property name="extract.method.default.visibility" value="private" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Larry-sea\OneDrive\code\gitpath\present\src\main\java\com\present\common\util" />
-      <recent name="C:\Users\Larry-sea\OneDrive\code\gitpath\present\src\main\java\com\present\common\dao" />
-      <recent name="C:\Users\Larry-sea\OneDrive\code\gitpath\present\src\main\resources" />
-      <recent name="C:\Users\Larry-sea\OneDrive\code\gitpath\present\src\main\java\com\present\login\dao" />
-      <recent name="C:\Users\Larry-sea\OneDrive\code\gitpath\present\src\main\java\com\present\common\dto" />
+      <recent name="C:\Users\Larry-sea\OneDrive\code\gitpath\present\src\main\java\com\present\sign\dao" />
+      <recent name="C:\Users\Larry-sea\OneDrive\code\gitpath\present\src\main\java\com\present\sign\bean" />
+      <recent name="C:\Users\Larry-sea\OneDrive\code\gitpath\present\src\main\java\com\present\course\bean" />
+      <recent name="C:\Users\Larry-sea\OneDrive\code\gitpath\present\src\main\java\com\present\course\dao" />
+      <recent name="C:\Users\Larry-sea\OneDrive\code\gitpath\present\src\main\java\com\present\login\bean" />
     </key>
   </component>
   <component name="RunManager" selected="Tomcat Server.Unnamed">
@@ -1141,11 +819,24 @@
       <updated>1489650280910</updated>
       <workItem from="1489650282261" duration="13898000" />
       <workItem from="1489713889561" duration="27938000" />
+      <workItem from="1489758906946" duration="135000" />
+      <workItem from="1489803459878" duration="17443000" />
+      <workItem from="1489894805886" duration="120000" />
+      <workItem from="1489974640067" duration="9611000" />
+      <workItem from="1489992319545" duration="15919000" />
     </task>
+    <task id="LOCAL-00001" summary="添加获取课程，还有获取班级接口,还有发起签到接口，还有获取学生签到记录接口">
+      <created>1490015383326</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1490015383326</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="41836000" />
+    <option name="totallyTimeSpent" value="85064000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1157,12 +848,12 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="false" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32933104" sideWeight="0.5045386" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32933104" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1174,19 +865,19 @@
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31560892" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32933104" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.68953687" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4425386" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32933104" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32933104" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5471698" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32933104" sideWeight="0.4969743" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5471698" sideWeight="0.4969743" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32933104" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32933104" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25340393" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24054463" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32933104" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32933104" sideWeight="0.49546143" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -1202,6 +893,11 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="添加获取课程，还有获取班级接口" />
+    <MESSAGE value="添加获取课程，还有获取班级接口,还有发起签到接口，还有获取学生签到记录接口" />
+    <option name="LAST_COMMIT_MESSAGE" value="添加获取课程，还有获取班级接口,还有发起签到接口，还有获取学生签到记录接口" />
+  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <option name="time" value="2" />
@@ -1213,370 +909,263 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/present/common/util/DateUtil.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/present/login/dao/dao/TeacherDao.xml" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/present/login/bean/Student.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/present/login/dao/StudentDao.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/present/student/baen/Student.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="206">
-          <caret line="148" column="9" lean-forward="true" selection-start-line="148" selection-start-column="9" selection-end-line="148" selection-end-column="9" />
+        <state relative-caret-position="-2816">
+          <caret line="16" column="7" lean-forward="true" selection-start-line="16" selection-start-column="7" selection-end-line="16" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/present/student/dao/StudentDao.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1948">
+          <caret line="93" column="16" lean-forward="true" selection-start-line="93" selection-start-column="16" selection-end-line="93" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/present/student/dao/StudentDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="259">
+          <caret line="59" column="33" lean-forward="true" selection-start-line="59" selection-start-column="33" selection-end-line="59" selection-end-column="33" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/present/common/dto/ResponseDto.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="179">
-          <caret line="31" column="0" lean-forward="true" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#353#354#0" expanded="false" />
-            <element signature="e#371#372#0" expanded="false" />
-            <element signature="e#464#465#0" expanded="false" />
-            <element signature="e#487#488#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/aspectj/aspectjweaver/1.7.4/aspectjweaver-1.7.4.jar!/org/aspectj/bridge/MessageUtil.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="27" column="13" lean-forward="false" selection-start-line="27" selection-start-column="13" selection-end-line="27" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/present/common/exception/ExternalServiceException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-107">
-          <caret line="13" column="39" lean-forward="false" selection-start-line="13" selection-start-column="39" selection-end-line="13" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/present/common/util/CheckUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="93" column="13" lean-forward="true" selection-start-line="93" selection-start-column="13" selection-end-line="93" selection-end-column="13" />
-          <folding>
-            <element signature="n#!!doc" expanded="false" />
-            <marker date="1489740204790" expanded="false" signature="205:412" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/jdbc.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="5" column="0" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/logback.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/present/teacher/package-info.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/present/course/bean/TeacherCourse.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="11" column="22" lean-forward="true" selection-start-line="11" selection-start-column="22" selection-end-line="11" selection-end-column="22" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/present/common/util/MessageUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="12" column="7" lean-forward="false" selection-start-line="12" selection-start-column="7" selection-end-line="12" selection-end-column="7" />
-          <folding>
-            <element signature="e#362#363#0" expanded="false" />
-            <element signature="e#402#403#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/present/common/plugin/PagePlugin.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <marker date="1489723176915" expanded="true" signature="8198:8241" ph="select count... missingValue" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/common/plugin/PropertiesConfigurer.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/present/common/annotation/Now.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="12" column="1" lean-forward="true" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/present/common/plugin/PropertiesConfigurer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="22" column="31" lean-forward="true" selection-start-line="22" selection-start-column="31" selection-end-line="22" selection-end-column="31" />
-          <folding>
-            <element signature="n#!!doc" expanded="false" />
-            <element signature="imports" expanded="false" />
-            <element signature="e#1374#1375#0" expanded="false" />
-            <element signature="e#1423#1424#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/sms-email.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/present/test.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/present/common/util/DateUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/present/common/util/CheckUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="n#!!doc" expanded="false" />
-            <marker date="1489740204790" expanded="false" signature="205:412" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/present/common/dto/MessageInfoDto.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#385#386#0" expanded="false" />
-            <element signature="e#403#404#0" expanded="false" />
-            <element signature="e#498#499#0" expanded="false" />
-            <element signature="e#521#522#0" expanded="false" />
-            <element signature="e#605#606#0" expanded="false" />
-            <element signature="e#622#623#0" expanded="false" />
-            <element signature="e#716#717#0" expanded="false" />
-            <element signature="e#737#738#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/present/common/exception/ExternalException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#214#215#0" expanded="false" />
-            <element signature="e#228#229#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/present/common/plugin/PropertiesConfigurer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="n#!!doc" expanded="false" />
-            <element signature="imports" expanded="false" />
-            <element signature="e#1374#1375#0" expanded="false" />
-            <element signature="e#1423#1424#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/present/login/test.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="6" column="0" lean-forward="true" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/present/common/util/BeanFactoryUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
-          <caret line="19" column="7" lean-forward="false" selection-start-line="19" selection-start-column="7" selection-end-line="19" selection-end-column="7" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/present/common/dto/ResponseDto.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/present/course/dto/TeacherCourseList.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="286">
-          <caret line="15" column="7" lean-forward="false" selection-start-line="15" selection-start-column="7" selection-end-line="15" selection-end-column="7" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#353#354#0" expanded="false" />
-            <element signature="e#371#372#0" expanded="false" />
-            <element signature="e#464#465#0" expanded="false" />
-            <element signature="e#487#488#0" expanded="false" />
-          </folding>
+          <caret line="13" column="0" lean-forward="true" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/present/common/service/BaseService.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/present/course/bean/Course.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="220">
-          <caret line="20" column="27" lean-forward="false" selection-start-line="20" selection-start-column="27" selection-end-line="20" selection-end-column="27" />
-          <folding>
-            <element signature="n#!!doc" expanded="false" />
-          </folding>
+          <caret line="13" column="0" lean-forward="true" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/present/common/service/IBaseService.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/present/course/dao/TeacherCourseDao.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="16" column="21" lean-forward="false" selection-start-line="16" selection-start-column="21" selection-end-line="16" selection-end-column="21" />
+        <state relative-caret-position="179">
+          <caret line="83" column="30" lean-forward="true" selection-start-line="83" selection-start-column="30" selection-end-line="83" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/present/course/dao/CourseDao.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="4" column="21" lean-forward="false" selection-start-line="4" selection-start-column="21" selection-end-line="4" selection-end-column="55" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/present/course/dao/CourseDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="193">
+          <caret line="40" column="7" lean-forward="true" selection-start-line="40" selection-start-column="7" selection-end-line="40" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/present/classes/service/AddClassesService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="25" column="26" lean-forward="true" selection-start-line="25" selection-start-column="26" selection-end-line="25" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/present/classes/bean/Classes.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="303">
+          <caret line="20" column="0" lean-forward="true" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/present/course/dao/TeacherCourseDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="14" column="17" lean-forward="true" selection-start-line="14" selection-start-column="17" selection-end-line="14" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/present/classes/bean/CourseClasses.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="13" column="29" lean-forward="false" selection-start-line="13" selection-start-column="18" selection-end-line="13" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/present/classes/dao/ClassesDao.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="75" column="13" lean-forward="true" selection-start-line="65" selection-start-column="4" selection-end-line="75" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/present/classes/dao/CourseClassDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="325">
+          <caret line="21" column="50" lean-forward="false" selection-start-line="21" selection-start-column="20" selection-end-line="21" selection-end-column="50" />
           <folding>
             <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/present/common/dto/PageInfoDto.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/present/classes/dao/CourseClassDao.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="5" column="7" lean-forward="false" selection-start-line="5" selection-start-column="7" selection-end-line="5" selection-end-column="7" />
+        <state relative-caret-position="396">
+          <caret line="18" column="35" lean-forward="false" selection-start-line="18" selection-start-column="35" selection-end-line="18" selection-end-column="35" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="jar://K:/ProgramFile/JAVA JDK/src.zip!/java/lang/reflect/Field.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/present/sign/package-info.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="96">
-          <caret line="1113" column="7" lean-forward="false" selection-start-line="1113" selection-start-column="7" selection-end-line="1113" selection-end-column="7" />
+        <state relative-caret-position="66">
+          <caret line="3" column="25" lean-forward="true" selection-start-line="3" selection-start-column="25" selection-end-line="3" selection-end-column="25" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="jar://K:/ProgramFile/JAVA JDK/src.zip!/java/util/UUID.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/present/common/util/MyStringUtil.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1012">
-          <caret line="69" column="19" lean-forward="false" selection-start-line="69" selection-start-column="19" selection-end-line="69" selection-end-column="19" />
+        <state relative-caret-position="-2131">
+          <caret line="13" column="27" lean-forward="true" selection-start-line="13" selection-start-column="27" selection-end-line="13" selection-end-column="27" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/present/common/plugin/PagePlugin.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/present/common/util/CheckUtil.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="40">
-          <caret line="260" column="26" lean-forward="false" selection-start-line="260" selection-start-column="26" selection-end-line="260" selection-end-column="26" />
+        <state relative-caret-position="1584">
+          <caret line="84" column="0" lean-forward="true" selection-start-line="84" selection-start-column="0" selection-end-line="84" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/present/sign/dao/CourseSignDao.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="179">
+          <caret line="39" column="13" lean-forward="true" selection-start-line="39" selection-start-column="13" selection-end-line="39" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/present/sign/dao/CourseSignDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-291">
+          <caret line="12" column="17" lean-forward="false" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/present/sign/bean/CourseSign.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="31" column="25" lean-forward="false" selection-start-line="31" selection-start-column="25" selection-end-line="31" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/present/sign/bean/SelectCourrseToSign.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="28" column="5" lean-forward="true" selection-start-line="28" selection-start-column="5" selection-end-line="28" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="false" />
-            <marker date="1489723176915" expanded="true" signature="8198:8241" ph="select count... missingValue" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/present/common/plugin/DatePlugin.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/present/sign/bean/SignStartWithClass.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1580">
-          <caret line="101" column="29" lean-forward="false" selection-start-line="101" selection-start-column="29" selection-end-line="101" selection-end-column="29" />
+        <state relative-caret-position="242">
+          <caret line="17" column="14" lean-forward="true" selection-start-line="17" selection-start-column="14" selection-end-line="17" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/present/sign/dao/SignStartWithClassDao.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="157">
+          <caret line="52" column="13" lean-forward="true" selection-start-line="52" selection-start-column="13" selection-end-line="52" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/present/sign/dao/SignStartWithClassDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="550">
+          <caret line="31" column="7" lean-forward="true" selection-start-line="31" selection-start-column="7" selection-end-line="31" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/present/sign/service/SelectCourseToSign.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-85">
+          <caret line="23" column="32" lean-forward="true" selection-start-line="23" selection-start-column="32" selection-end-line="23" selection-end-column="32" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#1365#1373#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/present/sign/bean/StudentSign.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="284">
+          <caret line="21" column="22" lean-forward="true" selection-start-line="21" selection-start-column="22" selection-end-line="21" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/present/sign/service/SelectClassToSign.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-71">
+          <caret line="32" column="0" lean-forward="true" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/external-servlet.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/present/sign/dao/StudentSignDao.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
-          <caret line="21" column="27" lean-forward="true" selection-start-line="21" selection-start-column="27" selection-end-line="21" selection-end-column="27" />
+        <state relative-caret-position="298">
+          <caret line="71" column="25" lean-forward="true" selection-start-line="71" selection-start-column="25" selection-end-line="71" selection-end-column="25" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/present/common/annotation/UUID.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/present/sign/dao/StudentSignDao.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="8" column="1" lean-forward="true" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/present/common/annotation/Now.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="10" column="1" lean-forward="true" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/application-context.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-506">
-          <caret line="7" column="45" lean-forward="true" selection-start-line="7" selection-start-column="45" selection-end-line="7" selection-end-column="45" />
-          <folding>
-            <element signature="e#1124#1149#0" expanded="false" />
-            <element signature="e#1192#1205#0" expanded="false" />
-            <element signature="e#1245#1263#0" expanded="false" />
-            <element signature="e#1307#1325#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/present/common/controller/ExternalController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="40" column="37" lean-forward="true" selection-start-line="40" selection-start-column="37" selection-end-line="40" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/present/common/util/MessageUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-          <folding>
-            <element signature="e#362#363#0" expanded="false" />
-            <element signature="e#402#403#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="239">
-          <caret line="169" column="38" lean-forward="true" selection-start-line="169" selection-start-column="38" selection-end-line="169" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/present/common/dao/PropertiesUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="25">
-          <caret line="9" column="7" lean-forward="true" selection-start-line="9" selection-start-column="7" selection-end-line="9" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/config.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="356">
-          <caret line="19" column="20" lean-forward="true" selection-start-line="19" selection-start-column="20" selection-end-line="19" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/present/common/dao/CacheDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1848">
-          <caret line="90" column="9" lean-forward="false" selection-start-line="90" selection-start-column="9" selection-end-line="90" selection-end-column="9" />
+        <state relative-caret-position="237">
+          <caret line="50" column="26" lean-forward="true" selection-start-line="50" selection-start-column="26" selection-end-line="50" selection-end-column="26" />
           <folding>
             <element signature="imports" expanded="false" />
           </folding>
@@ -1585,108 +1174,149 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/present/common/util/StringUtil.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="237">
-          <caret line="60" column="46" lean-forward="true" selection-start-line="60" selection-start-column="46" selection-end-line="60" selection-end-column="46" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/redis.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="8" column="57" lean-forward="false" selection-start-line="8" selection-start-column="57" selection-end-line="8" selection-end-column="57" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/present/common/util/MyStringUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="43" column="6" lean-forward="true" selection-start-line="43" selection-start-column="6" selection-end-line="43" selection-end-column="6" />
+        <state relative-caret-position="44">
+          <caret line="51" column="4" lean-forward="false" selection-start-line="51" selection-start-column="4" selection-end-line="51" selection-end-column="4" />
           <folding>
             <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/present/login/dto/TeacherLoginSuccessDto.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/present/common/controller/ExternalController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="237">
-          <caret line="72" column="0" lean-forward="true" selection-start-line="72" selection-start-column="0" selection-end-line="72" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/present/login/dao/TeacherDao.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="4" column="48" lean-forward="false" selection-start-line="4" selection-start-column="48" selection-end-line="4" selection-end-column="48" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/present/login/bean/Teacher.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="262">
-          <caret line="50" column="30" lean-forward="true" selection-start-line="50" selection-start-column="30" selection-end-line="50" selection-end-column="30" />
+        <state relative-caret-position="260">
+          <caret line="52" column="20" lean-forward="false" selection-start-line="52" selection-start-column="20" selection-end-line="52" selection-end-column="20" />
           <folding>
-            <element signature="e#620#621#0" expanded="true" />
-            <element signature="e#662#663#0" expanded="true" />
-            <element signature="e#696#697#0" expanded="true" />
+            <marker date="1490011954786" expanded="false" signature="47:965" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/present/classes/service/GetClassesUnderCourse.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="157">
+          <caret line="44" column="45" lean-forward="true" selection-start-line="44" selection-start-column="45" selection-end-line="44" selection-end-column="45" />
+          <folding>
+            <element signature="e#1475#1490#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/present/course/service/TeacherGetAllCourse.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="50">
+          <caret line="31" column="75" lean-forward="false" selection-start-line="31" selection-start-column="75" selection-end-line="31" selection-end-column="75" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/present/sign/service/GetTheSignInfoBySignCourseId.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="50">
+          <caret line="34" column="96" lean-forward="false" selection-start-line="34" selection-start-column="96" selection-end-line="34" selection-end-column="96" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/present/login/service/StudentLoginService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="113">
+          <caret line="44" column="82" lean-forward="false" selection-start-line="44" selection-start-column="82" selection-end-line="44" selection-end-column="82" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#1591#1600#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="110">
+          <caret line="59" column="16" lean-forward="false" selection-start-line="59" selection-start-column="16" selection-end-line="59" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-330">
+          <caret line="15" column="11" lean-forward="false" selection-start-line="15" selection-start-column="11" selection-end-line="15" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/application-context.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="7" column="56" lean-forward="false" selection-start-line="7" selection-start-column="56" selection-end-line="7" selection-end-column="56" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-context/4.3.7.RELEASE/spring-context-4.3.7.RELEASE.jar!/org/springframework/stereotype/Repository.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="164">
+          <caret line="18" column="18" lean-forward="false" selection-start-line="18" selection-start-column="18" selection-end-line="18" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/present/login/service/TeacherLoginService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="32" column="19" lean-forward="false" selection-start-line="32" selection-start-column="4" selection-end-line="32" selection-end-column="19" />
+          <folding>
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/present/common/service/TokenApiService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="284">
-          <caret line="40" column="0" lean-forward="true" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/present/login/service/TeacherLoginService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1543">
-          <caret line="81" column="38" lean-forward="true" selection-start-line="81" selection-start-column="38" selection-end-line="81" selection-end-column="38" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="267">
-          <caret line="44" column="45" lean-forward="true" selection-start-line="44" selection-start-column="45" selection-end-line="44" selection-end-column="45" />
+        <state relative-caret-position="218">
+          <caret line="30" column="7" lean-forward="false" selection-start-line="30" selection-start-column="7" selection-end-line="30" selection-end-column="7" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/present/login/dao/TeacherDao.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/present/common/dao/CacheDao.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="347">
-          <caret line="55" column="37" lean-forward="true" selection-start-line="55" selection-start-column="37" selection-end-line="55" selection-end-column="37" />
-          <folding />
+        <state relative-caret-position="88">
+          <caret line="10" column="21" lean-forward="false" selection-start-line="10" selection-start-column="21" selection-end-line="10" selection-end-column="21" />
+          <folding>
+            <element signature="n#!!doc" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/present/common/plugin/PagePlugin.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-308">
+          <caret line="27" column="3" lean-forward="false" selection-start-line="27" selection-start-column="3" selection-end-line="27" selection-end-column="3" />
+          <folding>
+            <element signature="e#5824#5825#0" expanded="false" />
+            <element signature="e#5872#5873#0" expanded="false" />
+            <marker date="1490015140298" expanded="true" signature="8033:8076" ph="select count... missingValue" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/message.properties">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="27" />
+        <state relative-caret-position="44">
+          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/present/login/service/TeacherRegisterService.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/present/common/plugin/DatePlugin.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="333">
-          <caret line="16" column="46" lean-forward="true" selection-start-line="16" selection-start-column="46" selection-end-line="16" selection-end-column="46" />
+        <state relative-caret-position="98">
+          <caret line="28" column="1" lean-forward="true" selection-start-line="28" selection-start-column="1" selection-end-line="28" selection-end-column="1" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="n#!!doc" expanded="false" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#1902#1931#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1761,6 +1391,7 @@
             <option name="proportions">
               <list>
                 <option value="0.2505747" />
+                <option value="0.6" />
               </list>
             </option>
           </splitter-proportions>
@@ -1780,7 +1411,7 @@
       </state>
       <state key="ProjectLibrariesConfigurable.UI">
         <settings>
-          <last-edited>Maven: aopalliance:aopalliance:1.0</last-edited>
+          <last-edited>Maven: c3p0:c3p0:0.9.0</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

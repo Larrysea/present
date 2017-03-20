@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://www.mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.present.sign.dao.StudentSignDao">
+    <resultMap type="com.present.sign.dao.StudentSign" id="studentSignMap">
+        <!-- 学生签到的id -->
+        <id column="id" property="id"/>
+        <!-- 课程发起签到id -->
+        <result column="course_sign_id" property="courseSignId"/>
+        <!-- 学生id -->
+        <result column="student_sign_id" property="studentSignId"/>
+        <!-- 签到时间 -->
+        <result column="sign_time" property="signTime"/>
+        <!-- 签到状态 -->
+        <result column="sign_state" property="signState"/>
+    </resultMap>
+
+    <!-- 将数据插入数据库中 -->
+    <insert id="insert" parameterType="com.present.sign.dao.StudentSign">
+        INSERT INTO
+        student_sign (
+            id,
+            course_sign_id,
+            student_sign_id,
+            sign_time,
+            sign_state) 
+        VALUES (
+            #{id},
+            #{courseSignId},
+            #{studentSignId},
+            #{signTime},
+            #{signState}) 
+    </insert>
+
+    <!-- 根据key查找数据库中信息 -->
+    <select id="queryByKey" resultMap="studentSignMap">
+        SELECT
+            * 
+        FROM 
+            student_sign 
+        <where>
+            id = #{id} 
+        </where>
+    </select>
+
+    <!-- 根据key更新数据库中信息 -->
+    <update id="updateByKey">
+        Update
+            student_sign
+        <set>
+            <if test = " courseSignId != null ">
+                course_sign_id = #{courseSignId},
+            </if>
+            <if test = " studentSignId != null ">
+                student_sign_id = #{studentSignId},
+            </if>
+            <if test = " signTime != null ">
+                sign_time = #{signTime},
+            </if>
+            <if test = " signState != null ">
+                sign_state = #{signState}
+            </if>
+        </set>
+        <where>
+            id = #{id} 
+        </where>
+    </update>
+
+    <!-- 根据Key删除数据库中信息 -->
+    <delete id="deleteByKey">
+        DELETE FROM
+            student_sign 
+        <where>
+            id = #{id} 
+        </where>
+    </delete>
+
+
+
+
+</mapper>

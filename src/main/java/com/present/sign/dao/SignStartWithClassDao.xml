@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://www.mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.present.sign.dao.SignStartWithClassDao">
+    <resultMap type="com.present.sign.dao.entity.SignStartWithClass" id="signStartWithClassMap">
+        <!-- 选择课程的id -->
+        <id column="id" property="id"/>
+        <!-- 课程发起签到id -->
+        <result column="course_sign_id" property="courseSignId"/>
+        <!-- 班级id -->
+        <result column="class_id" property="classId"/>
+    </resultMap>
+
+    <!-- 将数据插入数据库中 -->
+    <insert id="insert" parameterType="com.present.sign.dao.SignStartWithClass">
+        INSERT INTO
+        sign_start_with_class (
+            id,
+            course_sign_id,
+            class_id) 
+        VALUES (
+            #{id},
+            #{courseSignId},
+            #{classId}) 
+    </insert>
+
+    <!-- 根据key查找数据库中信息 -->
+    <select id="queryByKey" resultMap="signStartWithClassMap">
+        SELECT
+            * 
+        FROM 
+            sign_start_with_class 
+        <where>
+            id = #{id} 
+        </where>
+    </select>
+
+    <!-- 根据key更新数据库中信息 -->
+    <update id="updateByKey">
+        Update
+            sign_start_with_class
+        <set>
+            <if test = " courseSignId != null ">
+                course_sign_id = #{courseSignId},
+            </if>
+            <if test = " classId != null ">
+                class_id = #{classId}
+            </if>
+        </set>
+        <where>
+            id = #{id} 
+        </where>
+    </update>
+
+    <!-- 根据Key删除数据库中信息 -->
+    <delete id="deleteByKey">
+        DELETE FROM
+            sign_start_with_class 
+        <where>
+            id = #{id} 
+        </where>
+    </delete>
+</mapper>

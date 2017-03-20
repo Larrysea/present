@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://www.mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.present.courseList.dao.CourseDao">
+    <resultMap type="com.present.courseList.bean.Course" id="courseMap">
+        <!-- 课程id -->
+        <id column="Id" property="Id"/>
+        <!-- 课程名 -->
+        <result column="course_name" property="courseName"/>
+    </resultMap>
+
+    <!-- 将数据插入数据库中 -->
+    <insert id="insert" parameterType="com.present.courseList.bean.Course">
+        INSERT INTO
+        courseList (
+        Id,
+        course_name)
+        VALUES (
+        #{Id},
+        #{courseName})
+    </insert>
+
+    <!-- 根据key查找数据库中信息 -->
+    <select id="queryByKey" resultMap="courseMap">
+        SELECT
+        *
+        FROM
+        courseList
+        <where>
+            Id = #{Id}
+        </where>
+    </select>
+
+    <!-- 根据key更新数据库中信息 -->
+    <update id="updateByKey">
+        Update
+        courseList
+        <set>
+            <if test=" courseName != null ">
+                course_name = #{courseName}
+            </if>
+        </set>
+        <where>
+            Id = #{Id}
+        </where>
+    </update>
+
+    <!-- 根据Key删除数据库中信息 -->
+    <delete id="deleteByKey">
+        DELETE FROM
+        courseList
+        <where>
+            Id = #{Id}
+        </where>
+    </delete>
+
+    <!-- 根据课程名获取课程的id信息 -->
+    <select id="queryIdByCourseName" resultMap="courseMap">
+        SELECT
+        *
+        FROM
+        courseList
+        <where>
+            course_name = #{course_name}
+        </where>
+    </select>
+
+</mapper>
