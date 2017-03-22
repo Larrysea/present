@@ -10,6 +10,8 @@ package com.present.student.dao;
 
 import com.present.student.baen.Student;
 
+import java.util.List;
+
 public interface StudentDao
 {
     /**
@@ -56,11 +58,22 @@ public interface StudentDao
     /**
      * 学生用户登录
      *
-     * @param schoolId      学校id
-     * @param studentNumber   手机号
-     * @param password      密码
+     * @param schoolId         学校id
+     * @param studentNumber    手机号
+     * @param password         密码
      * @return
      */
     Student studentLogin(String schoolId,String  studentNumber,String password);
+
+
+
+
+    /**
+     *
+     * 批量插入用户列表
+     *
+     * @param studentList
+     */
+    void insertStudentList(List<Student> studentList);
 
 }

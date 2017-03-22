@@ -27,79 +27,90 @@
     <insert id="insert" parameterType="com.present.student.bean.Student">
         INSERT INTO
         student (
-            id,
-            name,
-            password,
-            phone,
-            sexual,
-            portrait_url,
-            imel,
-            mail,
-            student_number) 
+        id,
+        name,
+        password,
+        phone,
+        sexual,
+        portrait_url,
+        imel,
+        mail,
+        student_number)
         VALUES (
-            #{id},
-            #{name},
-            #{password},
-            #{phone},
-            #{sexual},
-            #{portraitUrl},
-            #{imel},
-            #{mail},
-            #{studentNumber}) 
+        #{id},
+        #{name},
+        #{password},
+        #{phone},
+        #{sexual},
+        #{portraitUrl},
+        #{imel},
+        #{mail},
+        #{studentNumber})
     </insert>
 
     <!-- 根据key查找数据库中信息 -->
     <select id="queryByKey" resultMap="studentMap">
         SELECT
-            * 
-        FROM 
-            student 
+        *
+        FROM
+        student
         <where>
-            id = #{id} 
+            id = #{id}
         </where>
     </select>
 
     <!-- 根据key更新数据库中信息 -->
     <update id="updateByKey">
         Update
-            student
+        student
         <set>
-            <if test = " name != null ">
+            <if test=" name != null ">
                 name = #{name},
             </if>
-            <if test = " password != null ">
+            <if test=" password != null ">
                 password = #{password},
             </if>
-            <if test = " phone != null ">
+            <if test=" phone != null ">
                 phone = #{phone},
             </if>
-            <if test = " sexual != null ">
+            <if test=" sexual != null ">
                 sexual = #{sexual},
             </if>
-            <if test = " portraitUrl != null ">
+            <if test=" portraitUrl != null ">
                 portrait_url = #{portraitUrl},
             </if>
-            <if test = " imel != null ">
+            <if test=" imel != null ">
                 imel = #{imel},
             </if>
-            <if test = " mail != null ">
+            <if test=" mail != null ">
                 mail = #{mail},
             </if>
-            <if test = " studentNumber != null ">
+            <if test=" studentNumber != null ">
                 student_number = #{studentNumber}
             </if>
         </set>
         <where>
-            id = #{id} 
+            id = #{id}
         </where>
     </update>
 
     <!-- 根据Key删除数据库中信息 -->
     <delete id="deleteByKey">
         DELETE FROM
-            student 
+        student
         <where>
-            id = #{id} 
+            id = #{id}
         </where>
     </delete>
+
+   <!-- mybatis批量插入数据-->
+    <insert id="insertUserList" parameterType="java.util.List">
+        INSERT
+        INTO
+        student (student_number, name)
+        values
+        <foreach collection="list" item="item" index="index" separator=",">
+            (#{item.studentNumber}, #{item.name})
+        </foreach>
+    </insert>
 </mapper>
