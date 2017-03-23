@@ -19,63 +19,80 @@
     <insert id="insert" parameterType="com.present.sign.dao.StudentSign">
         INSERT INTO
         student_sign (
-            id,
-            course_sign_id,
-            student_sign_id,
-            sign_time,
-            sign_state) 
+        id,
+        course_sign_id,
+        student_sign_id,
+        sign_time,
+        sign_state)
         VALUES (
-            #{id},
-            #{courseSignId},
-            #{studentSignId},
-            #{signTime},
-            #{signState}) 
+        #{id},
+        #{courseSignId},
+        #{studentSignId},
+        #{signTime},
+        #{signState})
     </insert>
 
     <!-- 根据key查找数据库中信息 -->
     <select id="queryByKey" resultMap="studentSignMap">
         SELECT
-            * 
-        FROM 
-            student_sign 
+        *
+        FROM
+        student_sign
         <where>
-            id = #{id} 
+            id = #{id}
         </where>
     </select>
 
     <!-- 根据key更新数据库中信息 -->
     <update id="updateByKey">
         Update
-            student_sign
+        student_sign
         <set>
-            <if test = " courseSignId != null ">
+            <if test=" courseSignId != null ">
                 course_sign_id = #{courseSignId},
             </if>
-            <if test = " studentSignId != null ">
+            <if test=" studentSignId != null ">
                 student_sign_id = #{studentSignId},
             </if>
-            <if test = " signTime != null ">
+            <if test=" signTime != null ">
                 sign_time = #{signTime},
             </if>
-            <if test = " signState != null ">
+            <if test=" signState != null ">
                 sign_state = #{signState}
             </if>
         </set>
         <where>
-            id = #{id} 
+            id = #{id}
         </where>
     </update>
 
     <!-- 根据Key删除数据库中信息 -->
     <delete id="deleteByKey">
         DELETE FROM
-            student_sign 
+        student_sign
         <where>
-            id = #{id} 
+            id = #{id}
         </where>
     </delete>
 
+    <!--修改某个学生的签到状态-->
+    <update id="changeStudentSignState">
 
+        Update
+        student_sign
+        <set>
+            <if test=" signState != null ">
+                sign_state = #{signState},
+            </if>
+        </set>
+        <where>
+            course_id = #{courseId}
+            AND
+            student_id= #{studentId}
+        </where>
+
+
+    </update>
 
 
 </mapper>

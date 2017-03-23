@@ -36,7 +36,7 @@ public class ExternalController{
 	 * @throws IOException 
 	 */
 	@SuppressWarnings({ "rawtypes" })
-	@RequestMapping(value = "/{service}")
+	@RequestMapping(value = "/externalservice/{service}")
 	@ResponseBody
 	public String executeExternalService( @PathVariable String service, @RequestBody  String params,
 			HttpServletRequest request, HttpServletResponse response) throws IOException

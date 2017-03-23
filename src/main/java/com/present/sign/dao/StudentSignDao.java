@@ -53,5 +53,15 @@ public interface StudentSignDao
      */
     List<StudentSign> getStudentSignInfoList(String courseSignId);
 
+
+
+    /**
+     * 修改学生的签到状态
+     * @param courseSignId   课程签到id
+     * @param studentId      学生id
+     * @param signState      签到状态
+     */
+    void changeStudentSignState(String courseSignId,String studentId,String signState);
+
 }
 

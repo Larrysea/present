@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://www.mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.present.student.dao.ClassStudentDao">
+    <resultMap type="com.present.student.dao.ClassStudent" id="classStudentMap">
+        <!-- 班级学生表的id -->
+        <id column="id" property="id"/>
+        <!-- 班级id -->
+        <result column="class_id" property="classId"/>
+        <!-- 学生id -->
+        <result column="student_id" property="studentId"/>
+    </resultMap>
+
+    <!-- 将数据插入数据库中 -->
+    <insert id="insert" parameterType="com.present.student.dao.ClassStudent">
+        INSERT INTO
+        class_student (
+            id,
+            class_id,
+            student_id) 
+        VALUES (
+            #{id},
+            #{classId},
+            #{studentId}) 
+    </insert>
+
+    <!-- 根据key查找数据库中信息 -->
+    <select id="queryByKey" resultMap="classStudentMap">
+        SELECT
+            * 
+        FROM 
+            class_student 
+        <where>
+            id = #{id} 
+        </where>
+    </select>
+
+    <!-- 根据key更新数据库中信息 -->
+    <update id="updateByKey">
+        Update
+            class_student
+        <set>
+            <if test = " classId != null ">
+                class_id = #{classId},
+            </if>
+            <if test = " studentId != null ">
+                student_id = #{studentId}
+            </if>
+        </set>
+        <where>
+            id = #{id} 
+        </where>
+    </update>
+
+    <!-- 根据Key删除数据库中信息 -->
+    <delete id="deleteByKey">
+        DELETE FROM
+            class_student 
+        <where>
+            id = #{id} 
+        </where>
+    </delete>
+
+
+    <!-- 根据班级id获取班级的所有学生信息 -->
+    <select id="queryStudentIdOfOneClass" resultMap="classStudentMap">
+        SELECT
+        id,
+        name,
+        phone,
+        sexual,
+        portrait_url,
+        imel,
+        mail,
+        student_number,
+        class
+        FROM
+        class_student
+        INNER
+        JOIN
+        student
+        ON
+        student.id=class_student.student_id
+    </select>
+
+
+</mapper>

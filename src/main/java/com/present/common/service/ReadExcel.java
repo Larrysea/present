@@ -1,11 +1,14 @@
 package com.present.common.service;
 
+import com.alibaba.fastjson.JSONObject;
+import com.present.common.dto.ResponseDto;
 import com.present.common.util.POIUtil;
 import com.present.student.baen.Student;
 import com.present.student.dao.StudentDao;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
@@ -23,6 +26,7 @@ import java.util.Map;
  * <p>
  * 读取excel
  */
+@Service("readExcel")
 public class ReadExcel {
 
 
@@ -38,6 +42,7 @@ public class ReadExcel {
      */
     @RequestMapping("/readExcel")
     public void readExcel(@RequestParam(value = "excelFile") MultipartFile excelFile, HttpServletRequest req, HttpServletResponse resp) {
+        logger.info("在readExcel 方法中");
         List<Student> allUsers = new ArrayList<Student>();
         try {
             List<String[]> userList = POIUtil.readExcel(excelFile);
@@ -53,4 +58,6 @@ public class ReadExcel {
         }
         studentDao.insertStudentList(allUsers);
     }
+
+
 }
