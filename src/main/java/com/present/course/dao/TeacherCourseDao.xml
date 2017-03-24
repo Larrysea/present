@@ -2,7 +2,7 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://www.mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="com.present.courseList.dao.TeacherCourseDao">
-    <resultMap type="com.present.courseList.dao.entity.TeacherCourse" id="teacherCourseMap">
+    <resultMap type="com.present.courseList.dao.TeacherCourse" id="teacherCourseMap">
         <!-- 老师课程数据id -->
         <id column="id" property="id"/>
         <!-- 老师id -->

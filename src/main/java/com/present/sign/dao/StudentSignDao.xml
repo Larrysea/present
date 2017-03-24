@@ -84,15 +84,40 @@
             <if test=" signState != null ">
                 sign_state = #{signState},
             </if>
+            <if test=" signTime !=null">
+                sign_time=#{signTime}
+            </if>
         </set>
         <where>
             course_id = #{courseId}
             AND
             student_id= #{studentId}
         </where>
-
-
     </update>
+
+
+    <!-- 根据key查找数据库中信息 -->
+    <select id="queryCourseSignInfoDto" resultMap="studentSignMap">
+        SELECT
+        sign_state,
+        sign_time
+        FROM
+        student_sign
+        <where>
+        course_sign_id IN
+        (
+        SELECT
+        id
+        FROM
+        course_sign
+        </where>
+        course_id = #{courseId}
+        )
+        AND
+        student_id =#{studentId}
+        ORDER BY
+        sign_time
+    </select>
 
 
 </mapper>

@@ -9,7 +9,10 @@ package com.present.sign.dao;
 
 
 import com.present.sign.bean.StudentSign;
+import com.present.sign.dto.CourseSignInfoDto;
+import com.present.sign.dto.StudentSignInfoDto;
 
+import java.util.Date;
 import java.util.List;
 
 public interface StudentSignDao
@@ -39,14 +42,15 @@ public interface StudentSignDao
 
     /**
      * 根据key删除数据库中信息
-     * 
+     *
      * @param id 删除的数据信息
      * @return 删除数据的行数
      */
     int deleteByKey(String id);
 
     /**
-     * 根据课程签到id
+     * 根据课程签到id获取学生考勤信息
+     * 也就是查看某一次课程签到的所有学生考勤信息
      *
      * @param courseSignId
      * @return  返回学生签到情况列表
@@ -59,9 +63,21 @@ public interface StudentSignDao
      * 修改学生的签到状态
      * @param courseSignId   课程签到id
      * @param studentId      学生id
+     * @param signTime       签到时间
      * @param signState      签到状态
      */
-    void changeStudentSignState(String courseSignId,String studentId,String signState);
+    void changeStudentSignState(String courseSignId, String studentId, Date signTime,String signState);
+
+
+    /**
+     * 查询学生的某个课程所有签到信息dto
+     *
+     * @param courseId
+     * @param studentId
+     * @return
+     */
+    List<CourseSignInfoDto>   queryCourseSignInfoDto(String courseId,String studentId);
+
 
 }
 

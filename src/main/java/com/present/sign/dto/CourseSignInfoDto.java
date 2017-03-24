@@ -1,57 +1,42 @@
 package com.present.sign.dto;
 
-import com.present.sign.bean.CourseSign;
-import com.present.sign.bean.StudentSign;
-
-import java.util.Date;
-import java.util.List;
-
 /**
- * Created by Larry-sea on 2017/3/21.
+ * Created by Larry-sea on 2017/3/24.
  *
+ * 某次课程签到信息的dto，其中包括签到状态和签到时间
  *
+ * 代表的是学生某次课程的签到记录信息
  *
- * 老师获取某门课程的签到dto
  */
 public class CourseSignInfoDto {
 
-    /*
-    * 总的签到次数
-    * */
-    int signCount;
-    /*
-    * 每个学生的签到记录
-    * */
-    List<StudentSign> studentSignList;
+    /**
+     * 学生的签到状态
+     */
+    String signState;
+
 
     /**
-     * 签到课程信息
+     *
+     * 签到时间
      *
      */
-    CourseSign courseSign;
+    String signTime;
 
 
-    public int getSignCount() {
-        return signCount;
+    public String getSignState() {
+        return signState;
     }
 
-    public void setSignCount(int signCount) {
-        this.signCount = signCount;
+    public void setSignState(String signState) {
+        this.signState = signState;
     }
 
-    public List<StudentSign> getStudentSignList() {
-        return studentSignList;
+    public String getSignTime() {
+        return signTime;
     }
 
-    public void setStudentSignList(List<StudentSign> studentSignList) {
-        this.studentSignList = studentSignList;
-    }
-
-    public CourseSign getCourseSign() {
-        return courseSign;
-    }
-
-    public void setCourseSign(CourseSign courseSign) {
-        this.courseSign = courseSign;
+    public void setSignTime(String signTime) {
+        this.signTime = signTime;
     }
 }
