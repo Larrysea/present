@@ -1,10 +1,10 @@
 package com.present.common.util;
 
-import org.apache.commons.lang.StringUtils;
-
 import java.io.PrintWriter;
 import java.io.StringWriter;
 import java.util.UUID;
+
+import org.apache.commons.lang.StringUtils;
 
 public class StringUtil extends StringUtils
 {
@@ -38,7 +38,7 @@ public class StringUtil extends StringUtils
     /**
      * 异常PrintStraceString输出字符串
      * 
-     * @param e 异常
+     * @param Throwable 异常
      * @return字符串
      */
     public static String getPrintStraceString(Throwable e)

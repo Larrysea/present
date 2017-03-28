@@ -6,31 +6,31 @@ import com.present.common.exception.ExternalServiceException;
 import com.present.common.service.BaseService;
 import com.present.common.util.CheckUtil;
 import com.present.common.util.MessageUtil;
-import com.present.student.baen.Student;
+import com.present.login.dto.StudentLoginSuccessDto;
+import com.present.student.bean.Student;
 import com.present.student.dao.StudentDao;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.xml.ws.Response;
 
 /**
  * Created by Larry-sea on 2017/3/18.
- *
+ * <p>
  * 学生用户登录
  */
-public class StudentLoginService extends BaseService<Student> {
+@Service("studentLogin")
+public class StudentLoginService extends BaseService<StudentLoginSuccessDto> {
 
 
     @Autowired
     StudentDao studentDao;
 
     @Override
-    public ResponseDto<Student> process(JSONObject params, HttpServletRequest request, HttpServletResponse response) {
-        CheckUtil.checkEmpty(params, params.getString("studentNumber"), params.getString("password"));
-
-
-        return super.process(params, request, response);
+    public ResponseDto<StudentLoginSuccessDto> process(JSONObject params, HttpServletRequest request, HttpServletResponse response) {
+        CheckUtil.checkEmpty(params, "schoolId", "studentNumber", "password");
+        return studentLogin(params.getString("schoolId"), params.getString("studentNumber"), params.getString("password"));
     }
 
 
@@ -42,15 +42,43 @@ public class StudentLoginService extends BaseService<Student> {
      * @param password      用户登录密码
      * @return
      */
-    public ResponseDto<Student> studentLogin(String schoolId, String studentNumber, String password) {
-        String result = studentDao.isVaildUser(studentNumber, schoolId);
+    public ResponseDto<StudentLoginSuccessDto> studentLogin(String schoolId, String studentNumber, String password) {
+        String result = studentDao.isValidUser(studentNumber, password, schoolId);
         if (result == null) {
             throw new ExternalServiceException(MessageUtil.getMessageInfoByKey("student.isValidAccount"));
         }
-        ResponseDto<Student> responseDto = new ResponseDto<Student>();
-        Student student = studentDao.studentLogin(schoolId, studentNumber, password);
-        responseDto.setData(student);
+        ResponseDto<StudentLoginSuccessDto> responseDto = new ResponseDto<StudentLoginSuccessDto>();
+        StudentLoginSuccessDto studentLoginSuccessDto = converStudentToStudentLoginSuccessDto(studentDao.studentLogin(schoolId, studentNumber, password));
+        responseDto.setData(studentLoginSuccessDto);
         return responseDto;
     }
 
+
+    /**
+     * 将学生实体转化为学生登录的dto
+     * 其中省略了密码项
+     *
+     * @param student
+     * @return
+     */
+    private StudentLoginSuccessDto converStudentToStudentLoginSuccessDto(final Student student) {
+        final StudentLoginSuccessDto studentLoginSuccessDto;
+        if (student != null) {
+            studentLoginSuccessDto = new StudentLoginSuccessDto();
+            studentLoginSuccessDto.setId(student.getId());
+            studentLoginSuccessDto.setImel(student.getImel());
+            studentLoginSuccessDto.setMail(student.getMail());
+            studentLoginSuccessDto.setName(student.getName());
+            studentLoginSuccessDto.setPhone(student.getPhone());
+            studentLoginSuccessDto.setPortraitUrl(student.getPortraitUrl());
+            studentLoginSuccessDto.setSexual(student.getSexual());
+            studentLoginSuccessDto.setStudentNumber(student.getStudentNumber());
+            studentLoginSuccessDto.setSchoolId(student.getSchoolId());
+
+        } else {
+            throw new IllegalArgumentException("student cant empty");
+        }
+
+        return studentLoginSuccessDto;
+    }
 }

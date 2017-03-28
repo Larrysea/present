@@ -1,6 +1,7 @@
 package com.present.login.dao;
 
 import com.present.login.bean.Teacher;
+import org.apache.ibatis.annotations.Param;
 
 
 /**
@@ -46,13 +47,13 @@ public interface TeacherDao {
      * @param password 用户密码
      * @return
      */
-    Teacher login(String userName, String password);
+    Teacher login(@Param("userName") String userName,@Param("password") String password);
 
 
     /**
      * @param phone
      * @return
      */
-    int isValidAccount(String phone);
+    int isValidAccount(@Param("phone")String phone);
 
 }

@@ -10,6 +10,7 @@ import com.present.sign.dao.StudentSignDao;
 import com.sun.xml.internal.bind.v2.TODO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Configurable;
+import org.springframework.stereotype.Service;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -18,10 +19,11 @@ import java.util.Date;
 /**
  * Created by Larry-sea on 2017/3/23.
  * <p>
- * 学生签到接口和学生修改签到状态接口
+ * 学生签到接口和老师修改学生签到状态接口
  * <p>
  * 当是学生
  */
+@Service("changeStudentSignState")
 public class ChangeStudentSignService extends BaseService {
 
 
@@ -37,7 +39,7 @@ public class ChangeStudentSignService extends BaseService {
      */
     @Override
     public ResponseDto process(JSONObject params, HttpServletRequest request, HttpServletResponse response) {
-        CheckUtil.checkEmpty(params, params.getString("courseId"), params.getString("studentId"), params.getString("signTime"), params.getString("changeType"));
+        CheckUtil.checkEmpty(params, "courseId", "studentId", "signTime", "changeType");
         if (null != params.getString("signType")) {
 
             //学生签到

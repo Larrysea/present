@@ -9,6 +9,7 @@ package com.present.classes.dao;
 
 
 import com.present.classes.bean.Classes;
+import org.apache.ibatis.annotations.Param;
 
 public interface ClassesDao
 {
@@ -45,12 +46,12 @@ public interface ClassesDao
 
     /**
      *
-     * 更具班级名称和学校id查询是否存在这个班级
-     * @param classesName
-     * @param schoolId
-     * @return
+     * 根据班级名称和学校id查询是否存在这个班级
+     * @param classesName   班级名称
+     * @param schoolId      学校id
+     * @return   如果查询到返回学校id
      */
-    String queryIdByClassesNameAndSchoolId(String classesName,String schoolId);
+    String queryIdByClassesNameAndSchoolId(@Param("className") String classesName,@Param("schoolId") String schoolId);
 
 
 }

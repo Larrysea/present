@@ -11,6 +11,7 @@ package com.present.sign.dao;
 import com.present.sign.bean.StudentSign;
 import com.present.sign.dto.CourseSignInfoDto;
 import com.present.sign.dto.StudentSignInfoDto;
+import org.apache.ibatis.annotations.Param;
 
 import java.util.Date;
 import java.util.List;
@@ -55,7 +56,7 @@ public interface StudentSignDao
      * @param courseSignId
      * @return  返回学生签到情况列表
      */
-    List<StudentSign> getStudentSignInfoList(String courseSignId);
+    List<StudentSign> getStudentSignInfoList(@Param("courseId")String courseSignId);
 
 
 
@@ -66,7 +67,7 @@ public interface StudentSignDao
      * @param signTime       签到时间
      * @param signState      签到状态
      */
-    void changeStudentSignState(String courseSignId, String studentId, Date signTime,String signState);
+    void changeStudentSignState(@Param("courseSignId") String courseSignId,@Param("studentId") String studentId,@Param("signTime") Date signTime,@Param("signState") String signState);
 
 
     /**
@@ -76,7 +77,7 @@ public interface StudentSignDao
      * @param studentId
      * @return
      */
-    List<CourseSignInfoDto>   queryCourseSignInfoDto(String courseId,String studentId);
+    List<CourseSignInfoDto>   queryCourseSignInfoDto(@Param("courseId")String courseId,@Param("studentId") String studentId);
 
 
 }

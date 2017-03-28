@@ -8,8 +8,9 @@
 package com.present.student.dao;
 
 
-import com.present.student.baen.ClassStudent;
-import com.present.student.baen.Student;
+import com.present.student.bean.ClassStudent;
+import com.present.student.bean.Student;
+import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
 
@@ -52,5 +53,5 @@ public interface ClassStudentDao
      * @param classId
      * @return
      */
-    List<Student> queryStudentIdOfOneClass(String classId);
+    List<Student> queryStudentIdOfOneClass(@Param("classId")String classId);
 }

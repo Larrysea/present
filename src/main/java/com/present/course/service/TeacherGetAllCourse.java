@@ -9,6 +9,7 @@ import com.present.common.util.MessageUtil;
 import com.present.course.bean.Course;
 import com.present.course.dao.TeacherCourseDao;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -20,6 +21,7 @@ import java.util.List;
  * <p>
  * 老师获取所有课程
  */
+@Service("teacherGetAllCourse")
 public class TeacherGetAllCourse extends BaseService<List<Course>> {
 
     @Autowired
@@ -30,11 +32,7 @@ public class TeacherGetAllCourse extends BaseService<List<Course>> {
         CheckUtil.checkEmpty(params, "teacherId");
         List<Course> arrayList = teacherCourseDao.queryCourseByTeacherId(params.getString("teacherId"));
         ResponseDto<List<Course>> responseDto = new ResponseDto<List<Course>>();
-        if (null != arrayList) {
-            responseDto.setData(arrayList);
-        } else {
-            throw new ExternalServiceException(MessageUtil.getMessageInfoByKey("course.noCourseYet"));
-        }
+        responseDto.setData(arrayList);
         return responseDto;
     }
 }

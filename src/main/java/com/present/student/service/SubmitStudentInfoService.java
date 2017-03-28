@@ -4,9 +4,10 @@ import com.alibaba.fastjson.JSONObject;
 import com.present.common.dto.ResponseDto;
 import com.present.common.service.BaseService;
 import com.present.common.util.CheckUtil;
-import com.present.student.baen.Student;
+import com.present.student.bean.Student;
 import com.present.student.dao.StudentDao;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -17,6 +18,8 @@ import javax.servlet.http.HttpServletResponse;
  * 提交学生的详细信息
  *
  */
+
+@Service("submitStudentInfo")
 public class SubmitStudentInfoService extends BaseService{
 
     @Autowired

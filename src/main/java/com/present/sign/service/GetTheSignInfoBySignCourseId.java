@@ -30,15 +30,10 @@ public class GetTheSignInfoBySignCourseId extends BaseService<List<StudentSign>>
 
     @Override
     public ResponseDto<List<StudentSign>> process(JSONObject params, HttpServletRequest request, HttpServletResponse response) {
-        CheckUtil.checkEmpty(params, params.getString("courseSignId"));
+        CheckUtil.checkEmpty(params, "courseSignId");
         List<StudentSign> studentSignList = studentSignDao.getStudentSignInfoList(params.getString("courseSignId"));
         ResponseDto<List<StudentSign>> studentSignResponseDto = new ResponseDto<List<StudentSign>>();
-        if (null != studentSignList) {
-            studentSignResponseDto.setData(studentSignList);
-        } else {
-            throw new ExternalServiceException(MessageUtil.getMessageInfoByKey("sign.noSignData"));
-        }
-
+        studentSignResponseDto.setData(studentSignList);
         return studentSignResponseDto;
     }
 

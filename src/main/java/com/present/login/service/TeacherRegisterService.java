@@ -32,7 +32,7 @@ public class TeacherRegisterService extends BaseService {
 
     @Override
     public ResponseDto process(JSONObject params, HttpServletRequest request, HttpServletResponse response) {
-        CheckUtil.checkEmpty(params, params.getString("token"), params.getString("name"), params.getString("password"), params.getString("school_id"), params.getString("mail"), params.getString("phone"));
+        CheckUtil.checkEmpty(params, "token", "name", "password", "school_id", "mail", "phone");
         tokenApiService.checkToken(params.getString("token"));
         int result = teacherDao.isValidAccount(params.getString("phone"));
         //账号已经存在

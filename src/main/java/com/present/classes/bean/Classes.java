@@ -7,6 +7,8 @@
  */
 package com.present.classes.bean;
 
+import com.present.common.annotation.UUID;
+
 /**
  *
  * @ClassName: Classes
@@ -17,6 +19,7 @@ public class Classes
     /**
      * 班级id
      */
+    @UUID
     private String id;
 
     /**

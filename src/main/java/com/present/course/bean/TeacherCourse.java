@@ -1,6 +1,8 @@
 
 package com.present.course.bean;
 
+import com.present.common.annotation.UUID;
+
 /**
  * @ClassName: TeacherCourse
  * @Description: 数据库表teacher_course对应的entity
@@ -9,6 +11,7 @@ public class TeacherCourse {
     /**
      * 老师课程数据id
      */
+    @UUID
     private String id;
 
     /**

@@ -55,7 +55,7 @@ public class CheckUtil {
         }
         for (String key : keys) {
             String value = params.getString(key);
-            if (StringUtils.isBlank(value)) {
+            if (StringUtil.isBlank(value)) {
                 sb.append(",");
                 sb.append(key);
             }

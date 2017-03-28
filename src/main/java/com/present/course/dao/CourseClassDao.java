@@ -8,8 +8,10 @@
 package com.present.course.dao;
 
 
+import com.present.classes.bean.Classes;
 import com.present.course.bean.Course;
 import com.present.course.bean.CourseClass;
+import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
 
@@ -48,10 +50,22 @@ public interface CourseClassDao
 
 
     /**
-     * 查询学生已经参加的班级id通过
+     * 查询学生已经参加课程通过班级id
      *
      * @param classId   班级id
      * @return          返回课程链表
      */
     List<Course> queryCourseByClassId(String classId);
+
+
+    /**
+     *
+     * 通过老师的id和课程获取下面所对应的班级信息
+     * @param teacherId
+     * @param courseId
+     * @return   返回班级list
+     */
+    List<Classes>    queryClassesByteacherAndCourse(@Param("teacherId") String teacherId, @Param("courseId")String courseId);
+
+
 }

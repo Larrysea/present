@@ -7,6 +7,8 @@
  */
 package com.present.sign.bean;
 
+import com.present.common.annotation.UUID;
+
 /**
  *
  * @ClassName: SignStartWithClass
@@ -17,6 +19,7 @@ public class SignStartWithClass
     /**
      * 选择课程的id
      */
+    @UUID
     private String id;
 
     /**

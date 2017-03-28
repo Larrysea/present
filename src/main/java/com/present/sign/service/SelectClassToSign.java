@@ -2,20 +2,18 @@ package com.present.sign.service;
 
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
-import com.present.classes.bean.Classes;
 import com.present.common.config.Constants;
 import com.present.common.dto.ResponseDto;
 import com.present.common.service.BaseService;
 import com.present.common.util.CheckUtil;
-import com.present.sign.bean.CourseSign;
 import com.present.sign.bean.SignStartWithClass;
 import com.present.sign.bean.StudentSign;
-import com.present.sign.dao.CourseSignDao;
 import com.present.sign.dao.SignStartWithClassDao;
 import com.present.sign.dao.StudentSignDao;
-import com.present.student.baen.Student;
+import com.present.student.bean.Student;
 import com.present.student.dao.ClassStudentDao;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -26,6 +24,8 @@ import java.util.List;
  * <p>
  * 已经确定是那个课程了，现在开始选择班级进行签到
  */
+
+@Service("selectClassToSign")
 public class SelectClassToSign extends BaseService {
 
 
@@ -40,7 +40,7 @@ public class SelectClassToSign extends BaseService {
 
     @Override
     public ResponseDto process(JSONObject params, HttpServletRequest request, HttpServletResponse response) {
-        CheckUtil.checkEmpty(params, params.getString("course_sign_id"), params.getString("classArray"));
+        CheckUtil.checkEmpty(params, "course_sign_id", "classArray");
 
         return selectClassesToSign(params);
     }

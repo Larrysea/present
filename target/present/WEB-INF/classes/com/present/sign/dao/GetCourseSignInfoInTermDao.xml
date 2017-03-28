@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://www.mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.present.sign.dao.GetCourseSignInfoInTerm">
+    <resultMap type="com.present.sign.dto.StudentSignInfoDto" id="courseSignInfoInTermMap">
+        <!--学生学号-->
+        <id column="student_id" property="studentId"/>
+        <!-- 学生姓名 -->
+        <result column="name" property="name"/>
+        <!-- 签到此处 -->
+        <result column="sign" property="sign"/>
+        <!--病假次数-->
+        <result column="sick_leave" property="sickLeave"/>
+        <!--逃课-->
+        <result column="absence" property="absence"/>
+    </resultMap>
+
+
+    <!-- 根据key查找数据库中信息 -->
+    <select id="getCourseSignInfoInTerm" resultMap="courseSignInfoInTermMap">
+        SELECT
+        student_number,
+        NAME,
+        sum(
+        CASE
+        WHEN sign_state = 1 THEN
+        1
+        ELSE
+        0
+        END
+        ) AS sign,
+        sum(
+        CASE
+        WHEN sign_state = 2 THEN
+        1
+        ELSE
+        0
+        END
+        ) AS sick_leave,
+        sum(
+        CASE
+        WHEN sign_state = 3 THEN
+        1
+        ELSE
+        0
+        END
+        ) AS absence
+        FROM
+        student_sign
+        INNER JOIN student ON student.id = student_sign.student_id
+        WHERE
+        student_id IN (
+        SELECT
+        student_id
+        FROM
+        class_student
+        WHERE
+        class_id =#{classId}
+        )
+        AND course_sign_id IN (
+        SELECT
+        id
+        FROM
+        course_sign
+        WHERE
+        teacher_id = #{teacherId}
+        AND course_id = #{courseId}
+        )
+        GROUP BY
+        student_number
+    </select>
+
+
+</mapper>

@@ -35,7 +35,7 @@ public class AddCourseService extends BaseService<Course> {
 
     @Override
     public ResponseDto<Course> process(JSONObject params, HttpServletRequest request, HttpServletResponse response) {
-        CheckUtil.checkEmpty(params, params.getString("course"));
+        CheckUtil.checkEmpty(params, "courseName");
 
         return addCourse(params);
     }
@@ -53,7 +53,7 @@ public class AddCourseService extends BaseService<Course> {
             throw new ExternalServiceException(MessageUtil.getMessageInfoByKey("course.addcourse"));
         }
         Course course = new Course();
-        course.setCourseName(params.getString("course"));
+        course.setCourseName(params.getString("courseName"));
         courseDao.insert(course);
         ResponseDto<Course> courseDto = new ResponseDto<Course>();
         courseDto.setData(course);

@@ -1,9 +1,7 @@
 package com.present.common.service;
 
-import com.alibaba.fastjson.JSONObject;
-import com.present.common.dto.ResponseDto;
 import com.present.common.util.POIUtil;
-import com.present.student.baen.Student;
+import com.present.student.bean.Student;
 import com.present.student.dao.StudentDao;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -17,9 +15,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 /**
  * Created by Larry-sea on 2017/3/21.

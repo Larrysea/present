@@ -4,9 +4,11 @@ import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
 import com.present.common.dto.ResponseDto;
 import com.present.common.service.BaseService;
-import com.present.student.baen.Student;
+import com.present.common.util.CheckUtil;
+import com.present.student.bean.Student;
 import com.present.student.dao.StudentDao;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -16,6 +18,8 @@ import javax.servlet.http.HttpServletResponse;
  * <p>
  * 添加学生信息
  */
+
+@Service("addStudentService")
 public class AddStudentService extends BaseService {
 
     @Autowired
@@ -23,6 +27,7 @@ public class AddStudentService extends BaseService {
 
     @Override
     public ResponseDto process(JSONObject params, HttpServletRequest request, HttpServletResponse response) {
+        CheckUtil.checkEmpty(params,"studentList");
         return super.process(params, request, response);
     }
 
@@ -33,7 +38,7 @@ public class AddStudentService extends BaseService {
      * @param params
      * @return
      */
-    public ResponseDto addStudent(JSONObject params) {
+    public ResponseDto addStudent(final JSONObject params) {
         Student student = new Student();
         JSONObject jsonObject;
         JSONArray jsonArray = params.getJSONArray("studentList");

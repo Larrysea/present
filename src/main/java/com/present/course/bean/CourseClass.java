@@ -7,6 +7,8 @@
  */
 package com.present.course.bean;
 
+import com.present.common.annotation.UUID;
+
 import java.util.Date;
 
 /**
@@ -19,6 +21,7 @@ public class CourseClass
     /**
      * courseClass  表 id
      */
+    @UUID
     private String id;
 
     /**

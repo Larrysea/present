@@ -8,7 +8,9 @@ import com.present.common.dto.ResponseDto;
 import com.present.common.exception.ExternalServiceException;
 import com.present.common.service.BaseService;
 import com.present.common.util.CheckUtil;
+import com.present.common.util.MessageUtil;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -17,9 +19,10 @@ import java.util.List;
 
 /**
  * Created by Larry-sea on 2017/3/18.
- *
+ * <p>
  * 添加班级信息
  */
+@Service("addClasses")
 public class AddClassesService extends BaseService<String> {
 
     @Autowired
@@ -28,33 +31,37 @@ public class AddClassesService extends BaseService<String> {
 
     @Override
     public ResponseDto<String> process(JSONObject params, HttpServletRequest request, HttpServletResponse response) {
-        CheckUtil.checkEmpty(params, params.getString("school_id"));
+        CheckUtil.checkEmpty(params, "schoolId", "className");
 
-        return addClasses(params,params.getString("schoolId"));
+        return addClasses(params);
     }
 
 
     /**
      * 老师添加班级信息
      *
-     * @param params     传入的请求jsonObject
-     * @param schoolId   学校id
-     * @return
+     * @param params 传入的请求jsonObject
+     * @return 返回包含新添加的班级id信息
      */
-    public ResponseDto<String> addClasses(final JSONObject params, final String schoolId) {
-        Classes classes = new Classes();
-        classesDao.queryIdByClassesNameAndSchoolId(params.getString("schoolName"), schoolId);
-        classes.setClassName(params.getString("schoolName"));
-        classes.setSchoolId(schoolId);
-        classesDao.insert(classes);
-        String id = classesDao.queryIdByClassesNameAndSchoolId(params.getString("schoolName"), schoolId);
-        ResponseDto<String> response = new ResponseDto<String>();
-        response.setData(id);
-        return response;
+    public ResponseDto<String> addClasses(final JSONObject params) {
+        String schoolId = params.getString("schoolId");
+        String classId = classesDao.queryIdByClassesNameAndSchoolId(params.getString("className"), schoolId);
+        ResponseDto<String> responseDto;
+        //如果不存在这个班级则添加该班级
+        if (classId == null) {
+            responseDto = new ResponseDto<String>();
+            Classes classes = new Classes();
+            classes.setSchoolId(schoolId);
+            classes.setClassName(params.getString("className"));
+            classesDao.insert(classes);
+            responseDto.setData(classes.getId());
+        }
+        //如果已经存在该班级则抛出异常
+        else {
+            throw new ExternalServiceException(MessageUtil.getMessageInfoByKey("classes.addClasses.alreadyExist"));
+        }
+        return responseDto;
     }
-
-
-
 
 
 }

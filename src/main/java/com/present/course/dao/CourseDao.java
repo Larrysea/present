@@ -2,6 +2,7 @@ package com.present.course.dao;
 
 
 import com.present.course.bean.Course;
+import org.apache.ibatis.annotations.Param;
 
 /**
  *
@@ -48,5 +49,5 @@ public interface CourseDao
      * @param   courseName
      * @return
      */
-    String queryIdByCourseName(String courseName);
+    String queryIdByCourseName(@Param("courseName")String courseName);
 }

@@ -2,13 +2,14 @@ package com.present.classes.service;
 
 import com.alibaba.fastjson.JSONObject;
 import com.present.classes.bean.Classes;
-import com.present.classes.dao.CourseClassDao;
 import com.present.common.dto.ResponseDto;
 import com.present.common.exception.ExternalServiceException;
 import com.present.common.service.BaseService;
 import com.present.common.util.CheckUtil;
 import com.present.common.util.MessageUtil;
+import com.present.course.dao.CourseClassDao;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -19,6 +20,7 @@ import java.util.List;
  * <p>
  * 通过老师id和课程id获取某个课程下面的所有班级
  */
+@Service("getClassesUnderCourse")
 public class GetClassesUnderCourse extends BaseService<List<Classes>> {
 
     @Autowired
@@ -27,7 +29,7 @@ public class GetClassesUnderCourse extends BaseService<List<Classes>> {
 
     @Override
     public ResponseDto<List<Classes>> process(JSONObject params, HttpServletRequest request, HttpServletResponse response) {
-        CheckUtil.checkEmpty(params, params.getString("teacherId"), params.getString("courseId"));
+        CheckUtil.checkEmpty(params, "teacherId", "courseId");
         return getClassUnderCourse(params);
     }
 
@@ -41,12 +43,7 @@ public class GetClassesUnderCourse extends BaseService<List<Classes>> {
         List<Classes> classesList = courseClassDao
                 .queryClassesByteacherAndCourse(params.getString("teacherId"), params.getString("courseId"));
         ResponseDto<List<Classes>> responseDto = new ResponseDto<List<Classes>>();
-        if (null != classesList) {
-            responseDto.setData(classesList);
-
-        } else {
-            throw new ExternalServiceException(MessageUtil.getMessageInfoByKey("classes.noClasses"));
-        }
+        responseDto.setData(classesList);
         return responseDto;
     }
 

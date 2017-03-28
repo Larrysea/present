@@ -8,6 +8,8 @@ package com.present.login.bean;
  * 版权：All rights reserved.
  */
 
+import com.present.common.annotation.UUID;
+
 /**
  *
  * @ClassName: Teacher
@@ -18,6 +20,7 @@ public class Teacher
     /**
      * 用户的唯一id
      */
+    @UUID
     private String id;
 
     /**
