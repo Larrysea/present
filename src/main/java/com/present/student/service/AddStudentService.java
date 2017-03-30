@@ -28,7 +28,7 @@ public class AddStudentService extends BaseService {
     @Override
     public ResponseDto process(JSONObject params, HttpServletRequest request, HttpServletResponse response) {
         CheckUtil.checkEmpty(params,"studentList");
-        return super.process(params, request, response);
+        return addStudent(params);
     }
 
 
@@ -46,6 +46,8 @@ public class AddStudentService extends BaseService {
             jsonObject = (JSONObject) jsonArray.get(position);
             student.setName(jsonObject.getString("name"));
             student.setStudentNumber(jsonObject.getString("studentNumber"));
+            student.setSchoolId(jsonObject.getString("schoolId"));
+            student.setClassId(jsonObject.getString("classId"));
             studentDao.insert(student);
         }
         return new ResponseDto();

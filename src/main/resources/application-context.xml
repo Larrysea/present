@@ -92,4 +92,6 @@
 
     <util:properties id="messageProperties" location="classpath:message.properties" />
 
+
+    <bean class="com.present.common.dao.CacheDao" init-method="init"/>
 </beans>

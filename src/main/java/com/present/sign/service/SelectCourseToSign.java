@@ -27,7 +27,7 @@ public class SelectCourseToSign extends BaseService<String> {
 
     @Override
     public ResponseDto<String> process(JSONObject params, HttpServletRequest request, HttpServletResponse response) {
-        CheckUtil.checkEmpty(params, "courseId", "signStartType");
+        CheckUtil.checkEmpty(params, "courseId", "signStartType","teacherId","validOfTime");
         return selectCourseToSign(params);
     }
 
@@ -41,6 +41,7 @@ public class SelectCourseToSign extends BaseService<String> {
         CourseSign courseSign = new CourseSign();
         courseSign.setCourseId(params.getString("courseId"));
         courseSign.setSignStartType(params.getString("signStartType"));
+
         courseSignDao.insert(courseSign);
         ResponseDto<String> responseDto = new ResponseDto<String>();
         responseDto.setData(courseSign.getId());

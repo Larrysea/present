@@ -13,23 +13,28 @@
         <result column="school_id" property="schoolId"/>
         <!-- 邮箱 -->
         <result column="mail" property="mail"/>
+
+        <result column="phone" property="phone"/>
+
     </resultMap>
 
     <!-- 将数据插入数据库中 -->
     <insert id="insert" parameterType="com.present.login.bean.Teacher">
         INSERT INTO
         teacher (
-        Id,
+        id,
         name,
         password,
         school_id,
-        mail)
+        mail,
+        phone)
         VALUES (
-        #{Id},
+        #{id},
         #{name},
         #{password},
         #{schoolId},
-        #{mail})
+        #{mail},
+        #{phone})
     </insert>
 
     <!-- 根据key查找数据库中信息 -->
@@ -39,7 +44,7 @@
         FROM
         teacher
         <where>
-            Id = #{Id}
+            id = #{id}
         </where>
     </select>
 
@@ -71,7 +76,7 @@
         DELETE FROM
         teacher
         <where>
-            Id = #{Id}
+            id = #{id}
         </where>
     </delete>
 
@@ -82,10 +87,23 @@
         FROM
         teacher
         <where>
-            name = #{name}
+            phone = #{phone}
             AND
             password=#{password}
         </where>
     </select>
+
+
+    <!-- 根据手机号判断账户是否有效 -->
+    <select id="isValidAccount" resultType="java.lang.Integer">
+        SELECT
+        COUNT(id)
+        FROM
+        teacher
+        <where>
+            phone=#{phone}
+        </where>
+    </select>
+
 
 </mapper>

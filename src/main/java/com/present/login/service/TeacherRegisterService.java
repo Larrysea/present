@@ -9,6 +9,7 @@ import com.present.common.util.CheckUtil;
 import com.present.common.util.MessageUtil;
 import com.present.login.bean.Teacher;
 import com.present.login.dao.TeacherDao;
+import com.present.login.dto.TeacherLoginSuccessDto;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -27,15 +28,11 @@ public class TeacherRegisterService extends BaseService {
     @Autowired
     TeacherDao teacherDao;
 
-    @Autowired
-    TokenApiService tokenApiService;
 
     @Override
     public ResponseDto process(JSONObject params, HttpServletRequest request, HttpServletResponse response) {
-        CheckUtil.checkEmpty(params, "token", "name", "password", "school_id", "mail", "phone");
-        tokenApiService.checkToken(params.getString("token"));
+        CheckUtil.checkEmpty(params, "name", "password", "schoolId", "mail", "phone");
         int result = teacherDao.isValidAccount(params.getString("phone"));
-        //账号已经存在
         if (result > 0) {
             throw new ExternalServiceException(MessageUtil.getMessageInfoByKey("login.account.already.exist"));
         } else {
@@ -57,11 +54,30 @@ public class TeacherRegisterService extends BaseService {
         }
         Teacher teacher = new Teacher();
         teacher.setName(jsonObject.getString("name"));
-        teacher.setSchoolId(jsonObject.getString("schooleId"));
+        teacher.setSchoolId(jsonObject.getString("schoolId"));
         teacher.setPhone(jsonObject.getString("phone"));
         teacher.setPassword(jsonObject.getString("password"));
         teacher.setMail(jsonObject.getString("mail"));
         return teacher;
+    }
+
+
+    /**
+     * 将老师实体转换为loginSuccessDto
+     *
+     * @return teacherLoginSuccessDto
+     */
+    public TeacherLoginSuccessDto convertTeacherToTeacherLoginSuccessDto(final Teacher teacher) {
+        if (teacher == null) {
+            throw new IllegalArgumentException("parameter  [teacher] cant empty");
+        }
+        final TeacherLoginSuccessDto teacherLoginSuccessDto = new TeacherLoginSuccessDto();
+        teacherLoginSuccessDto.setSchoolId(teacher.getSchoolId());
+        teacherLoginSuccessDto.setUserId(teacher.getId());
+        teacherLoginSuccessDto.setPhone(teacher.getPhone());
+        teacherLoginSuccessDto.setMail(teacher.getMail());
+        teacherLoginSuccessDto.setName(teacher.getName());
+        return teacherLoginSuccessDto;
     }
 
 

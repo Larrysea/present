@@ -40,7 +40,7 @@ public class SelectClassToSign extends BaseService {
 
     @Override
     public ResponseDto process(JSONObject params, HttpServletRequest request, HttpServletResponse response) {
-        CheckUtil.checkEmpty(params, "course_sign_id", "classArray");
+        CheckUtil.checkEmpty(params, "courseSignId", "classArray");
 
         return selectClassesToSign(params);
     }
@@ -49,19 +49,22 @@ public class SelectClassToSign extends BaseService {
     /**
      * 在确定某个课程的情况下选择班级进行签到
      *
-     * @param params 输入参数r
-     * @return 返回responseDto
+     * @param params     输入参数r
+     * @return          返回responseDto
      */
     public ResponseDto selectClassesToSign(JSONObject params) {
         JSONArray classArray = null;
-        SignStartWithClass signStartWithClass;
+        SignStartWithClass signStartWithClass = new SignStartWithClass();
+        JSONObject jsonObject;
         if (null != params.getJSONArray("classArray")) {
             classArray = params.getJSONArray("classArray");
             for (int position = 0; position < classArray.size(); position++) {
-                signStartWithClass = (SignStartWithClass) classArray.get(position);
+                signStartWithClass.setClassId(((JSONObject) classArray.get(position)).getString("classId"));
+                signStartWithClass.setCourseSignId(params.getString("courseSignId"));
                 signStartWithClassDao.insert(signStartWithClass);
             }
         }
+        initStudentSignInfo(classArray,params.getString("courseSignId"));
         return new ResponseDto();
     }
 
@@ -88,7 +91,7 @@ public class SelectClassToSign extends BaseService {
         StudentSign studentSign = new StudentSign();
         //查找出所有班级信息
         for (int classPosition = 0; classPosition < classArray.size(); classPosition++) {
-            classId = (String) classArray.get(classPosition);
+            classId = ((JSONObject) classArray.get(classPosition)).getString("classId");
             if (studentList != null) {
                 studentList.clear();
             }
@@ -97,7 +100,7 @@ public class SelectClassToSign extends BaseService {
                 //插入每个学生的信息到表中
                 for (int studentPosition = 0; studentPosition < studentList.size(); studentPosition++) {
                     studentSign.setCourseSignId(courseSignId);
-                    studentSign.setStudentSignId(studentList.get(studentPosition).getId());
+                    studentSign.setStudentId(studentList.get(studentPosition).getId());
                     studentSign.setSignState(Constants.ABSENCE);
                     studentSignDao.insert(studentSign);
                 }
@@ -105,8 +108,6 @@ public class SelectClassToSign extends BaseService {
                 throw new IllegalArgumentException("student list is empty");
             }
         }
-
-
     }
 
 }

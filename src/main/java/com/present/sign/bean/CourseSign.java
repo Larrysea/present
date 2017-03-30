@@ -42,6 +42,17 @@ public class CourseSign
      */
     private String signStartType;
 
+
+    private String dataState;
+
+    public String getDataState() {
+        return dataState;
+    }
+
+    public void setDataState(String dataState) {
+        this.dataState = dataState;
+    }
+
     /**
      * 获取课程发起签到id
      * @return id 课程发起签到id

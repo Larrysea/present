@@ -34,14 +34,14 @@ public class Constants {
     * 学生登录
     *
     * */
-    public final static String STUDENT_SIGN = "STUDENT_SIGN";
+    public final static String STUDENT_SIGN = "1";
 
 
     /*
     * 修改学生签到状态类型
     *
     * */
-    public final static String CHANGE_STUDENT_SIGN = "CHANGE_STUDENT_SIGN";
+    public final static String CHANGE_STUDENT_SIGN = "2";
 
 
 }

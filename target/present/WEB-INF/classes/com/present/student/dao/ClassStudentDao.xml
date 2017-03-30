@@ -63,9 +63,9 @@
 
 
     <!-- 根据班级id获取班级的所有学生信息 -->
-    <select id="queryStudentIdOfOneClass" resultMap="classStudentMap">
+    <select id="queryStudentIdOfOneClass" resultMap="com.present.student.dao.StudentDao.studentMap">
         SELECT
-        id,
+        student.id,
         name,
         phone,
         sexual,
@@ -73,7 +73,7 @@
         imel,
         mail,
         student_number,
-        class
+        student.class_id
         FROM
         class_student
         INNER

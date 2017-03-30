@@ -17,7 +17,7 @@ import com.present.common.annotation.UUID;
 public class SignStartWithClass
 {
     /**
-     * 选择课程的id
+     * 选择班级签到的id
      */
     @UUID
     private String id;

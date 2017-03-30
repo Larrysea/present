@@ -53,15 +53,28 @@ public class Student {
      */
     private String studentNumber;
 
-
-
-
     /*
     * 学校id
     *
     * */
-
     private String schoolId;
+
+
+
+    /**
+     * 班级id
+
+     */
+    private String classId;
+
+    public String getClassId() {
+        return classId;
+    }
+
+    public void setClassId(String classId) {
+        this.classId = classId;
+    }
+
 
     public String getSchoolId() {
         return schoolId;

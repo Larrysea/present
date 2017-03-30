@@ -39,27 +39,25 @@ public class ChangeStudentSignService extends BaseService {
      */
     @Override
     public ResponseDto process(JSONObject params, HttpServletRequest request, HttpServletResponse response) {
-        CheckUtil.checkEmpty(params, "courseId", "studentId", "signTime", "changeType");
+        CheckUtil.checkEmpty(params, "courseSignId", "studentId", "signTime", "changeType");
         if (null != params.getString("signType")) {
 
             //学生签到
             if (params.getString("signType").equals(Constants.STUDENT_SIGN)) {
-                studentSignDao.changeStudentSignState(params.getString("courseId"),
+                studentSignDao.changeStudentSignState(params.getString("courseSignId"),
                         params.getString("studentId"),
                         DateUtil.convertSecondsStringToDate(params.getString("signTime")),
                         Constants.SIGN);
             }
             //修改学生签到状态
             else if (params.getString("signType").equals(Constants.CHANGE_STUDENT_SIGN)) {
-                studentSignDao.changeStudentSignState(params.getString("courseId"),
+                studentSignDao.changeStudentSignState(params.getString("courseSignId"),
                         params.getString("studentId"),
                         DateUtil.getDate(), params.getString("signType"));
 
             }
 
         }
-
-
         return new ResponseDto();
     }
 }

@@ -40,21 +40,23 @@ public class TeacherLoginService extends BaseService<TeacherLoginSuccessDto> {
         int result = teacherDao.isValidAccount(params.getString("phone"));
         Teacher teacher = null;
         ResponseDto<TeacherLoginSuccessDto> responseDto;
-            //账户不存在
+            //账户存在
         if (result > 0) {
             teacher = teacherDao.login(params.getString("phone"), params.getString("password"));
             //账户存在但是密码错误
             if (teacher == null) {
-                throw new ExternalServiceException(MessageUtil.getMessageInfoByKey("login.invalid.passoword"));
+                throw new ExternalServiceException(MessageUtil.getMessageInfoByKey("login.invalid.password"));
             }
             //登录成功
             else {
-                tokenApiService.setToken(tokenApiService.getToken(teacher.getId()));
+                tokenApiService.setToken(teacher.getId());
                 responseDto = new ResponseDto<TeacherLoginSuccessDto>();
                 responseDto.setData(initTeacherLoginDto(teacher, tokenApiService.getToken(teacher.getId())));
             }
 
-        } else {
+        }
+        //账户不存在
+        else {
             MessageInfoDto messageInfoDto = MessageUtil.getMessageInfoByKey("invalid.account");
             throw new ExternalServiceException(messageInfoDto);
         }

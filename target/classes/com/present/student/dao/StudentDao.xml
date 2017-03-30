@@ -8,7 +8,7 @@
         <!-- 学生名称 -->
         <result column="name" property="name"/>
         <!-- 暂时隐藏这个字段  密码 -->
-       <result column="password" property="password"/>
+        <result column="password" property="password"/>
         <!-- 手机号 -->
         <result column="phone" property="phone"/>
         <!-- 性别 -->
@@ -21,6 +21,11 @@
         <result column="mail" property="mail"/>
         <!-- 学号 -->
         <result column="student_number" property="studentNumber"/>
+        <!--班级id-->
+        <result column="class_id" property="classId"/>
+        <!--学校id-->
+        <result column="school_id" property="schoolId"/>
+
     </resultMap>
 
     <!-- 将数据插入数据库中 -->
@@ -35,7 +40,9 @@
         portrait_url,
         imel,
         mail,
-        student_number)
+        student_number,
+        school_id,
+        class_id)
         VALUES (
         #{id},
         #{name},
@@ -45,7 +52,10 @@
         #{portraitUrl},
         #{imel},
         #{mail},
-        #{studentNumber})
+        #{studentNumber},
+        #{schoolId},
+        #{classId}
+        )
     </insert>
 
     <!-- 根据key查找数据库中信息 -->
@@ -87,6 +97,12 @@
             </if>
             <if test=" studentNumber != null ">
                 student_number = #{studentNumber}
+            </if>
+            <if test=" schoolId != null ">
+                school_id = #{schoolId}
+            </if>
+            <if test=" classId != null ">
+                class_id= #{classId}
             </if>
         </set>
         <where>
@@ -151,5 +167,38 @@
             school_id=#{schoolId}
         </where>
     </select>
+
+    <!-- @param studentId     学生id
+     * @param password      密码
+     * @param phone         手机
+     * @param sexual        性别
+     * @param imel
+     * @param mail-->
+
+    <update id="submitStudentInfo">
+        UPDATE
+        student
+        <set>
+            <if test=" password != null ">
+                password = #{password},
+            </if>
+            <if test=" phone != null ">
+                phone = #{phone},
+            </if>
+            <if test=" sexual != null ">
+                sexual = #{sexual},
+            </if>
+            <if test=" imel != null ">
+                imel = #{imel},
+            </if>
+            <if test=" mail != null ">
+                mail = #{mail}
+            </if>
+        </set>
+        <where>
+            id = #{studentId}
+        </where>
+    </update>
+
 
 </mapper>

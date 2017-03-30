@@ -10,6 +10,7 @@ package com.present.sign.dao;
 
 import com.present.sign.bean.StudentSign;
 import com.present.sign.dto.CourseSignInfoDto;
+import com.present.sign.dto.StudentCourseSignDto;
 import com.present.sign.dto.StudentSignInfoDto;
 import org.apache.ibatis.annotations.Param;
 
@@ -50,13 +51,13 @@ public interface StudentSignDao
     int deleteByKey(String id);
 
     /**
-     * 根据课程签到id获取学生考勤信息
+     * 根据课程签到id获取所有学生某一堂课的签到信息详情
      * 也就是查看某一次课程签到的所有学生考勤信息
      *
-     * @param courseSignId
+     * @param   courseSignId
      * @return  返回学生签到情况列表
      */
-    List<StudentSign> getStudentSignInfoList(@Param("courseId")String courseSignId);
+    List<StudentCourseSignDto> getCourseSignInforList(@Param("courseSignId")String courseSignId, @Param("classId") String classId);
 
 
 

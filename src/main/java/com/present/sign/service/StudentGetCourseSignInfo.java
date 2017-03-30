@@ -19,7 +19,7 @@ import java.util.List;
  * <p>
  * <p>
  * 通过courseId 和学生id来确定签到信息
- * 学生获取某个一签到课程的信息
+ * 学生获取某个一签到课程的所有签到记录信息
  */
 @Service("getCourseSignInfo")
 public class StudentGetCourseSignInfo extends BaseService<List<CourseSignInfoDto>> {
@@ -34,6 +34,13 @@ public class StudentGetCourseSignInfo extends BaseService<List<CourseSignInfoDto
         List<CourseSignInfoDto> courseSignInfoDtos = studentSignDao.queryCourseSignInfoDto(params.getString("courseId"), params.getString("studentId"));
         courseSignInfoDto.setData(courseSignInfoDtos);
         return courseSignInfoDto;
-
     }
+
+
+
+
+
+
+
+
 }

@@ -17,54 +17,60 @@
     <insert id="insert" parameterType="com.present.sign.bean.CourseSign">
         INSERT INTO
         course_sign (
-            id,
-            course_id,
-            create_time,
-            sign_start_type) 
+        id,
+        course_id,
+        create_time,
+        sign_start_type,
+        teacher_id,
+        data_state,
+        valid_of_time)
         VALUES (
-            #{id},
-            #{courseId},
-            #{createTime},
-            #{signStartType}) 
+        #{id},
+        #{courseId},
+        #{createTime},
+        #{signStartType},
+        #{teacherId},
+        #{data_state},
+        #{valid_of_time})
     </insert>
 
     <!-- 根据key查找数据库中信息 -->
     <select id="queryByKey" resultMap="courseSignMap">
         SELECT
-            * 
-        FROM 
-            course_sign 
+        *
+        FROM
+        course_sign
         <where>
-            id = #{id} 
+            id = #{id}
         </where>
     </select>
 
     <!-- 根据key更新数据库中信息 -->
     <update id="updateByKey">
         Update
-            course_sign
+        course_sign
         <set>
-            <if test = " courseId != null ">
+            <if test=" courseId != null ">
                 course_id = #{courseId},
             </if>
-            <if test = " createTime != null ">
+            <if test=" createTime != null ">
                 create_time = #{createTime},
             </if>
-            <if test = " signStartType != null ">
+            <if test=" signStartType != null ">
                 sign_start_type = #{signStartType}
             </if>
         </set>
         <where>
-            id = #{id} 
+            id = #{id}
         </where>
     </update>
 
     <!-- 根据Key删除数据库中信息 -->
     <delete id="deleteByKey">
         DELETE FROM
-            course_sign 
+        course_sign
         <where>
-            id = #{id} 
+            id = #{id}
         </where>
     </delete>
 </mapper>

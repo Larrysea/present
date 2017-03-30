@@ -65,4 +65,21 @@ public interface StudentDao {
      */
     void insertStudentList(@Param("studentList") List<Student> studentList);
 
+
+    /**
+     *
+     * 完善学生个人信息接口
+     * @param studentId     学生id
+     * @param password      密码
+     * @param phone         手机
+     * @param sexual        性别
+     * @param imel
+     * @param mail
+     */
+    void submitStudentInfo(@Param("studentId") String studentId,
+                           @Param("password") String password,
+                           @Param("phone") String phone,
+                           @Param("sexual") String sexual,
+                           @Param("imel") String imel,
+                           @Param("mail") String mail);
 }

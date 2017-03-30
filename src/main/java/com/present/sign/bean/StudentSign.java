@@ -32,7 +32,7 @@ public class StudentSign
     /**
      * 学生id
      */
-    private String studentSignId;
+    private String studentId;
 
     /**
      * 签到时间
@@ -82,20 +82,20 @@ public class StudentSign
 
     /**
      * 获取学生id
-     * @return studentSignId 学生id
+     * @return studentId 学生id
      */
-    public String getStudentSignId()
+    public String getStudentId()
     {
-         return studentSignId;
+         return studentId;
     }
 
     /**
      * 设置学生id
-     * @param studentSignId 学生id
+     * @param studentId 学生id
      */
-    public void setStudentSignId(String studentSignId)
+    public void setStudentId(String studentId)
     {
-         this.studentSignId = studentSignId;
+         this.studentId = studentId;
     }
 
     /**

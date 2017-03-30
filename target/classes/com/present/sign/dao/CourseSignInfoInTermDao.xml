@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://www.mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-<mapper namespace="com.present.sign.dao.GetCourseSignInfoInTerm">
+<mapper namespace="com.present.sign.dao.CourseSignInfoInTermDao">
     <resultMap type="com.present.sign.dto.StudentSignInfoDto" id="courseSignInfoInTermMap">
         <!--学生学号-->
         <id column="student_id" property="studentId"/>
@@ -13,6 +13,11 @@
         <result column="sick_leave" property="sickLeave"/>
         <!--逃课-->
         <result column="absence" property="absence"/>
+        <!--学生学号-->
+        <result column="student_number" property="studentNumber"/>
+
+        <!--签到状态给获取学生某堂课的签到记录使用-->
+        <result column="sign_state" property="signState"/>
     </resultMap>
 
 

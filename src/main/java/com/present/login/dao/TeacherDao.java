@@ -47,7 +47,7 @@ public interface TeacherDao {
      * @param password 用户密码
      * @return
      */
-    Teacher login(@Param("userName") String userName,@Param("password") String password);
+    Teacher login(@Param("phone") String userName,@Param("password") String password);
 
 
     /**
