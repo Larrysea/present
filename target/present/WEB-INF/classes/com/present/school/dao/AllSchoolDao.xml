@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://www.mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.present.school.dao.AllSchoolDao">
+    <resultMap type="com.present.school.bean.AllSchool" id="allSchoolMap">
+        <!-- 学校id -->
+        <id column="school_id" property="schoolId"/>
+        <!-- 学校名称 -->
+        <result column="school_name" property="schoolName"/>
+    </resultMap>
+
+    <!-- 将数据插入数据库中 -->
+    <insert id="insert" parameterType="com.present.school.bean.AllSchool">
+        INSERT INTO
+        all_school (
+            school_id,
+            school_name) 
+        VALUES (
+            #{schoolId},
+            #{schoolName}) 
+    </insert>
+
+    <!-- 根据key查找数据库中信息 -->
+    <select id="queryByKey" resultMap="allSchoolMap">
+        SELECT
+            * 
+        FROM 
+            all_school 
+        <where>
+            school_id = #{schoolId} 
+        </where>
+    </select>
+
+    <!-- 根据key更新数据库中信息 -->
+    <update id="updateByKey">
+        Update
+            all_school
+        <set>
+            <if test = " schoolName != null ">
+                school_name = #{schoolName}
+            </if>
+        </set>
+        <where>
+            school_id = #{schoolId} 
+        </where>
+    </update>
+
+    <!-- 根据Key删除数据库中信息 -->
+    <delete id="deleteByKey">
+        DELETE FROM
+            all_school 
+        <where>
+            school_id = #{schoolId} 
+        </where>
+    </delete>
+
+
+    <!-- 根据key查找数据库中信息 -->
+    <select id="getAllSchool" resultMap="allSchoolMap">
+        SELECT
+        school_id,
+        school_name
+        FROM
+        all_school
+    </select>
+
+
+</mapper>

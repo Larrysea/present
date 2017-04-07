@@ -1,10 +1,4 @@
-/**
- * 北京红云融通技术有限公司
- * 日期：$$Date$$
- * 作者：$$Author$$
- * 版本：$$Rev$$
- * 版权：All rights reserved.
- */
+
 package com.present.student.dao;
 
 
