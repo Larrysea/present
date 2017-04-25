@@ -11,7 +11,7 @@ import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
 import com.present.common.dto.MessageInfoDto;
 import com.present.common.exception.ExternalServiceException;
-import org.apache.commons.lang.StringUtils;
+
 
 import java.text.MessageFormat;
 
@@ -25,7 +25,7 @@ public class CheckUtil {
      */
     public static JSONObject parseObject(String json) {
         // 参数为空的时候 默认检查成功
-        if (StringUtils.isNotBlank(json)) {
+        if (StringUtil.isNotBlank(json)) {
             try {
                 return JSON.parseObject(json);
             } catch (Exception e) {

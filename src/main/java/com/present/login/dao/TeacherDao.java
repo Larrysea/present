@@ -54,6 +54,9 @@ public interface TeacherDao {
      * @param phone
      * @return
      */
-    int isValidAccount(@Param("phone")String phone);
+    int queryByPhone(@Param("phone")String phone);
+
+
+
 
 }

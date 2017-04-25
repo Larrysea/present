@@ -7,13 +7,12 @@
  */
 package com.present.common.plugin;
 
-import com.present.common.annotation.*;
+import com.present.common.annotation.Now;
 import com.present.common.annotation.UUID;
 import com.present.common.dto.MessageInfoDto;
 import com.present.common.exception.ExternalException;
 import com.present.common.exception.ExternalServiceException;
 import com.present.common.util.MessageUtil;
-import com.present.common.util.MyStringUtil;
 import com.present.common.util.StringUtil;
 import org.apache.ibatis.executor.Executor;
 import org.apache.ibatis.mapping.MappedStatement;

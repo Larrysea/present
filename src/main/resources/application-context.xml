@@ -74,7 +74,7 @@
         <!-- one of the properties available; the maximum file size(50M) in bytes -->
         <property name="maxUploadSize" value="52428800" />
         <property name="defaultEncoding" value="UTF-8"/>
-        <property name="uploadTempDir" value="fileUpload/temp"/>
+      <!--  <property name="uploadTempDir" value="fileUpload/temp"/>-->
     </bean>
 
 

@@ -4,7 +4,6 @@ import com.alibaba.fastjson.JSONObject;
 import com.present.common.dto.ResponseDto;
 import com.present.common.exception.ExternalServiceException;
 import com.present.common.service.BaseService;
-import com.present.common.service.TokenApiService;
 import com.present.common.util.CheckUtil;
 import com.present.common.util.MessageUtil;
 import com.present.login.bean.Teacher;
@@ -32,7 +31,7 @@ public class TeacherRegisterService extends BaseService {
     @Override
     public ResponseDto process(JSONObject params, HttpServletRequest request, HttpServletResponse response) {
         CheckUtil.checkEmpty(params, "name", "password", "schoolId", "mail", "phone");
-        int result = teacherDao.isValidAccount(params.getString("phone"));
+        int result = teacherDao.queryByPhone(params.getString("phone"));
         if (result > 0) {
             throw new ExternalServiceException(MessageUtil.getMessageInfoByKey("login.account.already.exist"));
         } else {

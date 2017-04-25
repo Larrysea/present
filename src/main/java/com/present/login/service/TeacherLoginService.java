@@ -37,7 +37,7 @@ public class TeacherLoginService extends BaseService<TeacherLoginSuccessDto> {
     public ResponseDto<TeacherLoginSuccessDto> process(JSONObject params, HttpServletRequest request, HttpServletResponse response) {
         CheckUtil.checkEmpty(params, "phone", "password");
 
-        int result = teacherDao.isValidAccount(params.getString("phone"));
+        int result = teacherDao.queryByPhone(params.getString("phone"));
         Teacher teacher = null;
         ResponseDto<TeacherLoginSuccessDto> responseDto;
             //账户存在

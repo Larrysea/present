@@ -23,7 +23,6 @@ public abstract class BaseService<T> implements IBaseService<T> {
      * @param response response对象
      * @return 返回码及描述
      */
-    @Override
     public ResponseDto<T> process(JSONObject params,
                                   HttpServletRequest request, HttpServletResponse response) {
         return null;
