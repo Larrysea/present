@@ -95,7 +95,7 @@
 
 
     <!-- 根据手机号判断账户是否有效 -->
-    <select id="isValidAccount" resultType="java.lang.Integer">
+    <select id="queryByPhone" resultType="java.lang.Integer">
         SELECT
         COUNT(id)
         FROM

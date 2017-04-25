@@ -67,12 +67,12 @@ public interface StudentDao {
 
 
     /**
-     *
      * 完善学生个人信息接口
-     * @param studentId     学生id
-     * @param password      密码
-     * @param phone         手机
-     * @param sexual        性别
+     *
+     * @param studentId 学生id
+     * @param password  密码
+     * @param phone     手机
+     * @param sexual    性别
      * @param imel
      * @param mail
      */
@@ -82,4 +82,12 @@ public interface StudentDao {
                            @Param("sexual") String sexual,
                            @Param("imel") String imel,
                            @Param("mail") String mail);
+
+    /**
+     * 查询手机号是否存在
+     * @param phone     手机号
+     * @return          返回查询到的数量的总数量
+     */
+    int queryByPhone(@Param("phone") String phone);
+
 }

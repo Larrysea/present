@@ -45,7 +45,7 @@ public class StudentLoginService extends BaseService<StudentLoginSuccessDto> {
     public ResponseDto<StudentLoginSuccessDto> studentLogin(String schoolId, String studentNumber, String password) {
         String result = studentDao.isValidUser(studentNumber, password, schoolId);
         if (result == null) {
-            throw new ExternalServiceException(MessageUtil.getMessageInfoByKey("student.isValidAccount"));
+            throw new ExternalServiceException(MessageUtil.getMessageInfoByKey("student.queryByPhone"));
         }
         ResponseDto<StudentLoginSuccessDto> responseDto = new ResponseDto<StudentLoginSuccessDto>();
         StudentLoginSuccessDto studentLoginSuccessDto = converStudentToStudentLoginSuccessDto(studentDao.studentLogin(schoolId, studentNumber, password));

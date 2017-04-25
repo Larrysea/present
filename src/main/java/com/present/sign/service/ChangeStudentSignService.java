@@ -7,14 +7,11 @@ import com.present.common.service.BaseService;
 import com.present.common.util.CheckUtil;
 import com.present.common.util.DateUtil;
 import com.present.sign.dao.StudentSignDao;
-import com.sun.xml.internal.bind.v2.TODO;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Configurable;
 import org.springframework.stereotype.Service;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import java.util.Date;
 
 /**
  * Created by Larry-sea on 2017/3/23.
@@ -42,6 +39,7 @@ public class ChangeStudentSignService extends BaseService {
         CheckUtil.checkEmpty(params, "courseSignId", "studentId", "signTime", "changeType");
         if (null != params.getString("signType")) {
 
+            //todo 学生签到的时候需要检查客户端传过来的id是否是他的课程的id而不是其他教室的wifi信号传过来的id
             //学生签到
             if (params.getString("signType").equals(Constants.STUDENT_SIGN)) {
                 studentSignDao.changeStudentSignState(params.getString("courseSignId"),
