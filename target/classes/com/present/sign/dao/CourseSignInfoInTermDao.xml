@@ -2,7 +2,7 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://www.mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="com.present.sign.dao.CourseSignInfoInTermDao">
-    <resultMap type="com.present.sign.dto.StudentSignInfoDto" id="courseSignInfoInTermMap">
+    <resultMap type="com.present.sign.dto.StudentSignInfoOfTermDto" id="courseSignInfoInTermMap">
         <!--学生学号-->
         <id column="student_id" property="studentId"/>
         <!-- 学生姓名 -->

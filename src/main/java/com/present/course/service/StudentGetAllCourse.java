@@ -28,6 +28,7 @@ public class StudentGetAllCourse extends BaseService<List<Course>> {
     @Autowired
     private CourseClassDao courseClassDao;
 
+    //todo 这个接口的参数有问题，不是班级id而是学生id，因为学生参加的课程当中有选修课这种临时班级，所以这种情况的考虑进来
 
     @Override
     public ResponseDto process(JSONObject params, HttpServletRequest request, HttpServletResponse response) {

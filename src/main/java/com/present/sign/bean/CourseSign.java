@@ -3,7 +3,6 @@ package com.present.sign.bean;
 
 import com.present.common.annotation.Now;
 import com.present.common.annotation.UUID;
-import org.apache.ibatis.annotations.Update;
 
 import java.util.Date;
 
@@ -37,7 +36,40 @@ public class CourseSign
     private String signStartType;
 
 
+    /*
+    *
+    * 数据状态，是否有效，是否无效，或者其他的一些功能
+    * */
     private String dataState;
+
+
+    /**
+     * 老师id
+     */
+    private String teacherId;
+
+
+    /**
+     * 签到时间限制
+     *
+     */
+    private int validOfTime;
+
+    public String getTeacherId() {
+        return teacherId;
+    }
+
+    public void setTeacherId(String teacherId) {
+        this.teacherId = teacherId;
+    }
+
+    public int getValidOfTime() {
+        return validOfTime;
+    }
+
+    public void setValidOfTime(int validOfTime) {
+        this.validOfTime = validOfTime;
+    }
 
     public String getDataState() {
         return dataState;

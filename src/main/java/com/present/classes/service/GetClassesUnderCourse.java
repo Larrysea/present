@@ -3,10 +3,8 @@ package com.present.classes.service;
 import com.alibaba.fastjson.JSONObject;
 import com.present.classes.bean.Classes;
 import com.present.common.dto.ResponseDto;
-import com.present.common.exception.ExternalServiceException;
 import com.present.common.service.BaseService;
 import com.present.common.util.CheckUtil;
-import com.present.common.util.MessageUtil;
 import com.present.course.dao.CourseClassDao;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -41,7 +39,7 @@ public class GetClassesUnderCourse extends BaseService<List<Classes>> {
      */
     private ResponseDto<List<Classes>> getClassUnderCourse(JSONObject params) {
         List<Classes> classesList = courseClassDao
-                .queryClassesByteacherAndCourse(params.getString("teacherId"), params.getString("courseId"));
+                .queryClassesByTeacherAndCourse(params.getString("teacherId"), params.getString("courseId"));
         ResponseDto<List<Classes>> responseDto = new ResponseDto<List<Classes>>();
         responseDto.setData(classesList);
         return responseDto;

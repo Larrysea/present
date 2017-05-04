@@ -4,9 +4,8 @@ import com.alibaba.fastjson.JSONObject;
 import com.present.common.dto.ResponseDto;
 import com.present.common.service.BaseService;
 import com.present.common.util.CheckUtil;
-import com.present.sign.bean.StudentSign;
 import com.present.sign.dao.CourseSignInfoInTermDao;
-import com.present.sign.dto.StudentSignInfoDto;
+import com.present.sign.dto.StudentSignInfoOfTermDto;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -21,7 +20,7 @@ import java.util.List;
  */
 
 @Service("getSignInfoOfCourseInTerm")
-public class GetSignInfoOfCourseInTerm extends BaseService<List<StudentSignInfoDto>> {
+public class GetSignInfoOfCourseInTerm extends BaseService<List<StudentSignInfoOfTermDto>> {
 
 
     /*
@@ -32,10 +31,10 @@ public class GetSignInfoOfCourseInTerm extends BaseService<List<StudentSignInfoD
     CourseSignInfoInTermDao getCourseSignInfoInTerm;
 
     @Override
-    public ResponseDto<List<StudentSignInfoDto>> process(JSONObject params, HttpServletRequest request, HttpServletResponse response) {
+    public ResponseDto<List<StudentSignInfoOfTermDto>> process(JSONObject params, HttpServletRequest request, HttpServletResponse response) {
         CheckUtil.checkEmpty(params, "teacherId", "courseId", "classId");
-        List<StudentSignInfoDto> studentSignInfoDtos = getCourseSignInfoInTerm.getCourseSignInfoInTerm(params.getString("teacherId"), params.getString("courseId"), params.getString("classId"));
-        ResponseDto<List<StudentSignInfoDto>> responseDto = new ResponseDto<List<StudentSignInfoDto>>();
+        List<StudentSignInfoOfTermDto> studentSignInfoDtos = getCourseSignInfoInTerm.getCourseSignInfoInTerm(params.getString("teacherId"), params.getString("courseId"), params.getString("classId"));
+        ResponseDto<List<StudentSignInfoOfTermDto>> responseDto = new ResponseDto<List<StudentSignInfoOfTermDto>>();
         responseDto.setData(studentSignInfoDtos);
         return responseDto;
     }

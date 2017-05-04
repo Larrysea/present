@@ -4,10 +4,9 @@ import com.alibaba.fastjson.JSONObject;
 import com.present.common.dto.ResponseDto;
 import com.present.common.service.BaseService;
 import com.present.common.util.CheckUtil;
-import com.present.sign.bean.StudentSign;
 import com.present.sign.dao.StudentSignDao;
 import com.present.sign.dto.StudentCourseSignDto;
-import com.present.sign.dto.StudentSignInfoDto;
+import com.present.sign.dto.StudentSignInfoOfTermDto;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -19,7 +18,7 @@ import java.util.List;
  * Created by Larry-sea on 2017/3/20.
  * <p>
  * <p>
- * 通过课程签到id和班级id获取那次签到的每个人的签到信息
+ * 通过课程签到id和班级id获取某一次签到活动的每个人的签到信息
  */
 @Service("getSignInfoByCourseSignIdAndClassId")
 public class GetTheSignInfoByCourseSignId extends BaseService<List<StudentCourseSignDto>> {
@@ -47,7 +46,7 @@ public class GetTheSignInfoByCourseSignId extends BaseService<List<StudentCourse
      * @param studentSignInfoDto
      * @return
      */
-    public StudentCourseSignDto convertStudentSignToStudentCourseSignDto(final StudentSignInfoDto studentSignInfoDto) {
+    public StudentCourseSignDto convertStudentSignToStudentCourseSignDto(final StudentSignInfoOfTermDto studentSignInfoDto) {
         if (studentSignInfoDto != null) {
             throw new IllegalArgumentException("param studentSign cant empty");
         }

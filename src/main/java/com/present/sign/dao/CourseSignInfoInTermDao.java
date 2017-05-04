@@ -1,6 +1,6 @@
 package com.present.sign.dao;
 
-import com.present.sign.dto.StudentSignInfoDto;
+import com.present.sign.dto.StudentSignInfoOfTermDto;
 import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
@@ -21,5 +21,5 @@ public interface CourseSignInfoInTermDao {
      * @param classId     班级id
      * @return
      */
-    List<StudentSignInfoDto> getCourseSignInfoInTerm(@Param("teacherId")String teacherId, @Param("courseId")String courseId,@Param("classId") String classId);
+    List<StudentSignInfoOfTermDto> getCourseSignInfoInTerm(@Param("teacherId")String teacherId, @Param("courseId")String courseId, @Param("classId") String classId);
 }

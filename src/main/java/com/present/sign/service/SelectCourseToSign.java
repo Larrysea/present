@@ -11,7 +11,6 @@ import org.springframework.stereotype.Service;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import java.util.Date;
 
 /**
  * Created by Larry-sea on 2017/3/20.
@@ -27,23 +26,26 @@ public class SelectCourseToSign extends BaseService<String> {
 
     @Override
     public ResponseDto<String> process(JSONObject params, HttpServletRequest request, HttpServletResponse response) {
-        CheckUtil.checkEmpty(params, "courseId", "signStartType","teacherId","validOfTime");
+        CheckUtil.checkEmpty(params, "courseId", "signStartType", "teacherId", "validOfTime");
         return selectCourseToSign(params);
     }
 
     /**
      * 选择课程发起签到
      *
-     * @param params
+     * @param params    请求的参数
      * @return
      */
     private ResponseDto<String> selectCourseToSign(JSONObject params) {
         CourseSign courseSign = new CourseSign();
         courseSign.setCourseId(params.getString("courseId"));
         courseSign.setSignStartType(params.getString("signStartType"));
+        courseSign.setTeacherId(params.getString("teacherId"));
+        courseSign.setValidOfTime(params.getInteger("validOfTime"));
+
 
         courseSignDao.insert(courseSign);
-        ResponseDto<String> responseDto = new ResponseDto<String>();
+        ResponseDto<String> responseDto = new ResponseDto();
         responseDto.setData(courseSign.getId());
         return responseDto;
     }

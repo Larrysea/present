@@ -10,6 +10,7 @@ import java.util.Date;
  * @ClassName: CourseClass
  * @Description: 数据库表course_class对应的entity
  */
+
 public class CourseClass
 {
     /**

@@ -44,7 +44,7 @@ public interface CourseClassDao
 
 
     /**
-     * 查询学生已经参加课程通过班级id
+     * 查询学生已经参加课程,通过班级id
      *
      * @param classId   班级id
      * @return          返回课程链表
@@ -59,7 +59,7 @@ public interface CourseClassDao
      * @param courseId
      * @return   返回班级list
      */
-    List<Classes>    queryClassesByteacherAndCourse(@Param("teacherId") String teacherId, @Param("courseId")String courseId);
+    List<Classes>    queryClassesByTeacherAndCourse(@Param("teacherId") String teacherId, @Param("courseId")String courseId);
 
 
 }

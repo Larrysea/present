@@ -41,6 +41,7 @@ public class AddCourseService extends BaseService<Course> {
     }
 
 
+    //todo 老师添加课程接口中需要添加老师的id，而不只是课程名
     /**
      * 添加课程信息
      *

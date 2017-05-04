@@ -16,7 +16,7 @@ import java.util.List;
 /**
  * Created by Larry-sea on 2017/4/6.
  * <p>
- * 获取所有校名的
+ * 获取所有校名的接口
  */
 @Service("getAllSchool")
 public class GetAllSchoolService extends BaseService<List<AllSchool>> {

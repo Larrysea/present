@@ -5,7 +5,6 @@ package com.present.sign.dao;
 import com.present.sign.bean.StudentSign;
 import com.present.sign.dto.CourseSignInfoDto;
 import com.present.sign.dto.StudentCourseSignDto;
-import com.present.sign.dto.StudentSignInfoDto;
 import org.apache.ibatis.annotations.Param;
 
 import java.util.Date;

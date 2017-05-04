@@ -18,7 +18,7 @@ import java.util.Properties;
 /**
  * 自定义ProjectDBinfoConfigurer返回properties内容
  * @ClassName: ProjectDBinfoConfigurer
- * @Description: TODO (请用一句话描述该类做什么)
+ * @Description: 自定义ProjectDBinfoConfigurer返回properties内容
  * @author ZhangYQ iitshare@itblood.com
  * @date: 2012-11-20 下午11:48:32
  */

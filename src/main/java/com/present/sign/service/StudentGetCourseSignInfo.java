@@ -4,7 +4,6 @@ import com.alibaba.fastjson.JSONObject;
 import com.present.common.dto.ResponseDto;
 import com.present.common.service.BaseService;
 import com.present.common.util.CheckUtil;
-import com.present.sign.bean.StudentSign;
 import com.present.sign.dao.StudentSignDao;
 import com.present.sign.dto.CourseSignInfoDto;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -27,6 +26,12 @@ public class StudentGetCourseSignInfo extends BaseService<List<CourseSignInfoDto
     @Autowired
     StudentSignDao studentSignDao;
 
+    /**
+     * @param params   业务参数
+     * @param request  request对象
+     * @param response response对象
+     * @return
+     */
     @Override
     public ResponseDto<List<CourseSignInfoDto>> process(JSONObject params, HttpServletRequest request, HttpServletResponse response) {
         CheckUtil.checkEmpty(params, "courseId", "studentId");

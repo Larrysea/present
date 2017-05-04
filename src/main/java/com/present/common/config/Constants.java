@@ -44,4 +44,20 @@ public class Constants {
     public final static int CHANGE_STUDENT_SIGN = 0x2;
 
 
+    /*
+    * 在使用时是否参加该课程接口时作为返回参数使用
+    *
+    * 已参加该课程
+    *
+    * */
+    public final static String ALREADY_JOIN_IN = "ALREADY_JOIN_IN";
+
+
+    /**
+     * 在使用时是否参加该课程接口时作为返回参数使用
+     *
+     * 没有参加该课程
+     */
+    public final static String NOT_JOIN_THE_COURSE = "NOT_JOIN_THE_COURSE";
+
 }
