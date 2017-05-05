@@ -50,6 +50,7 @@ public class CheckCourseIsJoinIn extends BaseService<String> {
         CheckUtil.checkEmpty(params, "courseSignId", "classId");
         CourseSign courseSign = courseSignDao.queryByKey(params.getString("courseSignId"));
         ResponseDto<String> responseDto = new ResponseDto<String>();
+
         /*
         * 课程签到
         * */
@@ -59,7 +60,7 @@ public class CheckCourseIsJoinIn extends BaseService<String> {
 
             //数据库中查询到的课程签到记录，与实际传输过过来的进行检查
             List<Course> courseList = courseClassDao.queryCourseByClassId(params.getString("classId"));
-            if (courseList.get(0).getId().equals(courseId)) {
+            if (isContainTheCourse(courseList, courseId)) {
                 responseDto.setData(Constants.ALREADY_JOIN_IN);
             } else {
                 responseDto.setData(Constants.NOT_JOIN_THE_COURSE);
@@ -77,8 +78,7 @@ public class CheckCourseIsJoinIn extends BaseService<String> {
      * @param courseId   课程id
      * @return
      */
-    public boolean isContainTheCourse(final List<Course> courseList, String courseId) {
-
+    public boolean isContainTheCourse(final List<Course> courseList, final String courseId) {
         for (Course course : courseList) {
             if (course.getId().equals(courseId)) {
                 return true;
