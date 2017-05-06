@@ -59,6 +59,16 @@ public interface StudentDao {
 
 
     /**
+     * 学生通过手机号登录
+     *
+     * @param phone         手机号
+     * @param password       密码
+     * @return
+     */
+    Student studentLoginByPhone(@Param("phone") String phone, @Param("password") String password);
+
+
+    /**
      * 批量插入用户列表
      *
      * @param studentList
@@ -85,8 +95,9 @@ public interface StudentDao {
 
     /**
      * 查询手机号是否存在
-     * @param phone     手机号
-     * @return          返回查询到的数量的总数量
+     *
+     * @param phone 手机号
+     * @return 返回查询到的数量的总数量
      */
     int queryByPhone(@Param("phone") String phone);
 

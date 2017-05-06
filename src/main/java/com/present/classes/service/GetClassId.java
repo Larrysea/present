@@ -2,12 +2,9 @@ package com.present.classes.service;
 
 import com.alibaba.fastjson.JSONObject;
 import com.present.classes.dao.ClassesDao;
-import com.present.common.dto.MessageInfoDto;
 import com.present.common.dto.ResponseDto;
-import com.present.common.exception.ExternalServiceException;
 import com.present.common.service.BaseService;
 import com.present.common.util.CheckUtil;
-import com.present.common.util.MessageUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -34,13 +31,8 @@ public class GetClassId extends BaseService<String> {
         CheckUtil.checkEmpty(params, "className", "schoolId");
         String classId = classesDao.queryIdByClassesNameAndSchoolId(params.getString("className"), params.getString("schoolId"));
         ResponseDto<String> responseDto;
-        if (classId == null) {
-            MessageInfoDto messageInfoDto = MessageUtil.getMessageInfoByKey("classes.not.exist");
-            throw new ExternalServiceException(messageInfoDto);
-        } else {
-            responseDto = new ResponseDto<String>();
-            responseDto.setData(classId);
-        }
+        responseDto = new ResponseDto<String>();
+        responseDto.setData(classId);
         return responseDto;
     }
 }

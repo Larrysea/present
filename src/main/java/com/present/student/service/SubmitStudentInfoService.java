@@ -26,7 +26,8 @@ public class SubmitStudentInfoService extends BaseService {
 
     @Override
     public ResponseDto process(JSONObject params, HttpServletRequest request, HttpServletResponse response) {
-        CheckUtil.checkEmpty(params, "password", "phone", "sexual", "imel", "mail");
+        CheckUtil.checkEmpty(params, "student");
+
         submitStudentInfo(params);
         return new ResponseDto();
     }
@@ -37,11 +38,12 @@ public class SubmitStudentInfoService extends BaseService {
      * @param params params参数
      */
     private void submitStudentInfo(JSONObject params) {
-        studentDao.submitStudentInfo(params.getString("studentId"),
+        studentDao.insert(JSONObject.parseObject(params.get("student").toString(), Student.class));
+        /*studentDao.submitStudentInfo(params.getString("studentId"),
                 params.getString("password"),
                 params.getString("phone"),
                 params.getString("sexual"),
                 params.getString("imel"),
-                params.getString("mail"));
+                params.getString("mail"));*/
     }
 }

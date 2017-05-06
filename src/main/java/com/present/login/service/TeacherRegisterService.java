@@ -20,7 +20,7 @@ import javax.servlet.http.HttpServletResponse;
  * <p>
  * 老师注册接口接口
  */
-@Service("teacherRegister")
+@Service("submitTeacherInfo")
 public class TeacherRegisterService extends BaseService {
 
 
@@ -30,34 +30,15 @@ public class TeacherRegisterService extends BaseService {
 
     @Override
     public ResponseDto process(JSONObject params, HttpServletRequest request, HttpServletResponse response) {
-        CheckUtil.checkEmpty(params, "name", "password", "schoolId", "mail", "phone");
-        int result = teacherDao.queryByPhone(params.getString("phone"));
+        CheckUtil.checkEmpty(params, "teacher");
+        Teacher teacher = params.getObject("teacher", Teacher.class);
+        int result = teacherDao.queryByPhone(teacher.getPhone());
         if (result > 0) {
             throw new ExternalServiceException(MessageUtil.getMessageInfoByKey("login.account.already.exist"));
         } else {
-            teacherDao.insert(initTeacher(params));
+            teacherDao.insert(teacher);
         }
         return new ResponseDto();
-    }
-
-
-    /**
-     * 初始化一个老师信息
-     *
-     * @param jsonObject
-     * @return
-     */
-    public Teacher initTeacher(final JSONObject jsonObject) {
-        if (jsonObject == null) {
-            throw new IllegalArgumentException("param cant empty");
-        }
-        Teacher teacher = new Teacher();
-        teacher.setName(jsonObject.getString("name"));
-        teacher.setSchoolId(jsonObject.getString("schoolId"));
-        teacher.setPhone(jsonObject.getString("phone"));
-        teacher.setPassword(jsonObject.getString("password"));
-        teacher.setMail(jsonObject.getString("mail"));
-        return teacher;
     }
 
 

@@ -36,11 +36,10 @@ public class TeacherLoginService extends BaseService<TeacherLoginSuccessDto> {
     @Override
     public ResponseDto<TeacherLoginSuccessDto> process(JSONObject params, HttpServletRequest request, HttpServletResponse response) {
         CheckUtil.checkEmpty(params, "phone", "password");
-
         int result = teacherDao.queryByPhone(params.getString("phone"));
         Teacher teacher = null;
         ResponseDto<TeacherLoginSuccessDto> responseDto;
-            //账户存在
+        //账户存在
         if (result > 0) {
             teacher = teacherDao.login(params.getString("phone"), params.getString("password"));
             //账户存在但是密码错误

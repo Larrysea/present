@@ -104,32 +104,24 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="GetClassId.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/present/classes/service/GetClassId.java">
+      <file leaf-file-name="TeacherLoginService.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/present/login/service/TeacherLoginService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="88">
-              <caret line="4" column="45" lean-forward="true" selection-start-line="4" selection-start-column="45" selection-end-line="4" selection-end-column="45" />
+            <state relative-caret-position="726">
+              <caret line="48" column="18" lean-forward="true" selection-start-line="48" selection-start-column="18" selection-end-line="48" selection-end-column="18" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="message.properties" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/message.properties">
+      <file leaf-file-name="StudentLoginService.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/present/login/service/StudentLoginService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="396">
-              <caret line="34" column="0" lean-forward="false" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="17" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ClassesDao.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/present/classes/dao/ClassesDao.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="382">
-              <caret line="53" column="11" lean-forward="false" selection-start-line="53" selection-start-column="11" selection-end-line="53" selection-end-column="11" />
-              <folding />
+            <state relative-caret-position="-793">
+              <caret line="28" column="0" lean-forward="true" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
+              <folding>
+                <element signature="e#1641#1665#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -180,9 +172,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/com/present/login/service/TeacherRegisterService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/present/sign/service/GetTheSignInfoBySignCourseId.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/present/sign/dao/CourseSignInfoInTermDao.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/present/sign/dto/StudentCourseSignDto.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/present/sign/dao/StudentSignDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/present/sign/dao/CourseSignDao.xml" />
@@ -193,7 +182,6 @@
         <option value="$PROJECT_DIR$/src/main/java/com/present/sign/dao/StudentSignDao.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/present/student/service/AddStudentService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/present/student/bean/Student.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/present/student/service/SubmitStudentInfoService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/present/student/dao/StudentDao.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/present/school/package-info.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/present/school/School.java" />
@@ -205,13 +193,11 @@
         <option value="$PROJECT_DIR$/src/main/java/com/present/school/dao/AllSchoolDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/present/common/service/BaseService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/present/common/util/CheckUtil.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/present/login/service/StudentLoginService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/present/login/service/LoginService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/present/login/service/RegisterVerficationService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/present/login/dao/TeacherDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/present/login/dao/TeacherDao.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/present/login/service/RegisterVerificationService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/present/student/dao/StudentDao.java" />
         <option value="$PROJECT_DIR$/src/main/resources/application-context.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/present/school/service/GetAllSchoolService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/present/course/service/StudentGetAllCourse.java" />
@@ -231,6 +217,12 @@
         <option value="$PROJECT_DIR$/src/main/java/com/present/course/service/CheckCourseIsJoinIn.java" />
         <option value="$PROJECT_DIR$/src/main/resources/message.properties" />
         <option value="$PROJECT_DIR$/src/main/java/com/present/classes/service/GetClassId.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/present/student/service/SubmitStudentInfoService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/present/login/service/TeacherRegisterService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/present/login/bean/Teacher.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/present/student/dao/StudentDao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/present/login/service/StudentLoginService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/present/login/service/TeacherLoginService.java" />
       </list>
     </option>
   </component>
@@ -307,9 +299,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="Scratches" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -322,8 +311,213 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="present" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="present" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="present" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="present" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="present" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="present" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="present" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="present" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="teacher" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="present" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="present" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="present" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="login" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="present" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="present" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="present" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="login" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="service" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="present" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="present" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="present" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="classes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="service" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="present" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="present" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="present" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="classes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -337,7 +531,7 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2505747" />
-    <property name="SearchEverywhereHistoryKey" value="getClass&#9;PSI&#9;JAVA://com.present.course.bean.CourseClass#getClassId&#10;CourseCla&#9;PSI&#9;JAVA://com.present.course.bean.CourseClass&#10;Course&#9;PSI&#9;JAVA://com.present.course.bean.Course&#10;MessageU&#9;PSI&#9;JAVA://com.present.common.util.MessageUtil&#10;Sel&#9;PSI&#9;JAVA://com.present.sign.service.SelectCourseToSign&#10;Sign&#9;PSI&#9;JAVA://com.present.sign.service.SelectClassToSign&#10;StudentSignSer&#9;FILE&#9;file://C:/Users/Larry-sea/OneDrive/code/gitpath/present/src/main/java/com/present/sign/service/ChangeStudentSignService.java&#10;StudentSign&#9;FILE&#9;file://C:/Users/Larry-sea/OneDrive/code/gitpath/present/src/main/java/com/present/sign/bean/StudentSign.java&#10;Classes&#9;PSI&#9;JAVA://com.present.classes.bean.Classes&#10;Student&#9;FILE&#9;file://C:/Users/Larry-sea/OneDrive/code/gitpath/present/src/main/java/com/present/student/bean/Student.java&#10;SelectSch&#9;PSI&#9;JAVA://org.apache.http.client.AuthenticationHandler#selectScheme&#10;StudentGetA&#9;PSI&#9;JAVA://com.present.course.service.StudentGetAllCourse&#10;ClassStudent&#9;FILE&#9;file://C:/Users/Larry-sea/OneDrive/code/gitpath/present/src/main/java/com/present/student/dao/ClassStudentDao.xml&#10;classStudentDao&#9;FILE&#9;file://C:/Users/Larry-sea/OneDrive/code/gitpath/present/src/main/java/com/present/student/dao/ClassStudentDao.xml&#10;Cache&#9;FILE&#9;file://C:/Users/Larry-sea/OneDrive/code/gitpath/present/src/main/java/com/present/common/dao/CacheDao.java&#10;student&#9;FILE&#9;file://C:/Users/Larry-sea/OneDrive/code/gitpath/present/src/main/java/com/present/student/bean/Student.java&#10;POI&#9;FILE&#9;file://C:/Users/Larry-sea/OneDrive/code/gitpath/present/src/main/java/com/present/common/util/POIUtil.java&#10;TeacherCour&#9;FILE&#9;file://C:/Users/Larry-sea/OneDrive/code/gitpath/present/src/main/java/com/present/course/dao/TeacherCourseDao.xml&#10;checkU&#9;PSI&#9;JAVA://com.present.common.util.CheckUtil&#10;DateU&#9;PSI&#9;JAVA://com.present.common.util.DateUtil&#10;Date&#9;FILE&#9;file://C:/Users/Larry-sea/OneDrive/code/gitpath/present/src/main/java/com/present/common/plugin/DatePlugin.java&#10;to&#9;FILE&#9;file://C:/Users/Larry-sea/OneDrive/code/gitpath/present/src/main/java/com/present/common/service/TokenApiService.java&#10;context&#9;FILE&#9;file://C:/Users/Larry-sea/OneDrive/code/gitpath/present/src/main/resources/application-context.xml&#10;message&#9;FILE&#9;file://C:/Users/Larry-sea/OneDrive/code/gitpath/present/src/main/resources/message.properties&#10;teacher&#9;FILE&#9;file://C:/Users/Larry-sea/OneDrive/code/gitpath/present/src/main/java/com/present/login/bean/Teacher.java&#10;String&#9;FILE&#9;file://C:/Users/Larry-sea/OneDrive/code/gitpath/present/src/main/java/com/present/common/util/StringUtil.java&#10;teacherLogin&#9;null&#9;null&#10;teacherLog&#9;FILE&#9;file://C:/Users/Larry-sea/OneDrive/code/gitpath/present/src/main/java/com/present/login/dto/TeacherLoginSuccessDto.java" />
+    <property name="SearchEverywhereHistoryKey" value="Teacher&#9;FILE&#9;file://C:/Users/Larry-sea/OneDrive/code/gitpath/present/src/main/java/com/present/login/bean/Teacher.java&#10;Student&#9;FILE&#9;file://C:/Users/Larry-sea/OneDrive/code/gitpath/present/src/main/java/com/present/student/service/SubmitStudentInfoService.java&#10;getClass&#9;PSI&#9;JAVA://com.present.course.bean.CourseClass#getClassId&#10;CourseCla&#9;PSI&#9;JAVA://com.present.course.bean.CourseClass&#10;Course&#9;PSI&#9;JAVA://com.present.course.bean.Course&#10;MessageU&#9;PSI&#9;JAVA://com.present.common.util.MessageUtil&#10;Sel&#9;PSI&#9;JAVA://com.present.sign.service.SelectCourseToSign&#10;Sign&#9;PSI&#9;JAVA://com.present.sign.service.SelectClassToSign&#10;StudentSignSer&#9;FILE&#9;file://C:/Users/Larry-sea/OneDrive/code/gitpath/present/src/main/java/com/present/sign/service/ChangeStudentSignService.java&#10;StudentSign&#9;FILE&#9;file://C:/Users/Larry-sea/OneDrive/code/gitpath/present/src/main/java/com/present/sign/bean/StudentSign.java&#10;Classes&#9;PSI&#9;JAVA://com.present.classes.bean.Classes&#10;SelectSch&#9;PSI&#9;JAVA://org.apache.http.client.AuthenticationHandler#selectScheme&#10;StudentGetA&#9;PSI&#9;JAVA://com.present.course.service.StudentGetAllCourse&#10;ClassStudent&#9;FILE&#9;file://C:/Users/Larry-sea/OneDrive/code/gitpath/present/src/main/java/com/present/student/dao/ClassStudentDao.xml&#10;classStudentDao&#9;FILE&#9;file://C:/Users/Larry-sea/OneDrive/code/gitpath/present/src/main/java/com/present/student/dao/ClassStudentDao.xml&#10;Cache&#9;FILE&#9;file://C:/Users/Larry-sea/OneDrive/code/gitpath/present/src/main/java/com/present/common/dao/CacheDao.java&#10;student&#9;FILE&#9;file://C:/Users/Larry-sea/OneDrive/code/gitpath/present/src/main/java/com/present/student/bean/Student.java&#10;POI&#9;FILE&#9;file://C:/Users/Larry-sea/OneDrive/code/gitpath/present/src/main/java/com/present/common/util/POIUtil.java&#10;TeacherCour&#9;FILE&#9;file://C:/Users/Larry-sea/OneDrive/code/gitpath/present/src/main/java/com/present/course/dao/TeacherCourseDao.xml&#10;checkU&#9;PSI&#9;JAVA://com.present.common.util.CheckUtil&#10;DateU&#9;PSI&#9;JAVA://com.present.common.util.DateUtil&#10;Date&#9;FILE&#9;file://C:/Users/Larry-sea/OneDrive/code/gitpath/present/src/main/java/com/present/common/plugin/DatePlugin.java&#10;to&#9;FILE&#9;file://C:/Users/Larry-sea/OneDrive/code/gitpath/present/src/main/java/com/present/common/service/TokenApiService.java&#10;context&#9;FILE&#9;file://C:/Users/Larry-sea/OneDrive/code/gitpath/present/src/main/resources/application-context.xml&#10;message&#9;FILE&#9;file://C:/Users/Larry-sea/OneDrive/code/gitpath/present/src/main/resources/message.properties&#10;teacher&#9;FILE&#9;file://C:/Users/Larry-sea/OneDrive/code/gitpath/present/src/main/java/com/present/login/bean/Teacher.java&#10;String&#9;FILE&#9;file://C:/Users/Larry-sea/OneDrive/code/gitpath/present/src/main/java/com/present/common/util/StringUtil.java&#10;teacherLogin&#9;null&#9;null&#10;teacherLog&#9;FILE&#9;file://C:/Users/Larry-sea/OneDrive/code/gitpath/present/src/main/java/com/present/login/dto/TeacherLoginSuccessDto.java" />
     <property name="extract.method.default.visibility" value="private" />
     <property name="last_opened_file_path" value="K:/p4_workspace/005_Medical/web/src/MedicalLogMonitor" />
   </component>
@@ -928,7 +1122,9 @@
       <workItem from="1493343778104" duration="46000" />
       <workItem from="1493364339923" duration="6921000" />
       <workItem from="1493906596954" duration="1943000" />
-      <workItem from="1493945718131" duration="5062000" />
+      <workItem from="1493945718131" duration="9179000" />
+      <workItem from="1494033751723" duration="3349000" />
+      <workItem from="1494043069692" duration="5473000" />
     </task>
     <task id="LOCAL-00001" summary="添加获取课程，还有获取班级接口,还有发起签到接口，还有获取学生签到记录接口">
       <created>1490015383326</created>
@@ -941,7 +1137,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="311873000" />
+    <option name="totallyTimeSpent" value="324812000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -953,7 +1149,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="784" extended-state="6" />
+    <frame x="-8" y="-8" width="1382" height="784" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -979,7 +1175,7 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.56019264" sideWeight="0.4969743" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32905295" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32744783" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20121029" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20726173" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980332" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1216,35 +1412,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/present/common/util/StringUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/present/common/service/IBaseService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="18" column="19" lean-forward="false" selection-start-line="18" selection-start-column="19" selection-end-line="18" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/present/login/service/LoginService.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/present/login/dao/TeacherDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="427">
-          <caret line="61" column="1" lean-forward="true" selection-start-line="61" selection-start-column="1" selection-end-line="61" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/present/login/dao/TeacherDao.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="141">
-          <caret line="95" column="0" lean-forward="true" selection-start-line="95" selection-start-column="0" selection-end-line="95" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/present/common/dto/ResponseDto.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="176">
@@ -1256,13 +1423,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="132">
           <caret line="15" column="18" lean-forward="false" selection-start-line="15" selection-start-column="18" selection-end-line="15" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/present/student/dao/StudentDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1848">
-          <caret line="87" column="27" lean-forward="false" selection-start-line="87" selection-start-column="27" selection-end-line="87" selection-end-column="27" />
         </state>
       </provider>
     </entry>
@@ -1351,20 +1511,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1166">
           <caret line="66" column="0" lean-forward="false" selection-start-line="66" selection-start-column="0" selection-end-line="66" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/present/login/service/StudentLoginService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="814">
-          <caret line="50" column="17" lean-forward="false" selection-start-line="50" selection-start-column="17" selection-end-line="50" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/present/login/service/TeacherRegisterService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="638">
-          <caret line="42" column="0" lean-forward="false" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -1479,7 +1625,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="198">
           <caret line="21" column="39" lean-forward="false" selection-start-line="21" selection-start-column="39" selection-end-line="21" selection-end-column="39" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1487,7 +1632,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="946">
           <caret line="43" column="54" lean-forward="false" selection-start-line="43" selection-start-column="54" selection-end-line="43" selection-end-column="54" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1503,7 +1647,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="308">
           <caret line="14" column="7" lean-forward="false" selection-start-line="14" selection-start-column="7" selection-end-line="14" selection-end-column="7" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1511,9 +1654,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1056">
           <caret line="53" column="0" lean-forward="false" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1521,25 +1661,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="175">
           <caret line="78" column="14" lean-forward="true" selection-start-line="78" selection-start-column="14" selection-end-line="78" selection-end-column="14" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/present/student/service/SubmitStudentInfoService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="219">
-          <caret line="20" column="27" lean-forward="false" selection-start-line="20" selection-start-column="10" selection-end-line="20" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/present/login/bean/Teacher.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="9" column="1" lean-forward="true" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1547,10 +1668,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="88">
           <caret line="4" column="0" lean-forward="true" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-          <folding>
-            <element signature="e#1236#1237#0" expanded="false" />
-            <element signature="e#1267#1268#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1558,29 +1675,23 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="253">
           <caret line="24" column="34" lean-forward="true" selection-start-line="24" selection-start-column="34" selection-end-line="24" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/present/classes/service/AddClassesService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="28" column="26" lean-forward="true" selection-start-line="28" selection-start-column="26" selection-end-line="28" selection-end-column="26" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/present/classes/dao/ClassesDao.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="382">
+        <state relative-caret-position="1012">
           <caret line="53" column="11" lean-forward="false" selection-start-line="53" selection-start-column="11" selection-end-line="53" selection-end-column="11" />
-          <folding />
+          <folding>
+            <element signature="n#!!doc" expanded="false" />
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/message.properties">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
+        <state relative-caret-position="748">
           <caret line="34" column="0" lean-forward="false" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="17" />
           <folding />
         </state>
@@ -1588,9 +1699,153 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/present/classes/service/GetClassId.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="4" column="45" lean-forward="true" selection-start-line="4" selection-start-column="45" selection-end-line="4" selection-end-column="45" />
+        <state relative-caret-position="330">
+          <caret line="24" column="7" lean-forward="false" selection-start-line="24" selection-start-column="7" selection-end-line="24" selection-end-column="7" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/present/classes/service/AddClassesService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="484">
+          <caret line="37" column="0" lean-forward="false" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/alibaba/fastjson/1.2.1/fastjson-1.2.1-sources.jar!/com/alibaba/fastjson/JSON.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5478">
+          <caret line="301" column="30" lean-forward="false" selection-start-line="301" selection-start-column="30" selection-end-line="301" selection-end-column="30" />
+          <folding>
+            <element signature="e#0#24203#0" expanded="false" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#3745#3746#0" expanded="false" />
+            <element signature="e#3803#3804#0" expanded="false" />
+            <element signature="e#13125#13126#0" expanded="false" />
+            <element signature="e#13194#13195#0" expanded="false" />
+            <element signature="e#19673#19674#0" expanded="false" />
+            <element signature="e#19710#19711#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/alibaba/fastjson/1.2.1/fastjson-1.2.1-sources.jar!/com/alibaba/fastjson/JSONObject.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="858">
+          <caret line="97" column="18" lean-forward="false" selection-start-line="97" selection-start-column="18" selection-end-line="97" selection-end-column="18" />
+          <folding>
+            <element signature="e#0#11055#0" expanded="false" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#2301#2302#0" expanded="false" />
+            <element signature="e#2354#2355#0" expanded="false" />
+            <element signature="e#2403#2404#0" expanded="false" />
+            <element signature="e#2433#2434#0" expanded="false" />
+            <element signature="e#2474#2475#0" expanded="false" />
+            <element signature="e#2529#2530#0" expanded="false" />
+            <element signature="e#2574#2575#0" expanded="false" />
+            <element signature="e#2618#2619#0" expanded="false" />
+            <element signature="e#2895#2896#0" expanded="false" />
+            <element signature="e#2928#2929#0" expanded="false" />
+            <element signature="e#2960#2961#0" expanded="false" />
+            <element signature="e#2996#2997#0" expanded="false" />
+            <element signature="e#3042#3043#0" expanded="false" />
+            <element signature="e#3085#3086#0" expanded="false" />
+            <element signature="e#3135#3136#0" expanded="false" />
+            <element signature="e#3182#3183#0" expanded="false" />
+            <element signature="e#3219#3220#0" expanded="false" />
+            <element signature="e#3254#3255#0" expanded="false" />
+            <element signature="e#7164#7165#0" expanded="false" />
+            <element signature="e#7206#7207#0" expanded="false" />
+            <element signature="e#7275#7276#0" expanded="false" />
+            <element signature="e#7304#7305#0" expanded="false" />
+            <element signature="e#7331#7332#0" expanded="false" />
+            <element signature="e#7358#7359#0" expanded="false" />
+            <element signature="e#7398#7399#0" expanded="false" />
+            <element signature="e#7436#7437#0" expanded="false" />
+            <element signature="e#7471#7472#0" expanded="false" />
+            <element signature="e#7506#7507#0" expanded="false" />
+            <element signature="e#7548#7549#0" expanded="false" />
+            <element signature="e#7583#7584#0" expanded="false" />
+            <element signature="e#7639#7640#0" expanded="false" />
+            <element signature="e#7676#7677#0" expanded="false" />
+            <element signature="e#7719#7720#0" expanded="false" />
+            <element signature="e#7790#7791#0" expanded="false" />
+            <element signature="e#7831#7832#0" expanded="false" />
+            <element signature="e#7874#7875#0" expanded="false" />
+            <element signature="e#7903#7904#0" expanded="false" />
+            <element signature="e#7945#7946#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/present/student/service/SubmitStudentInfoService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="27" column="29" lean-forward="true" selection-start-line="27" selection-start-column="29" selection-end-line="27" selection-end-column="29" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/present/login/service/TeacherRegisterService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="101">
+          <caret line="34" column="65" lean-forward="true" selection-start-line="34" selection-start-column="65" selection-end-line="34" selection-end-column="65" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/present/login/bean/Teacher.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="110">
+          <caret line="60" column="0" lean-forward="true" selection-start-line="60" selection-start-column="0" selection-end-line="60" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/present/login/dto/StudentLoginSuccessDto.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="15" column="22" lean-forward="true" selection-start-line="15" selection-start-column="22" selection-end-line="15" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/present/student/dao/StudentDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="63" column="31" lean-forward="true" selection-start-line="63" selection-start-column="31" selection-end-line="63" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/present/login/dto/TeacherLoginSuccessDto.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="14" column="17" lean-forward="true" selection-start-line="14" selection-start-column="17" selection-end-line="14" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/present/login/service/TeacherLoginService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="726">
+          <caret line="48" column="18" lean-forward="true" selection-start-line="48" selection-start-column="18" selection-end-line="48" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/present/login/service/StudentLoginService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-793">
+          <caret line="28" column="0" lean-forward="true" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
+          <folding>
+            <element signature="e#1641#1665#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

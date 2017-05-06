@@ -29,26 +29,25 @@ public class StudentLoginService extends BaseService<StudentLoginSuccessDto> {
 
     @Override
     public ResponseDto<StudentLoginSuccessDto> process(JSONObject params, HttpServletRequest request, HttpServletResponse response) {
-        CheckUtil.checkEmpty(params, "schoolId", "studentNumber", "password");
-        return studentLogin(params.getString("schoolId"), params.getString("studentNumber"), params.getString("password"));
+        CheckUtil.checkEmpty(params, "phone", "password");
+        return studentLogin(params.getString("phone"), params.getString("password"));
     }
 
 
     /**
      * 学生用户登录
      *
-     * @param schoolId      学校id
-     * @param studentNumber 学生学号
-     * @param password      用户登录密码
+     * @param phone    注册的手机号
+     * @param password 用户登录密码
      * @return
      */
-    public ResponseDto<StudentLoginSuccessDto> studentLogin(String schoolId, String studentNumber, String password) {
-        String result = studentDao.isValidUser(studentNumber, password, schoolId);
-        if (result == null) {
+    public ResponseDto<StudentLoginSuccessDto> studentLogin(String phone, String password) {
+        int result = studentDao.queryByPhone(phone);
+        if (result < 0) {
             throw new ExternalServiceException(MessageUtil.getMessageInfoByKey("student.queryByPhone"));
         }
         ResponseDto<StudentLoginSuccessDto> responseDto = new ResponseDto<StudentLoginSuccessDto>();
-        StudentLoginSuccessDto studentLoginSuccessDto = converStudentToStudentLoginSuccessDto(studentDao.studentLogin(schoolId, studentNumber, password));
+        StudentLoginSuccessDto studentLoginSuccessDto = converStudentToStudentLoginSuccessDto(studentDao.studentLoginByPhone(phone, password));
         responseDto.setData(studentLoginSuccessDto);
         return responseDto;
     }
