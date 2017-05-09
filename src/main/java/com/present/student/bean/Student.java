@@ -60,12 +60,26 @@ public class Student {
     private String schoolId;
 
 
-
     /**
      * 班级id
-
      */
     private String classId;
+
+
+    /*
+    *
+    * 班级职位
+    *
+    * */
+    private String classPosition;
+
+    public String getClassPosition() {
+        return classPosition;
+    }
+
+    public void setClassPosition(String classPosition) {
+        this.classPosition = classPosition;
+    }
 
     public String getClassId() {
         return classId;

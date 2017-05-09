@@ -49,8 +49,8 @@ public class SelectClassToSign extends BaseService {
     /**
      * 在确定某个课程的情况下选择班级进行签到
      *
-     * @param params     输入参数r
-     * @return          返回responseDto
+     * @param params 输入参数r
+     * @return 返回responseDto
      */
     public ResponseDto selectClassesToSign(JSONObject params) {
         JSONArray classArray = null;
@@ -59,13 +59,15 @@ public class SelectClassToSign extends BaseService {
         if (null != params.getJSONArray("classArray")) {
             classArray = params.getJSONArray("classArray");
             for (int position = 0; position < classArray.size(); position++) {
-                signStartWithClass.setClassId(((JSONObject) classArray.get(position)).getString("classId"));
+                signStartWithClass.setClassId(classArray.get(position).toString());
                 signStartWithClass.setCourseSignId(params.getString("courseSignId"));
                 signStartWithClassDao.insert(signStartWithClass);
             }
         }
-        initStudentSignInfo(classArray,params.getString("courseSignId"));
-        return new ResponseDto();
+        initStudentSignInfo(classArray, params.getString("courseSignId"));
+        ResponseDto<String> responseDto = new ResponseDto<String>();
+        responseDto.setData(signStartWithClass.getId());
+        return responseDto;
     }
 
 
@@ -91,7 +93,7 @@ public class SelectClassToSign extends BaseService {
         StudentSign studentSign = new StudentSign();
         //查找出所有班级信息
         for (int classPosition = 0; classPosition < classArray.size(); classPosition++) {
-            classId = ((JSONObject) classArray.get(classPosition)).getString("classId");
+            classId = classArray.get(classPosition).toString();
             if (studentList != null) {
                 studentList.clear();
             }

@@ -52,6 +52,33 @@ public class StudentLoginSuccessDto {
     private String studentNumber;
 
 
+    /**
+     * 班级id
+     */
+    private String classId;
+
+
+    /**
+     * 班级职位
+     */
+    private String classPosition;
+
+    public String getClassId() {
+        return classId;
+    }
+
+    public void setClassId(String classId) {
+        this.classId = classId;
+    }
+
+    public String getClassPosition() {
+        return classPosition;
+    }
+
+    public void setClassPosition(String classPosition) {
+        this.classPosition = classPosition;
+    }
+
     /*
     *
     * 学校id

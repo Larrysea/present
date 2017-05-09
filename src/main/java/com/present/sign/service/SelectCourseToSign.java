@@ -42,10 +42,9 @@ public class SelectCourseToSign extends BaseService<String> {
         courseSign.setSignStartType(params.getString("signStartType"));
         courseSign.setTeacherId(params.getString("teacherId"));
         courseSign.setValidOfTime(params.getInteger("validOfTime"));
-
-
+        courseSign.setDataState("1");
         courseSignDao.insert(courseSign);
-        ResponseDto<String> responseDto = new ResponseDto();
+        ResponseDto<String> responseDto = new ResponseDto<String>();
         responseDto.setData(courseSign.getId());
         return responseDto;
     }

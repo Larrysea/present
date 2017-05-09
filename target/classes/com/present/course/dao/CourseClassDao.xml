@@ -104,19 +104,23 @@
 
 
     <!-- 通过老师和课程获取某个课程下面的所有班级-->
-    <select id="queryClassesByteacherAndCourse" resultMap="com.present.classes.dao.ClassesDao.classesMap">
+    <select id="queryClassesByTeacherAndCourse" resultMap="com.present.classes.dao.ClassesDao.classesMap">
         SELECT
-        class.id,
+        distinct(class.id),
         class_name,
         school_id
         FROM
         class,
-        course_class
+        course_class,
+        teacher_course
         <where>
-            teacher_id=#{teacherId}
+            teacher_course.teacher_id=#{teacherId}
             AND
             course_class.class_id=class.id
         </where>
+        ORDER
+        BY
+        class_name
     </select>
 
 

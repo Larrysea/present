@@ -81,6 +81,8 @@
         student
         ON
         student.id=class_student.student_id
+        AND
+        class_student.class_id=#{classId}
     </select>
 
 

@@ -200,5 +200,29 @@
         </where>
     </update>
 
+    <select id="studentLoginByPhone" resultMap="studentMap">
+        SELECT
+        *
+        FROM
+        student
+        <where>
+            phone = #{phone}
+            AND
+            password= #{password}
+        </where>
+    </select>
+
+
+    <!-- 根据手机号判断账户是否有效 -->
+    <select id="queryByPhone" resultType="java.lang.Integer">
+        SELECT
+        COUNT(id)
+        FROM
+        student
+        <where>
+            phone=#{phone}
+        </where>
+    </select>
+
 
 </mapper>

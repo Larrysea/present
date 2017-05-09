@@ -48,15 +48,17 @@ public class TeacherLoginService extends BaseService<TeacherLoginSuccessDto> {
             }
             //登录成功
             else {
-                tokenApiService.setToken(teacher.getId());
+               // tokenApiService.setToken(teacher.getId());
                 responseDto = new ResponseDto<TeacherLoginSuccessDto>();
-                responseDto.setData(initTeacherLoginDto(teacher, tokenApiService.getToken(teacher.getId())));
+                responseDto.setData(initTeacherLoginDto(teacher, "fasdfasdfasdfasd"));
+
+                //responseDto.setData(initTeacherLoginDto(teacher, tokenApiService.getToken(teacher.getId())));
             }
 
         }
         //账户不存在
         else {
-            MessageInfoDto messageInfoDto = MessageUtil.getMessageInfoByKey("invalid.account");
+            MessageInfoDto messageInfoDto = MessageUtil.getMessageInfoByKey("login.invalid.account");
             throw new ExternalServiceException(messageInfoDto);
         }
 

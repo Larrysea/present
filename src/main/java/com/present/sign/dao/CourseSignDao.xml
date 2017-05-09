@@ -3,74 +3,89 @@
 
 <mapper namespace="com.present.sign.dao.CourseSignDao">
     <resultMap type="com.present.sign.bean.CourseSign" id="courseSignMap">
-        <!-- 课程发起签到id -->
+        <!-- id -->
         <id column="id" property="id"/>
         <!-- 课程id -->
         <result column="course_id" property="courseId"/>
-        <!-- 发起签到的时间 -->
+        <!-- 创建时间 -->
         <result column="create_time" property="createTime"/>
-        <!-- 签到发起类型 -->
+        <!-- 签到类型 -->
         <result column="sign_start_type" property="signStartType"/>
+        <!-- 老师id -->
+        <result column="teacher_id" property="teacherId"/>
+        <!-- 数据状态 -->
+        <result column="data_state" property="dataState"/>
+        <!-- 签到有效时间 -->
+        <result column="valid_of_time" property="validOfTime"/>
     </resultMap>
 
     <!-- 将数据插入数据库中 -->
     <insert id="insert" parameterType="com.present.sign.bean.CourseSign">
         INSERT INTO
         course_sign (
-        id,
-        course_id,
-        create_time,
-        sign_start_type,
-        teacher_id,
-        data_state,
-        valid_of_time)
+            id,
+            course_id,
+            create_time,
+            sign_start_type,
+            teacher_id,
+            data_state,
+            valid_of_time) 
         VALUES (
-        #{id},
-        #{courseId},
-        #{createTime},
-        #{signStartType},
-        #{teacherId},
-        #{data_state},
-        #{valid_of_time})
+            #{id},
+            #{courseId},
+            #{createTime},
+            #{signStartType},
+            #{teacherId},
+            #{dataState},
+            #{validOfTime}) 
     </insert>
 
     <!-- 根据key查找数据库中信息 -->
     <select id="queryByKey" resultMap="courseSignMap">
         SELECT
-        *
-        FROM
-        course_sign
+            * 
+        FROM 
+            course_sign 
         <where>
-            id = #{id}
+            id = #{id} 
         </where>
     </select>
 
     <!-- 根据key更新数据库中信息 -->
     <update id="updateByKey">
         Update
-        course_sign
+            course_sign
         <set>
-            <if test=" courseId != null ">
+            <if test = " courseId != null ">
                 course_id = #{courseId},
             </if>
-            <if test=" createTime != null ">
+            <if test = " createTime != null ">
                 create_time = #{createTime},
             </if>
-            <if test=" signStartType != null ">
-                sign_start_type = #{signStartType}
+            <if test = " signStartType != null ">
+                sign_start_type = #{signStartType},
+            </if>
+            <if test = " teacherId != null ">
+                teacher_id = #{teacherId},
+            </if>
+            <if test = " dataState != null ">
+                data_state = #{dataState},
+            </if>
+            <if test = " validOfTime != null ">
+                valid_of_time = #{validOfTime}
             </if>
         </set>
         <where>
-            id = #{id}
+            id = #{id} 
         </where>
     </update>
 
     <!-- 根据Key删除数据库中信息 -->
     <delete id="deleteByKey">
         DELETE FROM
-        course_sign
+            course_sign 
         <where>
-            id = #{id}
+            id = #{id} 
         </where>
     </delete>
 </mapper>

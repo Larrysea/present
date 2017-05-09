@@ -29,7 +29,7 @@ public class StudentLoginService extends BaseService<StudentLoginSuccessDto> {
 
     @Override
     public ResponseDto<StudentLoginSuccessDto> process(JSONObject params, HttpServletRequest request, HttpServletResponse response) {
-        CheckUtil.checkEmpty(params, "phone", "password");
+        CheckUtil.checkEmpty(params, "password", "phone");
         return studentLogin(params.getString("phone"), params.getString("password"));
     }
 
@@ -43,11 +43,15 @@ public class StudentLoginService extends BaseService<StudentLoginSuccessDto> {
      */
     public ResponseDto<StudentLoginSuccessDto> studentLogin(String phone, String password) {
         int result = studentDao.queryByPhone(phone);
-        if (result < 0) {
-            throw new ExternalServiceException(MessageUtil.getMessageInfoByKey("student.queryByPhone"));
+        if (result <= 0) {
+            throw new ExternalServiceException(MessageUtil.getMessageInfoByKey("login.invalid.account"));
         }
         ResponseDto<StudentLoginSuccessDto> responseDto = new ResponseDto<StudentLoginSuccessDto>();
-        StudentLoginSuccessDto studentLoginSuccessDto = converStudentToStudentLoginSuccessDto(studentDao.studentLoginByPhone(phone, password));
+        Student student = studentDao.studentLoginByPhone(phone, password);
+        if (student == null) {
+            throw new ExternalServiceException(MessageUtil.getMessageInfoByKey("login.invalid.password"));
+        }
+        StudentLoginSuccessDto studentLoginSuccessDto = convertStudentToStudentLoginSuccessDto(student);
         responseDto.setData(studentLoginSuccessDto);
         return responseDto;
     }
@@ -60,7 +64,7 @@ public class StudentLoginService extends BaseService<StudentLoginSuccessDto> {
      * @param student
      * @return
      */
-    private StudentLoginSuccessDto converStudentToStudentLoginSuccessDto(final Student student) {
+    private StudentLoginSuccessDto convertStudentToStudentLoginSuccessDto(final Student student) {
         final StudentLoginSuccessDto studentLoginSuccessDto;
         if (student != null) {
             studentLoginSuccessDto = new StudentLoginSuccessDto();
@@ -73,6 +77,8 @@ public class StudentLoginService extends BaseService<StudentLoginSuccessDto> {
             studentLoginSuccessDto.setSexual(student.getSexual());
             studentLoginSuccessDto.setStudentNumber(student.getStudentNumber());
             studentLoginSuccessDto.setSchoolId(student.getSchoolId());
+            studentLoginSuccessDto.setClassId(student.getClassId());
+            studentLoginSuccessDto.setClassPosition(student.getClassPosition());
 
         } else {
             throw new IllegalArgumentException("student cant empty");

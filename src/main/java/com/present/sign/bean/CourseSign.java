@@ -1,4 +1,10 @@
-
+/**
+ * 北京红云融通技术有限公司
+ * 日期：$$Date$$
+ * 作者：$$Author$$
+ * 版本：$$Rev$$
+ * 版权：All rights reserved.
+ */
 package com.present.sign.bean;
 
 import com.present.common.annotation.Now;
@@ -14,7 +20,7 @@ import java.util.Date;
 public class CourseSign
 {
     /**
-     * 课程发起签到id
+     * id
      */
     @UUID
     private String id;
@@ -25,63 +31,34 @@ public class CourseSign
     private String courseId;
 
     /**
-     * 发起签到的时间
+     * 创建时间
      */
     @Now
     private Date createTime;
 
     /**
-     * 签到发起类型
+     * 签到类型
      */
     private String signStartType;
-
-
-    /*
-    *
-    * 数据状态，是否有效，是否无效，或者其他的一些功能
-    * */
-    private String dataState;
-
 
     /**
      * 老师id
      */
     private String teacherId;
 
+    /**
+     * 数据状态
+     */
+    private String dataState;
 
     /**
-     * 签到时间限制
-     *
+     * 签到有效时间
      */
     private int validOfTime;
 
-    public String getTeacherId() {
-        return teacherId;
-    }
-
-    public void setTeacherId(String teacherId) {
-        this.teacherId = teacherId;
-    }
-
-    public int getValidOfTime() {
-        return validOfTime;
-    }
-
-    public void setValidOfTime(int validOfTime) {
-        this.validOfTime = validOfTime;
-    }
-
-    public String getDataState() {
-        return dataState;
-    }
-
-    public void setDataState(String dataState) {
-        this.dataState = dataState;
-    }
-
     /**
-     * 获取课程发起签到id
-     * @return id 课程发起签到id
+     * 获取id
+     * @return id id
      */
     public String getId()
     {
@@ -89,8 +66,8 @@ public class CourseSign
     }
 
     /**
-     * 设置课程发起签到id
-     * @param id 课程发起签到id
+     * 设置id
+     * @param id id
      */
     public void setId(String id)
     {
@@ -116,8 +93,8 @@ public class CourseSign
     }
 
     /**
-     * 获取发起签到的时间
-     * @return createTime 发起签到的时间
+     * 获取创建时间
+     * @return createTime 创建时间
      */
     public Date getCreateTime()
     {
@@ -125,8 +102,8 @@ public class CourseSign
     }
 
     /**
-     * 设置发起签到的时间
-     * @param createTime 发起签到的时间
+     * 设置创建时间
+     * @param createTime 创建时间
      */
     public void setCreateTime(Date createTime)
     {
@@ -134,8 +111,8 @@ public class CourseSign
     }
 
     /**
-     * 获取签到发起类型
-     * @return signStartType 签到发起类型
+     * 获取签到类型
+     * @return signStartType 签到类型
      */
     public String getSignStartType()
     {
@@ -143,11 +120,65 @@ public class CourseSign
     }
 
     /**
-     * 设置签到发起类型
-     * @param signStartType 签到发起类型
+     * 设置签到类型
+     * @param signStartType 签到类型
      */
     public void setSignStartType(String signStartType)
     {
          this.signStartType = signStartType;
+    }
+
+    /**
+     * 获取老师id
+     * @return teacherId 老师id
+     */
+    public String getTeacherId()
+    {
+         return teacherId;
+    }
+
+    /**
+     * 设置老师id
+     * @param teacherId 老师id
+     */
+    public void setTeacherId(String teacherId)
+    {
+         this.teacherId = teacherId;
+    }
+
+    /**
+     * 获取数据状态
+     * @return dataState 数据状态
+     */
+    public String getDataState()
+    {
+         return dataState;
+    }
+
+    /**
+     * 设置数据状态
+     * @param dataState 数据状态
+     */
+    public void setDataState(String dataState)
+    {
+         this.dataState = dataState;
+    }
+
+    /**
+     * 获取签到有效时间
+     * @return validOfTime 签到有效时间
+     */
+    public int getValidOfTime()
+    {
+         return validOfTime;
+    }
+
+    /**
+     * 设置签到有效时间
+     * @param validOfTime 签到有效时间
+     */
+    public void setValidOfTime(int validOfTime)
+    {
+         this.validOfTime = validOfTime;
     }
 }
