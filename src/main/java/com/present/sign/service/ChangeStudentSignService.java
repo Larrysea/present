@@ -6,6 +6,8 @@ import com.present.common.dto.ResponseDto;
 import com.present.common.service.BaseService;
 import com.present.common.util.CheckUtil;
 import com.present.common.util.DateUtil;
+import com.present.course.dao.CourseDao;
+import com.present.course.service.CheckCourseIsJoinIn;
 import com.present.sign.dao.StudentSignDao;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -28,6 +30,13 @@ public class ChangeStudentSignService extends BaseService {
     StudentSignDao studentSignDao;
 
 
+    @Autowired
+    CourseDao courseDao;
+
+
+    @Autowired
+    CheckCourseIsJoinIn checkCourseIsJoinIn;
+
     /**
      * @param params   业务参数 课程id，学生id，签到时间，签到类型  这个有两种类型一种是签到类型一种是修改签到状态类型
      * @param request  request对象
@@ -36,19 +45,20 @@ public class ChangeStudentSignService extends BaseService {
      */
     @Override
     public ResponseDto process(JSONObject params, HttpServletRequest request, HttpServletResponse response) {
-        CheckUtil.checkEmpty(params, "courseSignId", "studentId", "signTime", "changeType");
-        if (null != params.getString("signType")) {
-
-            //todo 学生签到的时候需要检查客户端传过来的id是否是他的课程的id而不是其他教室的wifi信号传过来的id
+        CheckUtil.checkEmpty(params, "studentId", "signTime");
+        //老师修改学生签到状态,signType 分为两种一种老师修改签到状态，一种是学生修改签到状态
+        if (null == params.getString("signType")) {
             //学生签到
-            if (params.getString("signType").equals(Constants.STUDENT_SIGN)) {
-                studentSignDao.changeStudentSignState(params.getString("courseSignId"),
+            if (params.getJSONArray("courseSignIdList") != null) {
+                //从courseSignIdList中获取正确的课程签到id
+                String courseSignId = checkCourseIsJoinIn.process(params, request, response).getData();
+                studentSignDao.changeStudentSignState(courseSignId,
                         params.getString("studentId"),
                         DateUtil.convertSecondsStringToDate(params.getString("signTime")),
                         Constants.SIGN);
             }
-            //修改学生签到状态
-            else if (params.getString("signType").equals(Constants.CHANGE_STUDENT_SIGN)) {
+            //修改学生签到状态,这个一般是老师进行修改学生签到状态
+            else if (params.getString("courseSignId") != null && params.getInteger("signType").equals(Constants.CHANGE_STUDENT_SIGN)) {
                 studentSignDao.changeStudentSignState(params.getString("courseSignId"),
                         params.getString("studentId"),
                         DateUtil.getDate(), params.getString("signType"));
@@ -58,12 +68,6 @@ public class ChangeStudentSignService extends BaseService {
         }
         return new ResponseDto();
     }
-
-
-
-
-
-
 
 
 }

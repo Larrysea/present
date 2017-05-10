@@ -33,7 +33,7 @@ public class SelectCourseToSign extends BaseService<String> {
     /**
      * 选择课程发起签到
      *
-     * @param params    请求的参数
+     * @param params 请求的参数
      * @return
      */
     private ResponseDto<String> selectCourseToSign(JSONObject params) {
@@ -46,6 +46,8 @@ public class SelectCourseToSign extends BaseService<String> {
         courseSignDao.insert(courseSign);
         ResponseDto<String> responseDto = new ResponseDto<String>();
         responseDto.setData(courseSign.getId());
+        courseSign.setSignStartType("a");
+        courseSignDao.updateByKey(courseSign);
         return responseDto;
     }
 }

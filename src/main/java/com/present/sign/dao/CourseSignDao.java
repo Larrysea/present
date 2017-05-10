@@ -9,6 +9,7 @@ package com.present.sign.dao;
 
 
 import com.present.sign.bean.CourseSign;
+import org.apache.ibatis.annotations.Param;
 
 public interface CourseSignDao
 {
@@ -42,4 +43,13 @@ public interface CourseSignDao
      * @return 删除数据的行数
      */
     int deleteByKey(String id);
+
+
+    /**
+     * 根据课程id获取最后一次的课程签到id
+     *
+     * @param courseId      课程id
+     * @return
+     */
+    String queryTheLatestCourseSignId(@Param("courseId") String courseId);
 }
