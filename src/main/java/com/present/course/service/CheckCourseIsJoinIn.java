@@ -9,6 +9,8 @@ import com.present.course.bean.Course;
 import com.present.course.dao.CourseClassDao;
 import com.present.sign.bean.CourseSign;
 import com.present.sign.dao.CourseSignDao;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -26,6 +28,8 @@ import java.util.List;
  */
 @Service("isJoinTheCourse")
 public class CheckCourseIsJoinIn extends BaseService<String> {
+
+    Logger logger = LoggerFactory.getLogger(CheckCourseIsJoinIn.class);
 
     /**
      * 课程签到dao
@@ -96,12 +100,14 @@ public class CheckCourseIsJoinIn extends BaseService<String> {
         List<String> courseIdList = new ArrayList<String>();
         CourseSign courseSign;
         for (Object object : courseSignIdArray) {
+            logger.error("object", object.toString());
             courseSign = courseSignDao.queryByKey(object.toString());
-            courseIdList.add(courseSign.getCourseId());
+            if (courseSign != null) {
+                courseIdList.add(courseSign.getCourseId());
+            }
         }
         return courseIdList;
     }
-
 
 
 }

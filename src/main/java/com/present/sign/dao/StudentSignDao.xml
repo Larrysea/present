@@ -147,15 +147,47 @@
         FROM
         student_sign
         INNER JOIN student ON student.id = student_sign.student_id
-        WHERE
-        course_sign_id = #{courseSignId}
-        AND
-        student.class_id=#{classId}
+        <where>
+            course_sign_id = #{courseSignId}
+            AND
+            student.class_id=#{classId}
+        </where>
         ORDER BY student_number ASC
     </select>
 
 
+    <!-- 查询 -->
+    <select id="queryStudentSignDtoByCourseSignId" resultMap="studentCourseSignMap">
+        SELECT
+        student_number,
+        name,
+        sign_state
+        FROM
+        student_sign
+        INNER JOIN student ON student.id = student_sign.student_id
+        <where>
+            course_sign_id = #{courseSignId}
+        </where>
+        ORDER BY student_number ASC
+    </select>
 
+
+    <!-- 查询 -->
+    <select id="getAbsenceStudentList" resultMap="studentCourseSignMap">
+        SELECT
+        student_number,
+        name,
+        sign_state
+        FROM
+        student_sign
+        INNER JOIN student ON student.id = student_sign.student_id
+        <where>
+            course_sign_id = #{courseSignId}
+            AND
+            student_sign.sign_state="3"
+        </where>
+        ORDER BY student_number ASC
+    </select>
 
 
 </mapper>

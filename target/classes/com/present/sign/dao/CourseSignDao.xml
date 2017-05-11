@@ -91,7 +91,7 @@
 
 
     <!-- 根据key查找数据库中信息 -->
-    <select id="queryTheLatestCourseSignId" resultMap="courseSignMap">
+    <select id="queryTheLatestCourseSignId" resultType="java.lang.String">
         SELECT
         id
         FROM

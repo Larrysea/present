@@ -8,7 +8,6 @@
 package com.present.sign.bean;
 
 import com.present.common.annotation.Now;
-import com.present.common.annotation.UUID;
 
 import java.util.Date;
 
@@ -22,7 +21,7 @@ public class CourseSign
     /**
      * id
      */
-    @UUID
+    //@UUID
     private String id;
 
     /**

@@ -4,6 +4,8 @@ import com.alibaba.fastjson.JSONObject;
 import com.present.common.dto.ResponseDto;
 import com.present.common.service.BaseService;
 import com.present.common.util.CheckUtil;
+import com.present.common.util.MD5EncipherUtil;
+import com.present.common.util.UUIDGenerator;
 import com.present.sign.bean.CourseSign;
 import com.present.sign.dao.CourseSignDao;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -38,6 +40,7 @@ public class SelectCourseToSign extends BaseService<String> {
      */
     private ResponseDto<String> selectCourseToSign(JSONObject params) {
         CourseSign courseSign = new CourseSign();
+        courseSign.setId(MD5EncipherUtil.md516(UUIDGenerator.getUUID()));
         courseSign.setCourseId(params.getString("courseId"));
         courseSign.setSignStartType(params.getString("signStartType"));
         courseSign.setTeacherId(params.getString("teacherId"));
@@ -47,7 +50,6 @@ public class SelectCourseToSign extends BaseService<String> {
         ResponseDto<String> responseDto = new ResponseDto<String>();
         responseDto.setData(courseSign.getId());
         courseSign.setSignStartType("a");
-        courseSignDao.updateByKey(courseSign);
         return responseDto;
     }
 }

@@ -14,6 +14,7 @@ import org.springframework.stereotype.Service;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import java.util.Date;
 
 /**
  * Created by Larry-sea on 2017/3/23.
@@ -52,9 +53,11 @@ public class ChangeStudentSignService extends BaseService {
             if (params.getJSONArray("courseSignIdList") != null) {
                 //从courseSignIdList中获取正确的课程签到id
                 String courseSignId = checkCourseIsJoinIn.process(params, request, response).getData();
+
+                //todo 时间戳转换
                 studentSignDao.changeStudentSignState(courseSignId,
                         params.getString("studentId"),
-                        DateUtil.convertSecondsStringToDate(params.getString("signTime")),
+                        new Date(),
                         Constants.SIGN);
             }
             //修改学生签到状态,这个一般是老师进行修改学生签到状态
@@ -62,7 +65,6 @@ public class ChangeStudentSignService extends BaseService {
                 studentSignDao.changeStudentSignState(params.getString("courseSignId"),
                         params.getString("studentId"),
                         DateUtil.getDate(), params.getString("signType"));
-
             }
 
         }
