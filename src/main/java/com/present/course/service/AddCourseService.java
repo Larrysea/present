@@ -35,13 +35,14 @@ public class AddCourseService extends BaseService<Course> {
 
     @Override
     public ResponseDto<Course> process(JSONObject params, HttpServletRequest request, HttpServletResponse response) {
-        CheckUtil.checkEmpty(params, "courseName");
+        CheckUtil.checkEmpty(params, "courseName", "teacherId");
 
         return addCourse(params);
     }
 
 
     //todo 老师添加课程接口中需要添加老师的id，而不只是课程名
+
     /**
      * 添加课程信息
      *
@@ -55,6 +56,7 @@ public class AddCourseService extends BaseService<Course> {
         }
         Course course = new Course();
         course.setCourseName(params.getString("courseName"));
+        course.setTeacherId(params.getString("teacherId"));
         courseDao.insert(course);
         ResponseDto<Course> courseDto = new ResponseDto<Course>();
         courseDto.setData(course);

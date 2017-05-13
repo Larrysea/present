@@ -54,4 +54,16 @@ public interface ClassesDao
     String queryIdByClassesNameAndSchoolId(@Param("className") String classesName,@Param("schoolId") String schoolId);
 
 
+
+    /**
+     *
+     * 根据班级名称和学校id查询班级信息
+     * @param classesName   班级名称
+     * @param schoolId      学校id
+     * @return   如果查询到返回学校id
+     */
+    Classes getClassInfo(@Param("className") String classesName,@Param("schoolId") String schoolId);
+
+
+
 }

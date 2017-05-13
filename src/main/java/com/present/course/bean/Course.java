@@ -21,6 +21,11 @@ public class Course {
 
 
     /**
+     * 老师id
+     */
+    private String teacherId;
+
+    /**
      * 获取课程id
      *
      * @return id 课程id
@@ -55,5 +60,13 @@ public class Course {
      */
     public void setCourseName(String courseName) {
         this.courseName = courseName;
+    }
+
+    public String getTeacherId() {
+        return teacherId;
+    }
+
+    public void setTeacherId(String teacherId) {
+        this.teacherId = teacherId;
     }
 }
