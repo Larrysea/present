@@ -3,6 +3,7 @@ package com.present.student.dao;
 import com.present.student.bean.Student;
 import org.apache.ibatis.annotations.Param;
 
+import java.io.File;
 import java.util.List;
 
 public interface StudentDao {
@@ -61,8 +62,8 @@ public interface StudentDao {
     /**
      * 学生通过手机号登录
      *
-     * @param phone         手机号
-     * @param password       密码
+     * @param phone    手机号
+     * @param password 密码
      * @return
      */
     Student studentLoginByPhone(@Param("phone") String phone, @Param("password") String password);
@@ -100,5 +101,7 @@ public interface StudentDao {
      * @return 返回查询到的数量的总数量
      */
     int queryByPhone(@Param("phone") String phone);
+
+
 
 }

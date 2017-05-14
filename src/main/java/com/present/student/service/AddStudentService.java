@@ -27,7 +27,7 @@ public class AddStudentService extends BaseService {
 
     @Override
     public ResponseDto process(JSONObject params, HttpServletRequest request, HttpServletResponse response) {
-        CheckUtil.checkEmpty(params,"studentList");
+        CheckUtil.checkEmpty(params, "studentList");
         return addStudent(params);
     }
 
