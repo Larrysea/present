@@ -106,4 +106,20 @@
     </select>
 
 
+    <!-- 根据key查找数据库中信息 -->
+    <select id="getCourseAllSignInfo" resultType="courseSignMap">
+        SELECT
+        id,
+        create_time,
+        sign_start_type
+        FROM
+        course_sign
+        <where>
+            course_id = #{courseId}
+        </where>
+        ORDER BY
+        create_time DESC
+    </select>
+
+
 </mapper>

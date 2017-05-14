@@ -4,6 +4,7 @@ package com.present.course.dao;
 
 import com.present.course.bean.Course;
 import com.present.course.bean.TeacherCourse;
+import com.present.course.dto.CourseAndTeacherDto;
 import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
@@ -49,7 +50,16 @@ public interface TeacherCourseDao {
      * @param teacherId
      * @return
      */
-    List<Course> queryCourseByTeacherId(@Param("teacherId")String teacherId);
+    List<Course> queryCourseByTeacherId(@Param("teacherId") String teacherId);
+
+
+    /**
+     * 获取老师和课程信息
+     *
+     * @param courseId
+     * @return
+     */
+    CourseAndTeacherDto getTeacherAndCourseInfo(@Param("courseId") String courseId);
 
 
 }

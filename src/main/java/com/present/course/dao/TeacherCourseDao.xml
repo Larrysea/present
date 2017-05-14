@@ -13,6 +13,19 @@
         <result column="data_state" property="dataState"/>
     </resultMap>
 
+
+    <resultMap type="com.present.course.dto.CourseAndTeacherDto" id="courseAndTeacherMap">
+        <!-- 老师课程数据id -->
+        <id column="course_name" property="courseName"/>
+        <!-- 老师id -->
+        <result column="name" property="teacherName"/>
+        <!-- 课程id -->
+        <result column="mail" property="teacherMail"/>
+        <!-- 数据状态 -->
+        <result column="phone" property="teacherPhone"/>
+    </resultMap>
+
+
     <!-- 将数据插入数据库中 -->
     <insert id="insert" parameterType="com.present.course.bean.TeacherCourse">
         INSERT INTO
@@ -69,10 +82,8 @@
     </delete>
 
 
-
-
     <select id="queryCourseByTeacherId"
-            resultMap="com.present.course.dao.CourseDao.courseMap">
+            resultMap="com.present.course.dto.CourseAndTeacherDto">
         SELECT
         course.id,
         course.course_name
@@ -86,5 +97,32 @@
             teacher_course.teacher_id=#{teacherId}
         </where>
     </select>
+
+
+    <select id="queryCourseByTeacherId"
+            resultMap="com.present.course.dto.CourseAndTeacherDto.courseAndTeacherMap">
+        SELECT
+        course.course_name,
+        teacher.name,
+        teacher.phone,
+        teacher.mail
+        FROM
+        teacher,
+        teacher_course,
+        course
+        <where>
+            course.id=teacher_course.course_id
+            AND
+            teacher_course.teacher_id=#{teacherId}
+        </where>
+    </select>
+
+
+
+
+
+
+
+
 
 </mapper>
