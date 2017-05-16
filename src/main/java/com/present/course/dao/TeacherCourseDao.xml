@@ -15,14 +15,14 @@
 
 
     <resultMap type="com.present.course.dto.CourseAndTeacherDto" id="courseAndTeacherMap">
-        <!-- 老师课程数据id -->
-        <id column="course_name" property="courseName"/>
-        <!-- 老师id -->
+        <!-- 课程名 -->
+        <result column="course_name" property="courseName"/>
+        <!-- 老师名 -->
         <result column="name" property="teacherName"/>
-        <!-- 课程id -->
-        <result column="mail" property="teacherMail"/>
-        <!-- 数据状态 -->
+        <!-- 老师电话 -->
         <result column="phone" property="teacherPhone"/>
+        <!-- 老师邮箱 -->
+        <result column="mail" property="teacherMail"/>
     </resultMap>
 
 
@@ -83,14 +83,13 @@
 
 
     <select id="queryCourseByTeacherId"
-            resultMap="com.present.course.dto.CourseAndTeacherDto">
+            resultMap="com.present.course.dao.CourseDao.courseMap">
         SELECT
         course.id,
         course.course_name
         FROM
         course,
         teacher_course
-
         <where>
             course.id=teacher_course.course_id
             AND
@@ -99,8 +98,8 @@
     </select>
 
 
-    <select id="queryCourseByTeacherId"
-            resultMap="com.present.course.dto.CourseAndTeacherDto.courseAndTeacherMap">
+    <select id="getTeacherAndCourseInfo"
+            resultMap="courseAndTeacherMap">
         SELECT
         course.course_name,
         teacher.name,
@@ -108,21 +107,13 @@
         teacher.mail
         FROM
         teacher,
-        teacher_course,
         course
         <where>
-            course.id=teacher_course.course_id
-            AND
-            teacher_course.teacher_id=#{teacherId}
+            course.id = #{courseId}
         </where>
+        AND
+        course.teacher_id=teacher.id
     </select>
-
-
-
-
-
-
-
 
 
 </mapper>

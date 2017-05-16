@@ -107,7 +107,7 @@
 
 
     <!-- 根据key查找数据库中信息 -->
-    <select id="getCourseAllSignInfo" resultType="courseSignMap">
+    <select id="getCourseAllSignInfo" resultMap="courseSignMap">
         SELECT
         id,
         create_time,

@@ -74,4 +74,22 @@
             school_id=#{schoolId}
         </where>
     </select>
+
+
+    <!-- 更具班级名称和学校id查询是否存在这个班级 -->
+    <select id="getClassInfo" resultMap="classesMap">
+        SELECT
+        id,
+        class_name,
+        school_id
+        FROM
+        class
+        <where>
+            class_name = #{className}
+            AND
+            school_id=#{schoolId}
+        </where>
+    </select>
+
+
 </mapper>
