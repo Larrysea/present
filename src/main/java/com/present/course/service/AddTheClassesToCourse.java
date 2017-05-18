@@ -1,5 +1,6 @@
 package com.present.course.service;
 
+import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
 import com.present.classes.bean.Classes;
 import com.present.common.dto.ResponseDto;
@@ -14,7 +15,6 @@ import org.springframework.stereotype.Service;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.util.Date;
-import java.util.List;
 
 /**
  * Created by Larry-sea on 2017/5/12.
@@ -30,11 +30,11 @@ public class AddTheClassesToCourse extends BaseService<String> {
     @Override
     public ResponseDto<String> process(JSONObject params, HttpServletRequest request, HttpServletResponse response) {
         CheckUtil.checkEmpty(params, "courseId", "classIdArray");
-        List<Classes> jsonArray = (List<Classes>) params.get("classIdArray");
+        JSONArray jsonArray = params.getJSONArray("classIdArray");
         Date date = DateUtil.getDate();
         Classes classes;
         for (Object object : jsonArray) {
-            classes = (Classes) object;
+            classes = JSONObject.parseObject(object.toString(), Classes.class);
             CourseClass courseClass = new CourseClass();
             courseClass.setCourseId(params.getString("courseId"));
             courseClass.setClassId(classes.getId());
