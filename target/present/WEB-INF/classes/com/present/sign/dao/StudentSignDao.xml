@@ -21,6 +21,8 @@
         <result column="student_number" property="studentNumber"/>
         <!-- 签到状态 -->
         <result column="sign_state" property="signState"/>
+
+        <result column="id" property="studentId"/>
     </resultMap>
 
 
@@ -143,7 +145,8 @@
         SELECT
         student_number,
         name,
-        sign_state
+        sign_state,
+        student.id
         FROM
         student_sign
         INNER JOIN student ON student.id = student_sign.student_id
@@ -161,7 +164,8 @@
         SELECT
         student_number,
         name,
-        sign_state
+        sign_state,
+        student.id
         FROM
         student_sign
         INNER JOIN student ON student.id = student_sign.student_id
@@ -177,7 +181,8 @@
         SELECT
         student_number,
         name,
-        sign_state
+        sign_state,
+        student.id
         FROM
         student_sign
         INNER JOIN student ON student.id = student_sign.student_id

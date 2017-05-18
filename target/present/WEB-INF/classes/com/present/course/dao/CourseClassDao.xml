@@ -11,76 +11,70 @@
         <result column="class_id" property="classId"/>
         <!-- 启动时间 -->
         <result column="start_time" property="startTime"/>
-        <!-- 老师id -->
-        <result column="teacher_id" property="teacherId"/>
+
         <!-- 数据状态 -->
         <result column="data_state" property="dataState"/>
     </resultMap>
-
 
 
     <!-- 将数据插入数据库中 -->
     <insert id="insert" parameterType="com.present.course.bean.CourseClass">
         INSERT INTO
         course_class (
-            id,
-            course_id,
-            class_id,
-            start_time,
-            teacher_id,
-            data_state) 
+        id,
+        course_id,
+        class_id,
+        start_time,
+        data_state)
         VALUES (
-            #{id},
-            #{courseId},
-            #{classId},
-            #{startTime},
-            #{teacherId},
-            #{dataState}) 
+        #{id},
+        #{courseId},
+        #{classId},
+        #{startTime},
+        #{dataState})
     </insert>
 
     <!-- 根据key查找数据库中信息 -->
     <select id="queryByKey" resultMap="courseClassMap">
         SELECT
-            * 
-        FROM 
-            course_class 
+        *
+        FROM
+        course_class
         <where>
-            id = #{id} 
+            id = #{id}
         </where>
     </select>
 
     <!-- 根据key更新数据库中信息 -->
     <update id="updateByKey">
         Update
-            course_class
+        course_class
         <set>
-            <if test = " courseId != null ">
+            <if test=" courseId != null ">
                 course_id = #{courseId},
             </if>
-            <if test = " classId != null ">
+            <if test=" classId != null ">
                 class_id = #{classId},
             </if>
-            <if test = " startTime != null ">
+            <if test=" startTime != null ">
                 start_time = #{startTime},
             </if>
-            <if test = " teacherId != null ">
-                teacher_id = #{teacherId},
-            </if>
-            <if test = " dataState != null ">
+
+            <if test=" dataState != null ">
                 data_state = #{dataState}
             </if>
         </set>
         <where>
-            id = #{id} 
+            id = #{id}
         </where>
     </update>
 
     <!-- 根据Key删除数据库中信息 -->
     <delete id="deleteByKey">
         DELETE FROM
-            course_class 
+        course_class
         <where>
-            id = #{id} 
+            id = #{id}
         </where>
     </delete>
 
@@ -102,7 +96,6 @@
     </select>
 
 
-
     <!-- 通过老师和课程获取某个课程下面的所有班级-->
     <select id="queryClassesByTeacherAndCourse" resultMap="com.present.classes.dao.ClassesDao.classesMap">
         SELECT
@@ -122,9 +115,6 @@
         BY
         class_name
     </select>
-
-
-
 
 
 </mapper>

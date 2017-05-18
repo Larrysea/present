@@ -32,10 +32,12 @@ public class AddTheClassesToCourse extends BaseService<String> {
         CheckUtil.checkEmpty(params, "courseId", "classIdArray");
         List<Classes> jsonArray = (List<Classes>) params.get("classIdArray");
         Date date = DateUtil.getDate();
-        for (Classes classId : jsonArray) {
+        Classes classes;
+        for (Object object : jsonArray) {
+            classes = (Classes) object;
             CourseClass courseClass = new CourseClass();
             courseClass.setCourseId(params.getString("courseId"));
-            courseClass.setClassId(classId.toString());
+            courseClass.setClassId(classes.getId());
             courseClass.setDataState("1");
             courseClass.setStartTime(date);
             courseClassDao.insert(courseClass);

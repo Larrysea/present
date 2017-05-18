@@ -88,7 +88,7 @@ public interface StudentSignDao {
      * @param courseSignId
      * @return
      */
-    List<StudentCourseSignDto>  getAbsenceStudentList(@Param("courseSignId") String courseSignId);
+    List<StudentCourseSignDto> getAbsenceStudentList(@Param("courseSignId") String courseSignId);
 
 }
 

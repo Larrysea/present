@@ -64,7 +64,7 @@ public class StudentLoginService extends BaseService<StudentLoginSuccessDto> {
      * @param student
      * @return
      */
-    private StudentLoginSuccessDto convertStudentToStudentLoginSuccessDto(final Student student) {
+    public static StudentLoginSuccessDto convertStudentToStudentLoginSuccessDto(final Student student) {
         final StudentLoginSuccessDto studentLoginSuccessDto;
         if (student != null) {
             studentLoginSuccessDto = new StudentLoginSuccessDto();
@@ -83,7 +83,6 @@ public class StudentLoginService extends BaseService<StudentLoginSuccessDto> {
         } else {
             throw new IllegalArgumentException("student cant empty");
         }
-
         return studentLoginSuccessDto;
     }
 }

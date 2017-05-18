@@ -25,6 +25,16 @@ public class StudentCourseSignDto {
     String signState;
 
 
+    String studentId;
+
+    public String getStudentId() {
+        return studentId;
+    }
+
+    public void setStudentId(String studentId) {
+        this.studentId = studentId;
+    }
+
     public String getStudentNumber() {
         return studentNumber;
     }
