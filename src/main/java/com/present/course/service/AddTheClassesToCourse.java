@@ -42,6 +42,6 @@ public class AddTheClassesToCourse extends BaseService<String> {
             courseClass.setStartTime(date);
             courseClassDao.insert(courseClass);
         }
-        return super.process(params, request, response);
+        return new ResponseDto<String>();
     }
 }

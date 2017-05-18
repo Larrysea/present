@@ -80,9 +80,9 @@
     <bean id="configProperties" class="com.present.common.plugin.PropertiesConfigurer">
         <property name="locations">
             <list>
-                <value>classpath:config.properties</value>
+
                 <value>classpath:redis.properties</value>
-                <value>classpath:sms-email.properties</value>
+
             </list>
         </property>
     </bean>

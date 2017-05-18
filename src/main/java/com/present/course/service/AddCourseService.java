@@ -12,7 +12,9 @@ import com.present.common.service.TokenApiService;
 import com.present.common.util.CheckUtil;
 import com.present.common.util.MessageUtil;
 import com.present.course.bean.Course;
+import com.present.course.bean.TeacherCourse;
 import com.present.course.dao.CourseDao;
+import com.present.course.dao.TeacherCourseDao;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -32,6 +34,9 @@ public class AddCourseService extends BaseService<Course> {
 
     @Autowired
     TokenApiService tokenApiService;
+
+    @Autowired
+    TeacherCourseDao teacherCourseDao;
 
     @Override
     public ResponseDto<Course> process(JSONObject params, HttpServletRequest request, HttpServletResponse response) {
@@ -60,6 +65,11 @@ public class AddCourseService extends BaseService<Course> {
         courseDao.insert(course);
         ResponseDto<Course> courseDto = new ResponseDto<Course>();
         courseDto.setData(course);
+        TeacherCourse teacherCourse = new TeacherCourse();
+        teacherCourse.setCourseId(course.getId());
+        teacherCourse.setDataState("1");
+        teacherCourse.setTeacherId(params.getString("teacherId"));
+        teacherCourseDao.insert(teacherCourse);
         return courseDto;
     }
 }
