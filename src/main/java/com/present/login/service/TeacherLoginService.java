@@ -48,11 +48,11 @@ public class TeacherLoginService extends BaseService<TeacherLoginSuccessDto> {
             }
             //登录成功
             else {
-               // tokenApiService.setToken(teacher.getId());
+                // tokenApiService.setToken(teacher.getId());
                 responseDto = new ResponseDto<TeacherLoginSuccessDto>();
                 responseDto.setData(initTeacherLoginDto(teacher, "fasdfasdfasdfasd"));
 
-                //responseDto.setData(initTeacherLoginDto(teacher, tokenApiService.getToken(teacher.getId())));
+                //responseDto.setData(converTeacherToLoginDto(teacher, tokenApiService.getToken(teacher.getId())));
             }
 
         }
@@ -70,7 +70,7 @@ public class TeacherLoginService extends BaseService<TeacherLoginSuccessDto> {
      *
      * @return
      */
-    public TeacherLoginSuccessDto initTeacherLoginDto(final Teacher teacher, final String token) {
+    public static TeacherLoginSuccessDto initTeacherLoginDto(final Teacher teacher, final String token) {
         if (teacher != null && token != null) {
             TeacherLoginSuccessDto teacherLoginSuccessDto = new TeacherLoginSuccessDto();
             teacherLoginSuccessDto.setName(teacher.getName());
