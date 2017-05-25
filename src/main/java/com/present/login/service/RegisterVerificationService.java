@@ -54,9 +54,9 @@ public class RegisterVerificationService extends BaseService<String> {
     public boolean isAlreadyRegister(String phone) {
         if (phone != null) {
             if (studentDao.queryByPhone(phone) > 0 || teacherDao.queryByPhone(phone) > 0) {
-                return false;
-            } else {
                 return true;
+            } else {
+                return false;
             }
         } else {
             throw new IllegalArgumentException("params cant empty");

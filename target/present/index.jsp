@@ -5,6 +5,3 @@
 <html>
 <body>
 <h2>present</h2>
-<a href="resource/a.zip">图片</a>
-</body>
-</html>

@@ -3,7 +3,6 @@ package com.present.school.service;
 import com.alibaba.fastjson.JSONObject;
 import com.present.common.dto.ResponseDto;
 import com.present.common.service.BaseService;
-import com.present.common.util.CheckUtil;
 import com.present.school.bean.AllSchool;
 import com.present.school.dao.AllSchoolDao;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,7 +25,6 @@ public class GetAllSchoolService extends BaseService<List<AllSchool>> {
 
     @Override
     public ResponseDto<List<AllSchool>> process(JSONObject params, HttpServletRequest request, HttpServletResponse response) {
-        CheckUtil.checkEmpty(params, "phone");
         List<AllSchool> schoolList = allSchoolDao.getAllSchool();
         ResponseDto<List<AllSchool>> allSchoolRsp = new ResponseDto<List<AllSchool>>();
         allSchoolRsp.setData(schoolList);

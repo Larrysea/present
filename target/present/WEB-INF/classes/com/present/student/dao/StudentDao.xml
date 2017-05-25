@@ -225,6 +225,18 @@
     </select>
 
 
+    <update id="updatePortrait">
+        UPDATE
+        student
+        <set>
+            <if test=" portraitPath != null ">
+                portrait_url = #{portraitPath}
+            </if>
+        </set>
+        <where>
+            phone = #{phone}
+        </where>
+    </update>
 
 
 </mapper>

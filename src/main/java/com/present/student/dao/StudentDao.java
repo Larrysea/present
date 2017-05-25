@@ -3,7 +3,6 @@ package com.present.student.dao;
 import com.present.student.bean.Student;
 import org.apache.ibatis.annotations.Param;
 
-import java.io.File;
 import java.util.List;
 
 public interface StudentDao {
@@ -103,5 +102,13 @@ public interface StudentDao {
     int queryByPhone(@Param("phone") String phone);
 
 
+    /**
+     * 更新学生头像
+     *
+     * @param portraitPath 头像保存地址
+     * @param phone        手机号
+     * @return
+     */
+    int updatePortrait(@Param("portraitPath") String portraitPath, @Param("phone") String phone);
 
 }
