@@ -31,6 +31,7 @@ public class SubmitFeedBack extends BaseService<String> {
         feedback.setDeviceInfo(params.getString("deviceInfo"));
         feedback.setOsInfo(params.getString("osInfo"));
         feedback.setUserid(params.getString("userId"));
+        feedback.setFeedBackContent(params.getString("content"));
         feedbackDao.insert(feedback);
         return new ResponseDto<String>();
     }

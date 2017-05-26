@@ -6,7 +6,6 @@ import com.present.common.service.BaseService;
 import com.present.common.util.CheckUtil;
 import com.present.sign.dao.StudentSignDao;
 import com.present.sign.dto.StudentCourseSignDto;
-import com.present.sign.dto.StudentSignInfoOfTermDto;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -40,12 +39,12 @@ public class GetTheSignInfoByCourseSignId extends BaseService<List<StudentCourse
     }
 
 
-    /**
+   /* *//**
      * 将studentSign转换为StudentCourseSignDto
      *
      * @param studentSignInfoDto
      * @return
-     */
+     *//*
     public StudentCourseSignDto convertStudentSignToStudentCourseSignDto(final StudentSignInfoOfTermDto studentSignInfoDto) {
         if (studentSignInfoDto != null) {
             throw new IllegalArgumentException("param studentSign cant empty");
@@ -55,7 +54,7 @@ public class GetTheSignInfoByCourseSignId extends BaseService<List<StudentCourse
         studentCourseSignDto.setSignState(studentSignInfoDto.getSignState());
         studentCourseSignDto.setStudentNumber(studentSignInfoDto.getStudentNumber());
         return studentCourseSignDto;
-    }
+    }*/
 
 
 }

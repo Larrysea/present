@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://www.mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.present.feedback.dao.FeedbackDao">
+    <resultMap type="com.present.feedback.bean.Feedback" id="feedbackMap">
+        <!-- id -->
+        <id column="id" property="id"/>
+        <!-- 用户id -->
+        <result column="userid" property="userid"/>
+        <!-- 联系方式 -->
+        <result column="contact_way" property="contactWay"/>
+        <!-- 反馈内容 -->
+        <result column="feed_back_content" property="feedBackContent"/>
+        <!-- 提交时间 -->
+        <result column="submit_date" property="submitDate"/>
+        <!-- 操作系统信息 -->
+        <result column="os_info" property="osInfo"/>
+        <!-- 设备信息 -->
+        <result column="device_info" property="deviceInfo"/>
+    </resultMap>
+
+    <!-- 将数据插入数据库中 -->
+    <insert id="insert" parameterType="com.present.feedback.bean.Feedback">
+        INSERT INTO
+        feedback (
+            id,
+            userid,
+            contact_way,
+            feed_back_content,
+            submit_date,
+            os_info,
+            device_info) 
+        VALUES (
+            #{id},
+            #{userid},
+            #{contactWay},
+            #{feedBackContent},
+            #{submitDate},
+            #{osInfo},
+            #{deviceInfo}) 
+    </insert>
+
+    <!-- 根据key查找数据库中信息 -->
+    <select id="queryByKey" resultMap="feedbackMap">
+        SELECT
+            * 
+        FROM 
+            feedback 
+        <where>
+            id = #{id} 
+        </where>
+    </select>
+
+    <!-- 根据key更新数据库中信息 -->
+    <update id="updateByKey">
+        Update
+            feedback
+        <set>
+            <if test = " userid != null ">
+                userid = #{userid},
+            </if>
+            <if test = " contactWay != null ">
+                contact_way = #{contactWay},
+            </if>
+            <if test = " feedBackContent != null ">
+                feed_back_content = #{feedBackContent},
+            </if>
+            <if test = " submitDate != null ">
+                submit_date = #{submitDate},
+            </if>
+            <if test = " osInfo != null ">
+                os_info = #{osInfo},
+            </if>
+            <if test = " deviceInfo != null ">
+                device_info = #{deviceInfo}
+            </if>
+        </set>
+        <where>
+            id = #{id} 
+        </where>
+    </update>
+
+    <!-- 根据Key删除数据库中信息 -->
+    <delete id="deleteByKey">
+        DELETE FROM
+            feedback 
+        <where>
+            id = #{id} 
+        </where>
+    </delete>
+</mapper>

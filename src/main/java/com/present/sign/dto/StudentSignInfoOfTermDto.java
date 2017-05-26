@@ -34,15 +34,8 @@ public class StudentSignInfoOfTermDto {
     String absence;
 
 
-    String signState;
 
-    public String getSignState() {
-        return signState;
-    }
 
-    public void setSignState(String signState) {
-        this.signState = signState;
-    }
 
     public String getStudentNumber() {
         return studentNumber;
