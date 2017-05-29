@@ -110,11 +110,6 @@ public class SendMail {
                                       String smtpServer) throws FileNotFoundException {
 
 
-        /*String host = "smtp.163.com";  //邮件服务器
-        String from = "norember_speeder@163.com";
-        String userName = "norember_speeder";
-        String pwd = "androidANDROID2";  //客户端授权码（这里用客户端授权码登陆，而不是用密码登陆）*/
-
         String userName = fromMailAddress.substring(0, (fromMailAddress.indexOf("@")));
         Properties properties = new Properties();
         properties.put("mail.smtp.host", smtpServer);
@@ -155,10 +150,10 @@ public class SendMail {
 
             // Part two is attachment
             messageBodyPart = new MimeBodyPart();
-//            String filename = "/home/manisha/file.txt";
-            // String filename = "C:/Users/Larry-sea/OneDrive/Desktop/thinking.txt";
+
 
             DataSource source = new FileDataSource(file.getAbsolutePath());
+            System.out.println("SendMail class" + file.getAbsolutePath());
             messageBodyPart.setDataHandler(new DataHandler(source));
             messageBodyPart.setFileName(file.getName());
             multipart.addBodyPart(messageBodyPart);

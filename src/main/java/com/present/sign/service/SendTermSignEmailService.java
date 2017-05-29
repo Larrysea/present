@@ -63,8 +63,11 @@ public class SendTermSignEmailService extends BaseService<String> {
                 header[0] = course.getCourseName();
                 header[1] = "签到总数";
                 header[2] = getSignCount(studentSignInfoDtos.get(0));
-                fileSavePath = request.getServletContext().getContextPath();
-                ExcelUtil.exportExcel(transStudentSignListToArray(studentSignInfoDtos),
+                fileSavePath = getProjectRootPath(request);
+                fileSavePath = fileSavePath + "\\src\\main\\webapp\\resource\\excel";
+
+                System.out.println("文件保存路径" + fileSavePath);
+                fileSavePath = ExcelUtil.exportExcel(transStudentSignListToArray(studentSignInfoDtos),
                         classes.getClassName(), classes.getClassName(), header, fileSavePath);
             } else {
                 throw new ExternalServiceException(MessageUtil.getMessageInfoByKey("sign.signinfo.notexist"));
@@ -83,7 +86,7 @@ public class SendTermSignEmailService extends BaseService<String> {
     }
 
     public String[][] transStudentSignListToArray(final List<StudentSignInfoOfTermDto> studentSignInfoOfTermDtoList) {
-        String[][] studentSignInfoArray = new String[100][];
+        String[][] studentSignInfoArray = new String[100][5];
         StudentSignInfoOfTermDto studentSignInfoOfTermDto;
         for (int position = 0; position < studentSignInfoOfTermDtoList.size(); position++) {
             studentSignInfoOfTermDto = studentSignInfoOfTermDtoList.get(position);
@@ -118,6 +121,20 @@ public class SendTermSignEmailService extends BaseService<String> {
         }
         return String.valueOf(sign + sickLeave + absence);
 
+    }
+
+
+    /**
+     * 返回项目的根路径
+     *
+     * @param httpServletRequest
+     * @return
+     */
+    public String getProjectRootPath(HttpServletRequest httpServletRequest) {
+        String originalPath = httpServletRequest.getRealPath("");
+        originalPath = originalPath.substring(0, originalPath.lastIndexOf("\\"));
+        originalPath = originalPath.substring(0, originalPath.lastIndexOf("\\"));
+        return originalPath;
     }
 
 

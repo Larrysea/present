@@ -3,65 +3,81 @@ package com.present.common.util;
 import org.apache.poi.hssf.usermodel.*;
 import org.apache.poi.ss.usermodel.HorizontalAlignment;
 
+import java.io.File;
 import java.io.FileOutputStream;
+import java.io.IOException;
 
 /**
- * excel¹¤¾ßÀà£¬Éú³Éexcel±í¸ñ
+ * excelå·¥å…·ç±»ï¼Œç”Ÿæˆexcelè¡¨æ ¼
  */
 public class ExcelUtil {
 
 
     /**
-     * µ¼³öexcel±í¸ñµÄ·½·¨
+     * å¯¼å‡ºexcelè¡¨æ ¼çš„æ–¹æ³•
      *
-     * @param exportData   µ¼³öµÄµÄÊı¾İ  Õâ¸ö¶àÎ¬Êı×éÖĞµÄÁĞºÍexcel±í¸ñÖĞÁĞÊÇ¶ÔÓ¦Ò»ÖÂµÄ
-     * @param fileName     ÎÄ¼şÃû
-     * @param sheetName    sheetName  Õâ¸öÄ¬ÈÏÎª°à¼¶Ãû
-     * @param header       ±íÍ·Êı¾İ
-     * @param fileSavePath ÎÄ¼ş±£´æÂ·¾¶
+     * @param exportData   å¯¼å‡ºçš„çš„æ•°æ®  è¿™ä¸ªå¤šç»´æ•°ç»„ä¸­çš„åˆ—å’Œexcelè¡¨æ ¼ä¸­åˆ—æ˜¯å¯¹åº”ä¸€è‡´çš„
+     * @param fileName     æ–‡ä»¶å
+     * @param sheetName    sheetName  è¿™ä¸ªé»˜è®¤ä¸ºç­çº§å
+     * @param header       è¡¨å¤´æ•°æ®
+     * @param fileSavePath æ–‡ä»¶ä¿å­˜è·¯å¾„
      */
-    public static void exportExcel(String[][] exportData, String fileName, String sheetName, String[] header, String fileSavePath) {
-        // µÚÒ»²½£¬´´½¨Ò»¸öwebbook£¬¶ÔÓ¦Ò»¸öExcelÎÄ¼ş
+    public static String exportExcel(String[][] exportData, String fileName, String sheetName, String[] header, String fileSavePath) {
+        // ç¬¬ä¸€æ­¥ï¼Œåˆ›å»ºä¸€ä¸ªwebbookï¼Œå¯¹åº”ä¸€ä¸ªExcelæ–‡ä»¶
         HSSFWorkbook wb = new HSSFWorkbook();
-        // µÚ¶ş²½£¬ÔÚwebbookÖĞÌí¼ÓÒ»¸ösheet,¶ÔÓ¦ExcelÎÄ¼şÖĞµÄsheet
+        // ç¬¬äºŒæ­¥ï¼Œåœ¨webbookä¸­æ·»åŠ ä¸€ä¸ªsheet,å¯¹åº”Excelæ–‡ä»¶ä¸­çš„sheet
         HSSFSheet sheet = wb.createSheet(sheetName);
-        // µÚÈı²½£¬ÔÚsheetÖĞÌí¼Ó±íÍ·µÚ0ĞĞ,×¢ÒâÀÏ°æ±¾poi¶ÔExcelµÄĞĞÊıÁĞÊıÓĞÏŞÖÆshort
+        // ç¬¬ä¸‰æ­¥ï¼Œåœ¨sheetä¸­æ·»åŠ è¡¨å¤´ç¬¬0è¡Œ,æ³¨æ„è€ç‰ˆæœ¬poiå¯¹Excelçš„è¡Œæ•°åˆ—æ•°æœ‰é™åˆ¶short
         HSSFRow row = sheet.createRow((int) 0);
-        // µÚËÄ²½£¬´´½¨µ¥Ôª¸ñ£¬²¢ÉèÖÃÖµ±íÍ· ÉèÖÃ±íÍ·¾ÓÖĞ
+        // ç¬¬å››æ­¥ï¼Œåˆ›å»ºå•å…ƒæ ¼ï¼Œå¹¶è®¾ç½®å€¼è¡¨å¤´ è®¾ç½®è¡¨å¤´å±…ä¸­
         HSSFCellStyle style = wb.createCellStyle();
         style.setAlignment(HorizontalAlignment.CENTER);
 
         HSSFFont hssfFont = wb.createFont();
-        hssfFont.setFontName("Î¢ÈíÑÅºÚ");
+        hssfFont.setFontName("å¾®è½¯é›…é»‘");
         hssfFont.setFontHeightInPoints((short) 11);
         style.setFont(hssfFont);
         initHeader(row, header, 1, style);
         initData(sheet, exportData, style);
         StringBuilder stringBuilder = new StringBuilder();
         stringBuilder.append(fileSavePath);
-        stringBuilder.append('/');
+        stringBuilder.append('\\');
         stringBuilder.append(fileName);
-        stringBuilder.append("xls");
+        stringBuilder.append(".xls");
+        String filePath = stringBuilder.toString();
+        File file = new File(filePath);
+        //  file = new File(file.getAbsolutePath());
+       /* //å¦‚æœæ–‡ä»¶å­˜åœ¨åˆ™åˆ é™¤æ–‡ä»¶
+        if (file.exists()) {
+            file.delete();
+        }*/
+        //æ–°å»ºä¸€ä¸ªæ–‡ä»¶
         try {
-            FileOutputStream fout = new FileOutputStream(stringBuilder.toString());
+            file.createNewFile();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        try {
+            FileOutputStream fout = new FileOutputStream(file.getAbsolutePath());
             wb.write(fout);
             fout.close();
         } catch (Exception e) {
             e.printStackTrace();
         }
+        return filePath;
     }
 
 
     /**
-     * ³õÊ¼»¯header
+     * åˆå§‹åŒ–header
      *
-     * @param row         ´ıÌí¼ÓÊı¾İµÄĞĞ
-     * @param headerArray ÆäÖĞ°üº¬headerµÄÊı¾İ  Ã¿¸öheaderÍ·ÔÚµÚÒ»ĞĞÊı¾İÖĞµ«ÊÇÃ¿¸öheader»á¼ä¸ô
-     * @param headerGap   Í·Ö®¼äµÄ¼ä¸ô
+     * @param row         å¾…æ·»åŠ æ•°æ®çš„è¡Œ
+     * @param headerArray å…¶ä¸­åŒ…å«headerçš„æ•°æ®  æ¯ä¸ªheaderå¤´åœ¨ç¬¬ä¸€è¡Œæ•°æ®ä¸­ä½†æ˜¯æ¯ä¸ªheaderä¼šé—´éš”
+     * @param headerGap   å¤´ä¹‹é—´çš„é—´éš”
      */
     public static void initHeader(final HSSFRow row, final String[] headerArray, int headerGap, final HSSFCellStyle hssfStyle) {
         int headerIndex = 0;
-        //Ôö¼ÓÒ»¸ö¼ä¸ô
+        //å¢åŠ ä¸€ä¸ªé—´éš”
         headerGap++;
         if (headerGap < 0) {
             throw new IllegalArgumentException("headerGap must big than 0");
@@ -83,10 +99,10 @@ public class ExcelUtil {
 
 
     /**
-     * ³õÊ¼»¯±íµÄÊı¾İ²¿·Ö
+     * åˆå§‹åŒ–è¡¨çš„æ•°æ®éƒ¨åˆ†
      *
-     * @param hssfSheet  ĞèÒªÌí¼ÓµÄĞĞ
-     * @param exportData ĞèÒªµ¼³öµÄÊı¾İ
+     * @param hssfSheet  éœ€è¦æ·»åŠ çš„è¡Œ
+     * @param exportData éœ€è¦å¯¼å‡ºçš„æ•°æ®
      */
     public static void initData(HSSFSheet hssfSheet, String[][] exportData, final HSSFCellStyle hssfCellStyle) throws IllegalArgumentException {
         if (hssfSheet == null) {
@@ -97,10 +113,10 @@ public class ExcelUtil {
         }
         HSSFRow hssfRow;
         HSSFCell hssfCell;
-        //Ìí¼ÓĞĞÊı¾İ
+        //æ·»åŠ è¡Œæ•°æ®
         for (int row = 0; row < exportData.length; row++) {
             hssfRow = hssfSheet.createRow(2 + row);
-            //Ìí¼ÓÁĞÊı¾İ
+            //æ·»åŠ åˆ—æ•°æ®
             for (int column = 0; column < exportData[row].length; column++) {
                 hssfCell = hssfRow.createCell(column);
                 hssfCell.setCellValue(exportData[row][column]);
