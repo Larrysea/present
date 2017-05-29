@@ -46,12 +46,9 @@ public class ExcelUtil {
         stringBuilder.append(".xls");
         String filePath = stringBuilder.toString();
         File file = new File(filePath);
-        //  file = new File(file.getAbsolutePath());
-       /* //如果文件存在则删除文件
         if (file.exists()) {
             file.delete();
-        }*/
-        //新建一个文件
+        }
         try {
             file.createNewFile();
         } catch (IOException e) {

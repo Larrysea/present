@@ -48,40 +48,17 @@ public class SendTermSignEmailService extends BaseService<String> {
 
 
     @Override
-    public ResponseDto<String> process(JSONObject params, HttpServletRequest request, HttpServletResponse response) {
+    public ResponseDto<String> process(final JSONObject params, final HttpServletRequest request, HttpServletResponse response) {
         CheckUtil.checkEmpty(params, "teacherId", "courseId", "classId", "mailAddress");
-        SendMail sendMail = new SendMail();
-        Classes classes = classesDao.queryByKey(params.getString("classId"));
-        Course course = courseDao.queryByKey(params.getString("courseId"));
-        String[] header = new String[3];
-        String fileSavePath = null;
-        if (classes != null && course != null) {
+        System.out.println(request.getRealPath(""));
+        Thread thread = new Thread() {
 
-            List<StudentSignInfoOfTermDto> studentSignInfoDtos = getCourseSignInfoInTerm.getCourseSignInfoInTerm(params.getString("teacherId"), params.getString("courseId"), params.getString("classId"));
-            //判断签到的数据是否为空，如果为空的则不会发送邮件并且给出提示
-            if (studentSignInfoDtos != null && studentSignInfoDtos.size() > 0) {
-                header[0] = course.getCourseName();
-                header[1] = "签到总数";
-                header[2] = getSignCount(studentSignInfoDtos.get(0));
-                fileSavePath = getProjectRootPath(request);
-                fileSavePath = fileSavePath + "\\src\\main\\webapp\\resource\\excel";
-
-                System.out.println("文件保存路径" + fileSavePath);
-                fileSavePath = ExcelUtil.exportExcel(transStudentSignListToArray(studentSignInfoDtos),
-                        classes.getClassName(), classes.getClassName(), header, fileSavePath);
-            } else {
-                throw new ExternalServiceException(MessageUtil.getMessageInfoByKey("sign.signinfo.notexist"));
+            @Override
+            public void run() {
+                sendAttachment(params, getProjectRootPath(request.getRealPath("")));
             }
-
-
-        }
-        try {
-            sendMail.sendAttachment(Constants.sendTearmSignExcetl, Constants.emailContent,
-                    fileSavePath, Constants.fromMailAddress,
-                    Constants.smtpAuthPwd, params.getString("mailAddress"), Constants.smtpServer);
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        }
+        };
+        thread.start();
         return new ResponseDto<String>();
     }
 
@@ -127,14 +104,53 @@ public class SendTermSignEmailService extends BaseService<String> {
     /**
      * 返回项目的根路径
      *
-     * @param httpServletRequest
+     * @param originalPath 项目原始路径
      * @return
      */
-    public String getProjectRootPath(HttpServletRequest httpServletRequest) {
-        String originalPath = httpServletRequest.getRealPath("");
+    public String getProjectRootPath(String originalPath) {
         originalPath = originalPath.substring(0, originalPath.lastIndexOf("\\"));
         originalPath = originalPath.substring(0, originalPath.lastIndexOf("\\"));
         return originalPath;
+    }
+
+    public void sendAttachment(JSONObject params, String fileSavePath) {
+        SendMail sendMail = new SendMail();
+        Classes classes = classesDao.queryByKey(params.getString("classId"));
+        Course course = courseDao.queryByKey(params.getString("courseId"));
+        String[] header = new String[3];
+        if (classes != null && course != null) {
+
+            List<StudentSignInfoOfTermDto> studentSignInfoDtos = getCourseSignInfoInTerm.getCourseSignInfoInTerm(params.getString("teacherId"), params.getString("courseId"), params.getString("classId"));
+            //判断签到的数据是否为空，如果为空的则不会发送邮件并且给出提示
+            if (studentSignInfoDtos != null && studentSignInfoDtos.size() > 0) {
+                header[0] = course.getCourseName();
+                header[1] = "签到总数";
+                header[2] = getSignCount(studentSignInfoDtos.get(0));
+                fileSavePath = fileSavePath + "\\src\\main\\webapp\\resource\\excel";
+
+                System.out.println("文件保存路径" + fileSavePath);
+                StudentSignInfoOfTermDto studentSignInfoOfTermDto = new StudentSignInfoOfTermDto();
+                studentSignInfoOfTermDto.setStudentNumber("学号");
+                studentSignInfoOfTermDto.setName("姓名");
+                studentSignInfoOfTermDto.setSign("到课次数");
+                studentSignInfoOfTermDto.setSickLeave("病假");
+                studentSignInfoOfTermDto.setAbsence("缺勤");
+                studentSignInfoDtos.add(0, studentSignInfoOfTermDto);
+                fileSavePath = ExcelUtil.exportExcel(transStudentSignListToArray(studentSignInfoDtos),
+                        classes.getClassName(), classes.getClassName(), header, fileSavePath);
+            } else {
+                throw new ExternalServiceException(MessageUtil.getMessageInfoByKey("sign.signinfo.notexist"));
+            }
+
+
+        }
+        try {
+            sendMail.sendAttachment(Constants.sendTearmSignExcetl, Constants.emailContent,
+                    fileSavePath, Constants.fromMailAddress,
+                    Constants.smtpAuthPwd, params.getString("mailAddress"), Constants.smtpServer);
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
     }
 
 
